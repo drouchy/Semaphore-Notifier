@@ -39,6 +39,11 @@
 		3B9FCB9C162F28CE0013F015 /* MASPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9FCB95162F28CE0013F015 /* MASPreferencesWindowController.m */; };
 		3B9FCB9D162F28CE0013F015 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3B9FCB96162F28CE0013F015 /* README.md */; };
 		3B9FCB9E162F28CE0013F015 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3B9FCB96162F28CE0013F015 /* README.md */; };
+		3B9FCBA4162F295E0013F015 /* ConfigurationPreferenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9FCBA2162F295E0013F015 /* ConfigurationPreferenceViewController.m */; };
+		3B9FCBA5162F295E0013F015 /* ConfigurationPreferenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9FCBA2162F295E0013F015 /* ConfigurationPreferenceViewController.m */; };
+		3B9FCBA6162F295E0013F015 /* ConfigurationPreferenceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B9FCBA3162F295E0013F015 /* ConfigurationPreferenceView.xib */; };
+		3B9FCBA7162F295E0013F015 /* ConfigurationPreferenceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B9FCBA3162F295E0013F015 /* ConfigurationPreferenceView.xib */; };
+		3B9FCBAB162F2A530013F015 /* ConfigurationPreferenceViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9FCBAA162F2A530013F015 /* ConfigurationPreferenceViewControllerSpec.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -142,6 +147,10 @@
 		3B9FCB94162F28CE0013F015 /* MASPreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASPreferencesWindowController.h; sourceTree = "<group>"; };
 		3B9FCB95162F28CE0013F015 /* MASPreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASPreferencesWindowController.m; sourceTree = "<group>"; };
 		3B9FCB96162F28CE0013F015 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		3B9FCBA1162F295E0013F015 /* ConfigurationPreferenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigurationPreferenceViewController.h; sourceTree = "<group>"; };
+		3B9FCBA2162F295E0013F015 /* ConfigurationPreferenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigurationPreferenceViewController.m; sourceTree = "<group>"; };
+		3B9FCBA3162F295E0013F015 /* ConfigurationPreferenceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfigurationPreferenceView.xib; sourceTree = "<group>"; };
+		3B9FCBAA162F2A530013F015 /* ConfigurationPreferenceViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigurationPreferenceViewControllerSpec.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,11 +225,13 @@
 		3B7B55FC162F0BF500D7CDCB /* Semaphore Notifier */ = {
 			isa = PBXGroup;
 			children = (
+				3B9FCBA0162F293D0013F015 /* Controllers */,
 				3B9FCB6F162F20400013F015 /* Models */,
 				3B7B5608162F0BF500D7CDCB /* AppDelegate.h */,
 				3B7B5609162F0BF500D7CDCB /* AppDelegate.m */,
 				3B7B560B162F0BF500D7CDCB /* MainMenu.xib */,
 				3B7B5663162F19A200D7CDCB /* Assets */,
+				3B9FCB9F162F292C0013F015 /* Nibs */,
 				3B7B55FD162F0BF500D7CDCB /* Supporting Files */,
 			);
 			path = "Semaphore Notifier";
@@ -241,6 +252,7 @@
 		3B7B5619162F0BF500D7CDCB /* Semaphore NotifierTests */ = {
 			isa = PBXGroup;
 			children = (
+				3B9FCBA8162F2A410013F015 /* Controllers */,
 				3B9FCB71162F204A0013F015 /* Models */,
 				3B7B561A162F0BF500D7CDCB /* Supporting Files */,
 				3B7B5661162F134500D7CDCB /* AppDelegateLoadingSpec.m */,
@@ -365,6 +377,31 @@
 			path = MASPreferences;
 			sourceTree = "<group>";
 		};
+		3B9FCB9F162F292C0013F015 /* Nibs */ = {
+			isa = PBXGroup;
+			children = (
+				3B9FCBA3162F295E0013F015 /* ConfigurationPreferenceView.xib */,
+			);
+			name = Nibs;
+			sourceTree = "<group>";
+		};
+		3B9FCBA0162F293D0013F015 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3B9FCBA1162F295E0013F015 /* ConfigurationPreferenceViewController.h */,
+				3B9FCBA2162F295E0013F015 /* ConfigurationPreferenceViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		3B9FCBA8162F2A410013F015 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3B9FCBAA162F2A530013F015 /* ConfigurationPreferenceViewControllerSpec.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -444,6 +481,7 @@
 				3B7B566B162F1B2B00D7CDCB /* statusIconTemplate@2x.png in Resources */,
 				3B9FCB99162F28CE0013F015 /* MASPreferencesWindow.xib in Resources */,
 				3B9FCB9D162F28CE0013F015 /* README.md in Resources */,
+				3B9FCBA6162F295E0013F015 /* ConfigurationPreferenceView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,6 +494,7 @@
 				3B7B566C162F1B2B00D7CDCB /* statusIconTemplate@2x.png in Resources */,
 				3B9FCB9A162F28CE0013F015 /* MASPreferencesWindow.xib in Resources */,
 				3B9FCB9E162F28CE0013F015 /* README.md in Resources */,
+				3B9FCBA7162F295E0013F015 /* ConfigurationPreferenceView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,6 +526,7 @@
 				3B9FCB74162F205C0013F015 /* Project.m in Sources */,
 				3B9FCB86162F25540013F015 /* Configuration.m in Sources */,
 				3B9FCB9B162F28CE0013F015 /* MASPreferencesWindowController.m in Sources */,
+				3B9FCBA4162F295E0013F015 /* ConfigurationPreferenceViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,6 +542,8 @@
 				3B9FCB87162F25540013F015 /* Configuration.m in Sources */,
 				3B9FCB8A162F256C0013F015 /* ConfigurationSpec.m in Sources */,
 				3B9FCB9C162F28CE0013F015 /* MASPreferencesWindowController.m in Sources */,
+				3B9FCBA5162F295E0013F015 /* ConfigurationPreferenceViewController.m in Sources */,
+				3B9FCBAB162F2A530013F015 /* ConfigurationPreferenceViewControllerSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
