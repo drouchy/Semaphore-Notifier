@@ -1,0 +1,459 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3B7B55F7162F0BF500D7CDCB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B7B55F6162F0BF500D7CDCB /* Cocoa.framework */; };
+		3B7B5601162F0BF500D7CDCB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B7B55FF162F0BF500D7CDCB /* InfoPlist.strings */; };
+		3B7B5603162F0BF500D7CDCB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7B5602162F0BF500D7CDCB /* main.m */; };
+		3B7B5607162F0BF500D7CDCB /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 3B7B5605162F0BF500D7CDCB /* Credits.rtf */; };
+		3B7B560A162F0BF500D7CDCB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7B5609162F0BF500D7CDCB /* AppDelegate.m */; };
+		3B7B560D162F0BF500D7CDCB /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B7B560B162F0BF500D7CDCB /* MainMenu.xib */; };
+		3B7B5615162F0BF500D7CDCB /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B7B5614162F0BF500D7CDCB /* SenTestingKit.framework */; };
+		3B7B5616162F0BF500D7CDCB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B7B55F6162F0BF500D7CDCB /* Cocoa.framework */; };
+		3B7B561E162F0BF500D7CDCB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B7B561C162F0BF500D7CDCB /* InfoPlist.strings */; };
+		3B7B5621162F0BF500D7CDCB /* Semaphore_NotifierTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7B5620162F0BF500D7CDCB /* Semaphore_NotifierTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3B7B5617162F0BF500D7CDCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B7B55E9162F0BF500D7CDCB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3B7B55F1162F0BF500D7CDCB;
+			remoteInfo = "Semaphore Notifier";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3B7B55F2162F0BF500D7CDCB /* Semaphore Notifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Semaphore Notifier.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B7B55F6162F0BF500D7CDCB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		3B7B55F9162F0BF500D7CDCB /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		3B7B55FA162F0BF500D7CDCB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		3B7B55FB162F0BF500D7CDCB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3B7B55FE162F0BF500D7CDCB /* Semaphore Notifier-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Semaphore Notifier-Info.plist"; sourceTree = "<group>"; };
+		3B7B5600162F0BF500D7CDCB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3B7B5602162F0BF500D7CDCB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3B7B5604162F0BF500D7CDCB /* Semaphore Notifier-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Semaphore Notifier-Prefix.pch"; sourceTree = "<group>"; };
+		3B7B5606162F0BF500D7CDCB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		3B7B5608162F0BF500D7CDCB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3B7B5609162F0BF500D7CDCB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3B7B560C162F0BF500D7CDCB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		3B7B5613162F0BF500D7CDCB /* Semaphore NotifierTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Semaphore NotifierTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B7B5614162F0BF500D7CDCB /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		3B7B561B162F0BF500D7CDCB /* Semaphore NotifierTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Semaphore NotifierTests-Info.plist"; sourceTree = "<group>"; };
+		3B7B561D162F0BF500D7CDCB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3B7B561F162F0BF500D7CDCB /* Semaphore_NotifierTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Semaphore_NotifierTests.h; sourceTree = "<group>"; };
+		3B7B5620162F0BF500D7CDCB /* Semaphore_NotifierTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Semaphore_NotifierTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3B7B55EF162F0BF500D7CDCB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B7B55F7162F0BF500D7CDCB /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B7B560F162F0BF500D7CDCB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B7B5615162F0BF500D7CDCB /* SenTestingKit.framework in Frameworks */,
+				3B7B5616162F0BF500D7CDCB /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3B7B55E7162F0BF500D7CDCB = {
+			isa = PBXGroup;
+			children = (
+				3B7B55FC162F0BF500D7CDCB /* Semaphore Notifier */,
+				3B7B5619162F0BF500D7CDCB /* Semaphore NotifierTests */,
+				3B7B55F5162F0BF500D7CDCB /* Frameworks */,
+				3B7B55F3162F0BF500D7CDCB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3B7B55F3162F0BF500D7CDCB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3B7B55F2162F0BF500D7CDCB /* Semaphore Notifier.app */,
+				3B7B5613162F0BF500D7CDCB /* Semaphore NotifierTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3B7B55F5162F0BF500D7CDCB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3B7B55F6162F0BF500D7CDCB /* Cocoa.framework */,
+				3B7B5614162F0BF500D7CDCB /* SenTestingKit.framework */,
+				3B7B55F8162F0BF500D7CDCB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3B7B55F8162F0BF500D7CDCB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3B7B55F9162F0BF500D7CDCB /* AppKit.framework */,
+				3B7B55FA162F0BF500D7CDCB /* CoreData.framework */,
+				3B7B55FB162F0BF500D7CDCB /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		3B7B55FC162F0BF500D7CDCB /* Semaphore Notifier */ = {
+			isa = PBXGroup;
+			children = (
+				3B7B5608162F0BF500D7CDCB /* AppDelegate.h */,
+				3B7B5609162F0BF500D7CDCB /* AppDelegate.m */,
+				3B7B560B162F0BF500D7CDCB /* MainMenu.xib */,
+				3B7B55FD162F0BF500D7CDCB /* Supporting Files */,
+			);
+			path = "Semaphore Notifier";
+			sourceTree = "<group>";
+		};
+		3B7B55FD162F0BF500D7CDCB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3B7B55FE162F0BF500D7CDCB /* Semaphore Notifier-Info.plist */,
+				3B7B55FF162F0BF500D7CDCB /* InfoPlist.strings */,
+				3B7B5602162F0BF500D7CDCB /* main.m */,
+				3B7B5604162F0BF500D7CDCB /* Semaphore Notifier-Prefix.pch */,
+				3B7B5605162F0BF500D7CDCB /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3B7B5619162F0BF500D7CDCB /* Semaphore NotifierTests */ = {
+			isa = PBXGroup;
+			children = (
+				3B7B561F162F0BF500D7CDCB /* Semaphore_NotifierTests.h */,
+				3B7B5620162F0BF500D7CDCB /* Semaphore_NotifierTests.m */,
+				3B7B561A162F0BF500D7CDCB /* Supporting Files */,
+			);
+			path = "Semaphore NotifierTests";
+			sourceTree = "<group>";
+		};
+		3B7B561A162F0BF500D7CDCB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3B7B561B162F0BF500D7CDCB /* Semaphore NotifierTests-Info.plist */,
+				3B7B561C162F0BF500D7CDCB /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3B7B55F1162F0BF500D7CDCB /* Semaphore Notifier */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B7B5624162F0BF500D7CDCB /* Build configuration list for PBXNativeTarget "Semaphore Notifier" */;
+			buildPhases = (
+				3B7B55EE162F0BF500D7CDCB /* Sources */,
+				3B7B55EF162F0BF500D7CDCB /* Frameworks */,
+				3B7B55F0162F0BF500D7CDCB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Semaphore Notifier";
+			productName = "Semaphore Notifier";
+			productReference = 3B7B55F2162F0BF500D7CDCB /* Semaphore Notifier.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3B7B5612162F0BF500D7CDCB /* Semaphore NotifierTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B7B5627162F0BF500D7CDCB /* Build configuration list for PBXNativeTarget "Semaphore NotifierTests" */;
+			buildPhases = (
+				3B7B560E162F0BF500D7CDCB /* Sources */,
+				3B7B560F162F0BF500D7CDCB /* Frameworks */,
+				3B7B5610162F0BF500D7CDCB /* Resources */,
+				3B7B5611162F0BF500D7CDCB /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3B7B5618162F0BF500D7CDCB /* PBXTargetDependency */,
+			);
+			name = "Semaphore NotifierTests";
+			productName = "Semaphore NotifierTests";
+			productReference = 3B7B5613162F0BF500D7CDCB /* Semaphore NotifierTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3B7B55E9162F0BF500D7CDCB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "David Rouchy";
+			};
+			buildConfigurationList = 3B7B55EC162F0BF500D7CDCB /* Build configuration list for PBXProject "Semaphore Notifier" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3B7B55E7162F0BF500D7CDCB;
+			productRefGroup = 3B7B55F3162F0BF500D7CDCB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3B7B55F1162F0BF500D7CDCB /* Semaphore Notifier */,
+				3B7B5612162F0BF500D7CDCB /* Semaphore NotifierTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3B7B55F0162F0BF500D7CDCB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B7B5601162F0BF500D7CDCB /* InfoPlist.strings in Resources */,
+				3B7B5607162F0BF500D7CDCB /* Credits.rtf in Resources */,
+				3B7B560D162F0BF500D7CDCB /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B7B5610162F0BF500D7CDCB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B7B561E162F0BF500D7CDCB /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3B7B5611162F0BF500D7CDCB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3B7B55EE162F0BF500D7CDCB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B7B5603162F0BF500D7CDCB /* main.m in Sources */,
+				3B7B560A162F0BF500D7CDCB /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B7B560E162F0BF500D7CDCB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B7B5621162F0BF500D7CDCB /* Semaphore_NotifierTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3B7B5618162F0BF500D7CDCB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3B7B55F1162F0BF500D7CDCB /* Semaphore Notifier */;
+			targetProxy = 3B7B5617162F0BF500D7CDCB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3B7B55FF162F0BF500D7CDCB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B7B5600162F0BF500D7CDCB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3B7B5605162F0BF500D7CDCB /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B7B5606162F0BF500D7CDCB /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		3B7B560B162F0BF500D7CDCB /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B7B560C162F0BF500D7CDCB /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		3B7B561C162F0BF500D7CDCB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B7B561D162F0BF500D7CDCB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3B7B5622162F0BF500D7CDCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		3B7B5623162F0BF500D7CDCB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		3B7B5625162F0BF500D7CDCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Semaphore Notifier/Semaphore Notifier-Prefix.pch";
+				INFOPLIST_FILE = "Semaphore Notifier/Semaphore Notifier-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3B7B5626162F0BF500D7CDCB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Semaphore Notifier/Semaphore Notifier-Prefix.pch";
+				INFOPLIST_FILE = "Semaphore Notifier/Semaphore Notifier-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		3B7B5628162F0BF500D7CDCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Semaphore Notifier.app/Contents/MacOS/Semaphore Notifier";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Semaphore Notifier/Semaphore Notifier-Prefix.pch";
+				INFOPLIST_FILE = "Semaphore NotifierTests/Semaphore NotifierTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		3B7B5629162F0BF500D7CDCB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Semaphore Notifier.app/Contents/MacOS/Semaphore Notifier";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Semaphore Notifier/Semaphore Notifier-Prefix.pch";
+				INFOPLIST_FILE = "Semaphore NotifierTests/Semaphore NotifierTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3B7B55EC162F0BF500D7CDCB /* Build configuration list for PBXProject "Semaphore Notifier" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B7B5622162F0BF500D7CDCB /* Debug */,
+				3B7B5623162F0BF500D7CDCB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B7B5624162F0BF500D7CDCB /* Build configuration list for PBXNativeTarget "Semaphore Notifier" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B7B5625162F0BF500D7CDCB /* Debug */,
+				3B7B5626162F0BF500D7CDCB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3B7B5627162F0BF500D7CDCB /* Build configuration list for PBXNativeTarget "Semaphore NotifierTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B7B5628162F0BF500D7CDCB /* Debug */,
+				3B7B5629162F0BF500D7CDCB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3B7B55E9162F0BF500D7CDCB /* Project object */;
+}
