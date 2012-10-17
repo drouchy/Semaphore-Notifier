@@ -16,7 +16,11 @@
 		3B7B5615162F0BF500D7CDCB /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B7B5614162F0BF500D7CDCB /* SenTestingKit.framework */; };
 		3B7B5616162F0BF500D7CDCB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B7B55F6162F0BF500D7CDCB /* Cocoa.framework */; };
 		3B7B561E162F0BF500D7CDCB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B7B561C162F0BF500D7CDCB /* InfoPlist.strings */; };
-		3B7B5621162F0BF500D7CDCB /* Semaphore_NotifierTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7B5620162F0BF500D7CDCB /* Semaphore_NotifierTests.m */; };
+		3B7B5657162F0C5B00D7CDCB /* libExpecta-macosx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B7B5648162F0C5B00D7CDCB /* libExpecta-macosx.a */; };
+		3B7B5658162F0C5B00D7CDCB /* OCMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B7B564B162F0C5B00D7CDCB /* OCMock.framework */; };
+		3B7B5659162F0C5B00D7CDCB /* libSpecta-macosx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B7B564D162F0C5B00D7CDCB /* libSpecta-macosx.a */; };
+		3B7B565B162F0D2E00D7CDCB /* OCMock.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3B7B564B162F0C5B00D7CDCB /* OCMock.framework */; };
+		3B7B565E162F0D4A00D7CDCB /* ConfigurationSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7B565D162F0D4A00D7CDCB /* ConfigurationSpec.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +32,19 @@
 			remoteInfo = "Semaphore Notifier";
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3B7B565A162F0D2900D7CDCB /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				3B7B565B162F0D2E00D7CDCB /* OCMock.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3B7B55F2162F0BF500D7CDCB /* Semaphore Notifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Semaphore Notifier.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,8 +64,51 @@
 		3B7B5614162F0BF500D7CDCB /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		3B7B561B162F0BF500D7CDCB /* Semaphore NotifierTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Semaphore NotifierTests-Info.plist"; sourceTree = "<group>"; };
 		3B7B561D162F0BF500D7CDCB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		3B7B561F162F0BF500D7CDCB /* Semaphore_NotifierTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Semaphore_NotifierTests.h; sourceTree = "<group>"; };
-		3B7B5620162F0BF500D7CDCB /* Semaphore_NotifierTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Semaphore_NotifierTests.m; sourceTree = "<group>"; };
+		3B7B562B162F0C5B00D7CDCB /* EXPBackwardCompatibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPBackwardCompatibility.h; sourceTree = "<group>"; };
+		3B7B562C162F0C5B00D7CDCB /* EXPBlockDefinedMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPBlockDefinedMatcher.h; sourceTree = "<group>"; };
+		3B7B562D162F0C5B00D7CDCB /* EXPDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPDefines.h; sourceTree = "<group>"; };
+		3B7B562E162F0C5B00D7CDCB /* EXPDoubleTuple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPDoubleTuple.h; sourceTree = "<group>"; };
+		3B7B562F162F0C5B00D7CDCB /* Expecta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Expecta.h; sourceTree = "<group>"; };
+		3B7B5630162F0C5B00D7CDCB /* ExpectaSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpectaSupport.h; sourceTree = "<group>"; };
+		3B7B5631162F0C5B00D7CDCB /* EXPExpect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPExpect.h; sourceTree = "<group>"; };
+		3B7B5632162F0C5B00D7CDCB /* EXPFloatTuple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPFloatTuple.h; sourceTree = "<group>"; };
+		3B7B5633162F0C5B00D7CDCB /* EXPMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPMatcher.h; sourceTree = "<group>"; };
+		3B7B5634162F0C5B00D7CDCB /* EXPMatcherHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPMatcherHelpers.h; sourceTree = "<group>"; };
+		3B7B5635162F0C5B00D7CDCB /* EXPMatchers+beCloseTo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+beCloseTo.h"; sourceTree = "<group>"; };
+		3B7B5636162F0C5B00D7CDCB /* EXPMatchers+beFalsy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+beFalsy.h"; sourceTree = "<group>"; };
+		3B7B5637162F0C5B00D7CDCB /* EXPMatchers+beGreaterThan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+beGreaterThan.h"; sourceTree = "<group>"; };
+		3B7B5638162F0C5B00D7CDCB /* EXPMatchers+beGreaterThanOrEqualTo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+beGreaterThanOrEqualTo.h"; sourceTree = "<group>"; };
+		3B7B5639162F0C5B00D7CDCB /* EXPMatchers+beIdenticalTo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+beIdenticalTo.h"; sourceTree = "<group>"; };
+		3B7B563A162F0C5B00D7CDCB /* EXPMatchers+beInstanceOf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+beInstanceOf.h"; sourceTree = "<group>"; };
+		3B7B563B162F0C5B00D7CDCB /* EXPMatchers+beInTheRangeOf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+beInTheRangeOf.h"; sourceTree = "<group>"; };
+		3B7B563C162F0C5B00D7CDCB /* EXPMatchers+beKindOf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+beKindOf.h"; sourceTree = "<group>"; };
+		3B7B563D162F0C5B00D7CDCB /* EXPMatchers+beLessThan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+beLessThan.h"; sourceTree = "<group>"; };
+		3B7B563E162F0C5B00D7CDCB /* EXPMatchers+beLessThanOrEqualTo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+beLessThanOrEqualTo.h"; sourceTree = "<group>"; };
+		3B7B563F162F0C5B00D7CDCB /* EXPMatchers+beNil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+beNil.h"; sourceTree = "<group>"; };
+		3B7B5640162F0C5B00D7CDCB /* EXPMatchers+beSubclassOf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+beSubclassOf.h"; sourceTree = "<group>"; };
+		3B7B5641162F0C5B00D7CDCB /* EXPMatchers+beTruthy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+beTruthy.h"; sourceTree = "<group>"; };
+		3B7B5642162F0C5B00D7CDCB /* EXPMatchers+contain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+contain.h"; sourceTree = "<group>"; };
+		3B7B5643162F0C5B00D7CDCB /* EXPMatchers+equal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+equal.h"; sourceTree = "<group>"; };
+		3B7B5644162F0C5B00D7CDCB /* EXPMatchers+haveCountOf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+haveCountOf.h"; sourceTree = "<group>"; };
+		3B7B5645162F0C5B00D7CDCB /* EXPMatchers+raise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+raise.h"; sourceTree = "<group>"; };
+		3B7B5646162F0C5B00D7CDCB /* EXPMatchers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPMatchers.h; sourceTree = "<group>"; };
+		3B7B5647162F0C5B00D7CDCB /* EXPUnsupportedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPUnsupportedObject.h; sourceTree = "<group>"; };
+		3B7B5648162F0C5B00D7CDCB /* libExpecta-macosx.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libExpecta-macosx.a"; sourceTree = "<group>"; };
+		3B7B5649162F0C5B00D7CDCB /* NSObject+Expecta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Expecta.h"; sourceTree = "<group>"; };
+		3B7B564A162F0C5B00D7CDCB /* NSValue+Expecta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValue+Expecta.h"; sourceTree = "<group>"; };
+		3B7B564B162F0C5B00D7CDCB /* OCMock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OCMock.framework; sourceTree = "<group>"; };
+		3B7B564D162F0C5B00D7CDCB /* libSpecta-macosx.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libSpecta-macosx.a"; sourceTree = "<group>"; };
+		3B7B564E162F0C5B00D7CDCB /* Specta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Specta.h; sourceTree = "<group>"; };
+		3B7B564F162F0C5B00D7CDCB /* SpectaSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpectaSupport.h; sourceTree = "<group>"; };
+		3B7B5650162F0C5B00D7CDCB /* SpectaTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpectaTypes.h; sourceTree = "<group>"; };
+		3B7B5651162F0C5B00D7CDCB /* SPTExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPTExample.h; sourceTree = "<group>"; };
+		3B7B5652162F0C5B00D7CDCB /* SPTExampleGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPTExampleGroup.h; sourceTree = "<group>"; };
+		3B7B5653162F0C5B00D7CDCB /* SPTSenTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPTSenTestCase.h; sourceTree = "<group>"; };
+		3B7B5654162F0C5B00D7CDCB /* SPTSenTestInvocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPTSenTestInvocation.h; sourceTree = "<group>"; };
+		3B7B5655162F0C5B00D7CDCB /* SPTSharedExampleGroups.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPTSharedExampleGroups.h; sourceTree = "<group>"; };
+		3B7B5656162F0C5B00D7CDCB /* SPTSpec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPTSpec.h; sourceTree = "<group>"; };
+		3B7B565D162F0D4A00D7CDCB /* ConfigurationSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigurationSpec.m; sourceTree = "<group>"; };
+		3B7B565F162F0D7A00D7CDCB /* SpecHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpecHelper.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +126,9 @@
 			files = (
 				3B7B5615162F0BF500D7CDCB /* SenTestingKit.framework in Frameworks */,
 				3B7B5616162F0BF500D7CDCB /* Cocoa.framework in Frameworks */,
+				3B7B5657162F0C5B00D7CDCB /* libExpecta-macosx.a in Frameworks */,
+				3B7B5658162F0C5B00D7CDCB /* OCMock.framework in Frameworks */,
+				3B7B5659162F0C5B00D7CDCB /* libSpecta-macosx.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,7 +143,9 @@
 				3B7B55F5162F0BF500D7CDCB /* Frameworks */,
 				3B7B55F3162F0BF500D7CDCB /* Products */,
 			);
+			indentWidth = 2;
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		3B7B55F3162F0BF500D7CDCB /* Products */ = {
 			isa = PBXGroup;
@@ -94,6 +159,9 @@
 		3B7B55F5162F0BF500D7CDCB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3B7B562A162F0C5B00D7CDCB /* Expecta */,
+				3B7B564B162F0C5B00D7CDCB /* OCMock.framework */,
+				3B7B564C162F0C5B00D7CDCB /* Specta */,
 				3B7B55F6162F0BF500D7CDCB /* Cocoa.framework */,
 				3B7B5614162F0BF500D7CDCB /* SenTestingKit.framework */,
 				3B7B55F8162F0BF500D7CDCB /* Other Frameworks */,
@@ -137,9 +205,8 @@
 		3B7B5619162F0BF500D7CDCB /* Semaphore NotifierTests */ = {
 			isa = PBXGroup;
 			children = (
-				3B7B561F162F0BF500D7CDCB /* Semaphore_NotifierTests.h */,
-				3B7B5620162F0BF500D7CDCB /* Semaphore_NotifierTests.m */,
 				3B7B561A162F0BF500D7CDCB /* Supporting Files */,
+				3B7B565D162F0D4A00D7CDCB /* ConfigurationSpec.m */,
 			);
 			path = "Semaphore NotifierTests";
 			sourceTree = "<group>";
@@ -149,8 +216,65 @@
 			children = (
 				3B7B561B162F0BF500D7CDCB /* Semaphore NotifierTests-Info.plist */,
 				3B7B561C162F0BF500D7CDCB /* InfoPlist.strings */,
+				3B7B565F162F0D7A00D7CDCB /* SpecHelper.h */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3B7B562A162F0C5B00D7CDCB /* Expecta */ = {
+			isa = PBXGroup;
+			children = (
+				3B7B562B162F0C5B00D7CDCB /* EXPBackwardCompatibility.h */,
+				3B7B562C162F0C5B00D7CDCB /* EXPBlockDefinedMatcher.h */,
+				3B7B562D162F0C5B00D7CDCB /* EXPDefines.h */,
+				3B7B562E162F0C5B00D7CDCB /* EXPDoubleTuple.h */,
+				3B7B562F162F0C5B00D7CDCB /* Expecta.h */,
+				3B7B5630162F0C5B00D7CDCB /* ExpectaSupport.h */,
+				3B7B5631162F0C5B00D7CDCB /* EXPExpect.h */,
+				3B7B5632162F0C5B00D7CDCB /* EXPFloatTuple.h */,
+				3B7B5633162F0C5B00D7CDCB /* EXPMatcher.h */,
+				3B7B5634162F0C5B00D7CDCB /* EXPMatcherHelpers.h */,
+				3B7B5635162F0C5B00D7CDCB /* EXPMatchers+beCloseTo.h */,
+				3B7B5636162F0C5B00D7CDCB /* EXPMatchers+beFalsy.h */,
+				3B7B5637162F0C5B00D7CDCB /* EXPMatchers+beGreaterThan.h */,
+				3B7B5638162F0C5B00D7CDCB /* EXPMatchers+beGreaterThanOrEqualTo.h */,
+				3B7B5639162F0C5B00D7CDCB /* EXPMatchers+beIdenticalTo.h */,
+				3B7B563A162F0C5B00D7CDCB /* EXPMatchers+beInstanceOf.h */,
+				3B7B563B162F0C5B00D7CDCB /* EXPMatchers+beInTheRangeOf.h */,
+				3B7B563C162F0C5B00D7CDCB /* EXPMatchers+beKindOf.h */,
+				3B7B563D162F0C5B00D7CDCB /* EXPMatchers+beLessThan.h */,
+				3B7B563E162F0C5B00D7CDCB /* EXPMatchers+beLessThanOrEqualTo.h */,
+				3B7B563F162F0C5B00D7CDCB /* EXPMatchers+beNil.h */,
+				3B7B5640162F0C5B00D7CDCB /* EXPMatchers+beSubclassOf.h */,
+				3B7B5641162F0C5B00D7CDCB /* EXPMatchers+beTruthy.h */,
+				3B7B5642162F0C5B00D7CDCB /* EXPMatchers+contain.h */,
+				3B7B5643162F0C5B00D7CDCB /* EXPMatchers+equal.h */,
+				3B7B5644162F0C5B00D7CDCB /* EXPMatchers+haveCountOf.h */,
+				3B7B5645162F0C5B00D7CDCB /* EXPMatchers+raise.h */,
+				3B7B5646162F0C5B00D7CDCB /* EXPMatchers.h */,
+				3B7B5647162F0C5B00D7CDCB /* EXPUnsupportedObject.h */,
+				3B7B5648162F0C5B00D7CDCB /* libExpecta-macosx.a */,
+				3B7B5649162F0C5B00D7CDCB /* NSObject+Expecta.h */,
+				3B7B564A162F0C5B00D7CDCB /* NSValue+Expecta.h */,
+			);
+			path = Expecta;
+			sourceTree = "<group>";
+		};
+		3B7B564C162F0C5B00D7CDCB /* Specta */ = {
+			isa = PBXGroup;
+			children = (
+				3B7B564D162F0C5B00D7CDCB /* libSpecta-macosx.a */,
+				3B7B564E162F0C5B00D7CDCB /* Specta.h */,
+				3B7B564F162F0C5B00D7CDCB /* SpectaSupport.h */,
+				3B7B5650162F0C5B00D7CDCB /* SpectaTypes.h */,
+				3B7B5651162F0C5B00D7CDCB /* SPTExample.h */,
+				3B7B5652162F0C5B00D7CDCB /* SPTExampleGroup.h */,
+				3B7B5653162F0C5B00D7CDCB /* SPTSenTestCase.h */,
+				3B7B5654162F0C5B00D7CDCB /* SPTSenTestInvocation.h */,
+				3B7B5655162F0C5B00D7CDCB /* SPTSharedExampleGroups.h */,
+				3B7B5656162F0C5B00D7CDCB /* SPTSpec.h */,
+			);
+			path = Specta;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,6 +304,7 @@
 				3B7B560E162F0BF500D7CDCB /* Sources */,
 				3B7B560F162F0BF500D7CDCB /* Frameworks */,
 				3B7B5610162F0BF500D7CDCB /* Resources */,
+				3B7B565A162F0D2900D7CDCB /* CopyFiles */,
 				3B7B5611162F0BF500D7CDCB /* ShellScript */,
 			);
 			buildRules = (
@@ -270,7 +395,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B7B5621162F0BF500D7CDCB /* Semaphore_NotifierTests.m in Sources */,
+				3B7B565E162F0D4A00D7CDCB /* ConfigurationSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,10 +525,19 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Semaphore Notifier.app/Contents/MacOS/Semaphore Notifier";
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Semaphore Notifier/Semaphore Notifier-Prefix.pch";
 				INFOPLIST_FILE = "Semaphore NotifierTests/Semaphore NotifierTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Expecta\"",
+					"\"$(SRCROOT)/Specta\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
@@ -415,10 +549,19 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Semaphore Notifier.app/Contents/MacOS/Semaphore Notifier";
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Semaphore Notifier/Semaphore Notifier-Prefix.pch";
 				INFOPLIST_FILE = "Semaphore NotifierTests/Semaphore NotifierTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Expecta\"",
+					"\"$(SRCROOT)/Specta\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
