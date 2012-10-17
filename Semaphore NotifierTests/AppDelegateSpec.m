@@ -8,64 +8,32 @@
 
 #import "AppDelegate.h"
 #import "SpecHelper.h"
+#import "Configuration.h"
 
 SpecBegin(AppDelegateSpec)
 
 describe(@"AppDelegate", ^{
   __block AppDelegate *delegate ;
-  __block NSApplication *application;
   
   beforeEach(^{
-    application = [NSApplication sharedApplication];
-    [NSBundle loadNibNamed:@"MainMenu" owner:application];
-    delegate = [application delegate] ;
+    delegate = [[AppDelegate alloc] init] ;
   }) ;
 
-  afterEach(^{
-    [[NSStatusBar systemStatusBar] removeStatusItem:delegate.statusItem] ;
-  }) ;
-
-  describe(@"awakeFromNib", ^{
+  describe(@"properties", ^{
     beforeEach(^{
-      [delegate applicationDidFinishLaunching: nil] ;
     }) ;
 
-    it(@"does not have a window", ^{
-      expect(delegate.window).to.beNil() ;
+    it(@"has a default configuration", ^{
+      expect(delegate.configuration).toNot.beNil() ;
     }) ;
 
-    it(@"links the status menu", ^{
-      expect(delegate.statusMenu).toNot.beNil() ;
-    }) ;
+    it(@"has a configuration", ^{
+      Configuration *configuration = [[Configuration alloc] init] ;
+      delegate.configuration = configuration ;
 
-    it(@"creates a status bar item", ^{
-      expect(delegate.statusItem).toNot.beNil() ;
+      expect(delegate.configuration).to.equal(configuration) ;
     }) ;
   }) ;
 
-  describe(@"statusBarItem", ^{
-    __block NSStatusItem *statusItem ;
-    
-    beforeEach(^{
-      [delegate applicationDidFinishLaunching: nil] ;
-      statusItem = delegate.statusItem ;
-    }) ;
-
-    it(@"has the title 'CI'", ^{
-      expect(statusItem.title).to.equal(@"CI") ;
-    }) ;
-
-    it(@"has the image 'statusIconTemplate'", ^{
-      expect(statusItem.image.name).to.equal(@"statusIconTemplate") ;
-    }) ;
-
-    it(@"is in highlight mode", ^{
-      expect(statusItem.highlightMode).to.beTruthy() ;
-    }) ;
-
-    it(@"is linked to the application status menu", ^{
-      expect(statusItem.menu).to.beIdenticalTo(delegate.statusMenu) ;
-    }) ;
-  }) ;
 });
 SpecEnd

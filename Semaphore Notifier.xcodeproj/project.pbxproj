@@ -20,8 +20,7 @@
 		3B7B5658162F0C5B00D7CDCB /* OCMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B7B564B162F0C5B00D7CDCB /* OCMock.framework */; };
 		3B7B5659162F0C5B00D7CDCB /* libSpecta-macosx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B7B564D162F0C5B00D7CDCB /* libSpecta-macosx.a */; };
 		3B7B565B162F0D2E00D7CDCB /* OCMock.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3B7B564B162F0C5B00D7CDCB /* OCMock.framework */; };
-		3B7B565E162F0D4A00D7CDCB /* ConfigurationSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7B565D162F0D4A00D7CDCB /* ConfigurationSpec.m */; };
-		3B7B5662162F134500D7CDCB /* AppDelegateSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7B5661162F134500D7CDCB /* AppDelegateSpec.m */; };
+		3B7B5662162F134500D7CDCB /* AppDelegateLoadingSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7B5661162F134500D7CDCB /* AppDelegateLoadingSpec.m */; };
 		3B7B5669162F1B2B00D7CDCB /* statusIconTemplate.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B7B5667162F1B2B00D7CDCB /* statusIconTemplate.png */; };
 		3B7B566A162F1B2B00D7CDCB /* statusIconTemplate.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B7B5667162F1B2B00D7CDCB /* statusIconTemplate.png */; };
 		3B7B566B162F1B2B00D7CDCB /* statusIconTemplate@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B7B5668162F1B2B00D7CDCB /* statusIconTemplate@2x.png */; };
@@ -30,6 +29,10 @@
 		3B9FCB74162F205C0013F015 /* Project.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9FCB73162F205C0013F015 /* Project.m */; };
 		3B9FCB75162F205C0013F015 /* Project.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9FCB73162F205C0013F015 /* Project.m */; };
 		3B9FCB78162F206A0013F015 /* ProjectSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9FCB77162F206A0013F015 /* ProjectSpec.m */; };
+		3B9FCB83162F23470013F015 /* AppDelegateSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9FCB82162F23470013F015 /* AppDelegateSpec.m */; };
+		3B9FCB86162F25540013F015 /* Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9FCB85162F25540013F015 /* Configuration.m */; };
+		3B9FCB87162F25540013F015 /* Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9FCB85162F25540013F015 /* Configuration.m */; };
+		3B9FCB8A162F256C0013F015 /* ConfigurationSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9FCB89162F256C0013F015 /* ConfigurationSpec.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,15 +119,18 @@
 		3B7B5654162F0C5B00D7CDCB /* SPTSenTestInvocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPTSenTestInvocation.h; sourceTree = "<group>"; };
 		3B7B5655162F0C5B00D7CDCB /* SPTSharedExampleGroups.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPTSharedExampleGroups.h; sourceTree = "<group>"; };
 		3B7B5656162F0C5B00D7CDCB /* SPTSpec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPTSpec.h; sourceTree = "<group>"; };
-		3B7B565D162F0D4A00D7CDCB /* ConfigurationSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigurationSpec.m; sourceTree = "<group>"; };
 		3B7B565F162F0D7A00D7CDCB /* SpecHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpecHelper.h; sourceTree = "<group>"; };
-		3B7B5661162F134500D7CDCB /* AppDelegateSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegateSpec.m; sourceTree = "<group>"; };
+		3B7B5661162F134500D7CDCB /* AppDelegateLoadingSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegateLoadingSpec.m; sourceTree = "<group>"; };
 		3B7B5667162F1B2B00D7CDCB /* statusIconTemplate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = statusIconTemplate.png; sourceTree = "<group>"; };
 		3B7B5668162F1B2B00D7CDCB /* statusIconTemplate@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "statusIconTemplate@2x.png"; sourceTree = "<group>"; };
 		3B7B566E162F1BCD00D7CDCB /* StatusBarMenuSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusBarMenuSpec.m; sourceTree = "<group>"; };
 		3B9FCB72162F205C0013F015 /* Project.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Project.h; sourceTree = "<group>"; };
 		3B9FCB73162F205C0013F015 /* Project.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Project.m; sourceTree = "<group>"; };
 		3B9FCB77162F206A0013F015 /* ProjectSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectSpec.m; sourceTree = "<group>"; };
+		3B9FCB82162F23470013F015 /* AppDelegateSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegateSpec.m; sourceTree = "<group>"; };
+		3B9FCB84162F25540013F015 /* Configuration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Configuration.h; sourceTree = "<group>"; };
+		3B9FCB85162F25540013F015 /* Configuration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Configuration.m; sourceTree = "<group>"; };
+		3B9FCB89162F256C0013F015 /* ConfigurationSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigurationSpec.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,9 +231,9 @@
 			children = (
 				3B9FCB71162F204A0013F015 /* Models */,
 				3B7B561A162F0BF500D7CDCB /* Supporting Files */,
-				3B7B565D162F0D4A00D7CDCB /* ConfigurationSpec.m */,
-				3B7B5661162F134500D7CDCB /* AppDelegateSpec.m */,
+				3B7B5661162F134500D7CDCB /* AppDelegateLoadingSpec.m */,
 				3B7B566E162F1BCD00D7CDCB /* StatusBarMenuSpec.m */,
+				3B9FCB82162F23470013F015 /* AppDelegateSpec.m */,
 			);
 			path = "Semaphore NotifierTests";
 			sourceTree = "<group>";
@@ -312,6 +318,8 @@
 			children = (
 				3B9FCB72162F205C0013F015 /* Project.h */,
 				3B9FCB73162F205C0013F015 /* Project.m */,
+				3B9FCB84162F25540013F015 /* Configuration.h */,
+				3B9FCB85162F25540013F015 /* Configuration.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -320,6 +328,7 @@
 			isa = PBXGroup;
 			children = (
 				3B9FCB77162F206A0013F015 /* ProjectSpec.m */,
+				3B9FCB89162F256C0013F015 /* ConfigurationSpec.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -440,6 +449,7 @@
 				3B7B5603162F0BF500D7CDCB /* main.m in Sources */,
 				3B7B560A162F0BF500D7CDCB /* AppDelegate.m in Sources */,
 				3B9FCB74162F205C0013F015 /* Project.m in Sources */,
+				3B9FCB86162F25540013F015 /* Configuration.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,11 +457,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B7B565E162F0D4A00D7CDCB /* ConfigurationSpec.m in Sources */,
-				3B7B5662162F134500D7CDCB /* AppDelegateSpec.m in Sources */,
+				3B7B5662162F134500D7CDCB /* AppDelegateLoadingSpec.m in Sources */,
 				3B7B566F162F1BCD00D7CDCB /* StatusBarMenuSpec.m in Sources */,
 				3B9FCB75162F205C0013F015 /* Project.m in Sources */,
 				3B9FCB78162F206A0013F015 /* ProjectSpec.m in Sources */,
+				3B9FCB83162F23470013F015 /* AppDelegateSpec.m in Sources */,
+				3B9FCB87162F25540013F015 /* Configuration.m in Sources */,
+				3B9FCB8A162F256C0013F015 /* ConfigurationSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,12 +11,21 @@
 @implementation AppDelegate
 
 @synthesize statusItem = _statusItem ;
+@synthesize configuration = _configuration ;
 
 - (void)dealloc {
   [super dealloc];
 }
 
+- (id) init {
+  if((self = [super init])) {
+    self.configuration = [[Configuration alloc] init] ;
+  }
+  return self ;
+}
+
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+
 }
 
 - (void) awakeFromNib {
