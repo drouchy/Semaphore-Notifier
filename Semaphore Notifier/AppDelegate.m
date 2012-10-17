@@ -10,14 +10,26 @@
 
 @implementation AppDelegate
 
-- (void)dealloc
-{
-    [super dealloc];
+@synthesize statusItem = _statusItem ;
+
+- (void)dealloc {
+  [super dealloc];
 }
 
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
-{
-    // Insert code here to initialize your application
+- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
 }
 
+- (void) awakeFromNib {
+  self.statusItem = [self createStatusItem] ;
+}
+
+- (NSStatusItem *) createStatusItem {
+  NSStatusItem *statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength: NSVariableStatusItemLength] ;
+  statusItem.highlightMode = YES ;
+  statusItem.title = @"CI" ;
+  statusItem.image = [NSImage imageNamed: @"statusIconTemplate"] ;
+  statusItem.menu = self.statusMenu ;
+  
+  return statusItem ;
+}
 @end
