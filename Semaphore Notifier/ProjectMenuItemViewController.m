@@ -23,4 +23,16 @@
   return self;
 }
 
+- (void) awakeFromNib {
+  [self showIndicator] ;
+}
+
+- (void) showIndicator {
+  [self.loadingIndicator performSelector:@selector(startAnimation:)
+                              withObject:self
+                              afterDelay:0.0
+                                 inModes:[NSArray
+                         arrayWithObject:NSEventTrackingRunLoopMode]];
+}
+
 @end

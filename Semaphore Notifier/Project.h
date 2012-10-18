@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SMXObject.h"
 
-@interface Project : NSObject
+@interface Project : SMXObject
 
 @property (copy, nonatomic) NSString *name ;
 @property (copy, nonatomic) NSString *apiKey ;

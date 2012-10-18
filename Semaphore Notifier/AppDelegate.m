@@ -11,6 +11,8 @@
 #import "ConfigurationPreferencesViewController.h"
 #import "ProjectsPreferencesViewController.h"
 #import "AdvancedPreferencesViewController.h"
+#import "Project.h"
+#import "ProjectMenuItemViewController.h"
 
 @implementation AppDelegate
 
@@ -20,6 +22,16 @@
 
 - (void)dealloc {
   [super dealloc];
+}
+
++ (void) initialize {
+  NSDictionary *defaults = @{
+    @"authKey": @"",
+    @"projects": [NSKeyedArchiver archivedDataWithRootObject:[NSMutableArray array]]
+  } ;
+  
+  [[NSUserDefaults standardUserDefaults] registerDefaults: [defaults mutableCopy]] ;
+  NSLog(@"registered defaults %@", defaults) ;
 }
 
 - (id) init {
@@ -35,6 +47,7 @@
 
 - (void) awakeFromNib {
   self.statusItem = [self createStatusItem] ;
+  [self loadProjects] ;
 }
 
 - (NSStatusItem *) createStatusItem {
@@ -45,6 +58,10 @@
   statusItem.menu = self.statusMenu ;
   
   return statusItem ;
+}
+
+- (void) loadProjects {
+
 }
 
 - (void) launchPreferences:(id) sender {

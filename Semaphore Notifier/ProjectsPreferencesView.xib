@@ -23,6 +23,7 @@
 			<string>NSTableHeaderView</string>
 			<string>NSTableView</string>
 			<string>NSTextFieldCell</string>
+			<string>NSUserDefaultsController</string>
 		</array>
 		<array key="IBDocument.PluginDependencies">
 			<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -337,6 +338,9 @@
 				<bool key="NSFilterRestrictsInsertion">YES</bool>
 				<bool key="NSClearsFilterPredicateOnInsertion">YES</bool>
 			</object>
+			<object class="NSUserDefaultsController" id="339133668">
+				<bool key="NSSharedInstance">YES</bool>
+			</object>
 		</array>
 		<object class="IBObjectContainer" key="IBDocument.Objects">
 			<array class="NSMutableArray" key="connectionRecords">
@@ -347,22 +351,6 @@
 						<reference key="destination" ref="1005"/>
 					</object>
 					<int key="connectionID">2</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBBindingConnection" key="connection">
-						<string key="label">contentArray: configuration.projects</string>
-						<reference key="source" ref="46873939"/>
-						<reference key="destination" ref="1001"/>
-						<object class="NSNibBindingConnector" key="connector">
-							<reference key="NSSource" ref="46873939"/>
-							<reference key="NSDestination" ref="1001"/>
-							<string key="NSLabel">contentArray: configuration.projects</string>
-							<string key="NSBinding">contentArray</string>
-							<string key="NSKeyPath">configuration.projects</string>
-							<int key="NSNibBindingConnectorVersion">2</int>
-						</object>
-					</object>
-					<int key="connectionID">49</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
@@ -379,6 +367,26 @@
 						<reference key="destination" ref="797506086"/>
 					</object>
 					<int key="connectionID">65</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">contentArray: values.projects</string>
+						<reference key="source" ref="46873939"/>
+						<reference key="destination" ref="339133668"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="46873939"/>
+							<reference key="NSDestination" ref="339133668"/>
+							<string key="NSLabel">contentArray: values.projects</string>
+							<string key="NSBinding">contentArray</string>
+							<string key="NSKeyPath">values.projects</string>
+							<dictionary key="NSOptions">
+								<boolean value="YES" key="NSHandlesContentAsCompoundValue"/>
+								<string key="NSValueTransformerName">NSKeyedUnarchiveFromData</string>
+							</dictionary>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">75</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
@@ -475,7 +483,6 @@
 						<int key="objectID">1</int>
 						<reference key="object" ref="1005"/>
 						<array class="NSMutableArray" key="children">
-							<reference ref="50134436"/>
 							<object class="IBNSLayoutConstraint" id="563154596">
 								<reference key="firstItem" ref="797506086"/>
 								<int key="firstAttribute">11</int>
@@ -606,6 +613,7 @@
 							</object>
 							<reference ref="256843031"/>
 							<reference ref="797506086"/>
+							<reference ref="50134436"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -741,6 +749,11 @@
 						<reference key="object" ref="648732742"/>
 						<reference key="parent" ref="1005"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">71</int>
+						<reference key="object" ref="339133668"/>
+						<reference key="parent" ref="0"/>
+					</object>
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
@@ -781,6 +794,7 @@
 				<string key="5.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="6.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="7.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="71.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="8.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="9.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 			</dictionary>
@@ -788,7 +802,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">70</int>
+			<int key="maxID">75</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
