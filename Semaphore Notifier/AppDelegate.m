@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "MASPreferencesWindowController.h"
 #import "ConfigurationPreferencesViewController.h"
+#import "ProjectsPreferencesViewController.h"
+#import "AdvancedPreferencesViewController.h"
 
 @implementation AppDelegate
 
@@ -28,7 +30,7 @@
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-  [[NSApplication sharedApplication] activateIgnoringOtherApps:NO];
+  [[NSApplication sharedApplication] activateIgnoringOtherApps:YES];
 }
 
 - (void) awakeFromNib {
@@ -47,8 +49,13 @@
 
 - (void) launchPreferences:(id) sender {
   NSLog(@"launchPreferences") ;
+
   if(! self.preferencesController) {
-    NSArray *controllers = @[ [ConfigurationPreferencesViewController controllerForConfiguration: self.configuration]] ;
+    NSArray *controllers = @[
+                                [ConfigurationPreferencesViewController controllerForConfiguration: self.configuration],
+                                [ProjectsPreferencesViewController controllerForConfiguration: self.configuration],
+                                [AdvancedPreferencesViewController controllerForConfiguration: self.configuration]
+                            ] ;
     self.preferencesController = [[MASPreferencesWindowController alloc] initWithViewControllers:controllers title: @"Preferences"] ;
   }
   [self.preferencesController showWindow:nil] ;

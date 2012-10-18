@@ -10,6 +10,8 @@
 #import "AppDelegate.h"
 #import "MASPreferencesWindowController.h"
 #import "ConfigurationPreferencesViewController.h"
+#import "ProjectsPreferencesViewController.h"
+#import "AdvancedPreferencesViewController.h"
 
 @interface AppDelegate()
 - (void) launchPreferences:(id) sender ;
@@ -64,7 +66,22 @@ describe(@"AppDelegate", ^{
     // Same thing here
     pending(@"creates a preference window with e configuration view controller", ^{
       id viewController = ((MASPreferencesWindowController *) delegate.preferencesController).viewControllers ;
+
       expect(viewController[0]).to.beKindOf([ConfigurationPreferencesViewController class]) ;
+    }) ;
+
+    // Same thing here
+    pending(@"creates a preference window with e configuration view controller", ^{
+      id viewController = ((MASPreferencesWindowController *) delegate.preferencesController).viewControllers ;
+      
+      expect(viewController[1]).to.beKindOf([ProjectsPreferencesViewController class]) ;
+    }) ;
+
+    // Same thing here
+    pending(@"creates a preference window with e configuration view controller", ^{
+      id viewController = ((MASPreferencesWindowController *) delegate.preferencesController).viewControllers ;
+      
+      expect(viewController[2]).to.beKindOf([AdvancedPreferencesViewController class]) ;
     }) ;
 
     it(@"does not re-create the controller, it memoizes it", ^{

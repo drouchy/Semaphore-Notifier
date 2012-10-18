@@ -8,6 +8,7 @@
 
 #import "SpecHelper.h"
 #import "ConfigurationPreferencesViewController.h"
+#import "PreferencesViewControllerSharedExamples.h"
 
 @interface ConfigurationPreferencesViewController()
 - (NSString *) identifier ;
@@ -27,42 +28,14 @@ describe(@"ConfigurationPreferenceViewController", ^{
 
     controller.configuration = configuration  ;
   }) ;
-  
-  describe(@"init", ^{
-    it(@"has a configuration", ^{
-      expect(controller.configuration).to.beIdenticalTo(configuration) ;
-    }) ;
-  }) ;
 
-  describe(@"controllerForConfiguration", ^{
-    
-    it(@"creates a controller", ^{
-      id created = [ConfigurationPreferencesViewController controllerForConfiguration: configuration] ;
+  itBehavesLike(@"a preferences view controller", @{ @"controllerClass": [ConfigurationPreferencesViewController class]}) ;
 
-      expect(created).to.beKindOf([ConfigurationPreferencesViewController class]) ;
-    }) ;
-
-    it(@"links it with the configuration", ^{
-      id created = [ConfigurationPreferencesViewController controllerForConfiguration: configuration] ;
-
-      expect([created configuration]).to.beIdenticalTo(configuration) ;
-    }) ;
-
-    it(@"creates one configuration preferences view controller", ^{}) ;
-  }) ;
-
-  describe(@"MASPreferencesViewController protocol", ^{
-    it(@"has a identifier", ^{
-      expect([controller identifier]).to.equal(@"GeneralPreferences") ;
-    }) ;
-
-    it(@"has a toolbar item image", ^{
-      expect([controller toolbarItemImage].name).to.equal(@"NSPreferencesGeneral") ;
-    }) ;
-
-    it(@"has a toolbar item label", ^{
-      expect([controller toolbarItemLabel]).to.equal(@"General") ;
-    }) ;
-  }) ;
+  itBehavesLike(@"a MASPreferences controller", @{
+                      @"controllerClass": [ConfigurationPreferencesViewController class],
+                      @"identifier": @"GeneralPreferences",
+                      @"toolbarItemImage": @"NSPreferencesGeneral",
+                      @"toolbarItemLabel": @"General"
+                    }) ;
 }) ;
 SpecEnd

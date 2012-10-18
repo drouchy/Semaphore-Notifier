@@ -16,7 +16,7 @@
 
 - (id)init
 {
-    self = [super initWithNibName:@"ConfigurationPreferenceView" bundle: [NSBundle bundleForClass: [self class]]];
+    self = [super initWithNibName:@"ConfigurationPreferencesView" bundle: [NSBundle bundleForClass: [self class]]];
     if (self) {
         // Initialization code here.
     }
@@ -42,7 +42,7 @@
 }
 
 - (NSString *)toolbarItemLabel {
-  return NSLocalizedString(@"General", @"Toolbar item name for the General preference pane");
+  return @"General";
 }
 
 @end
