@@ -14,8 +14,6 @@
 
 @implementation ProjectsPreferencesViewController
 
-@synthesize configuration = _configuration ;
-
 - (id)init
 {
   self = [super initWithNibName:@"ProjectsPreferencesView" bundle: [NSBundle bundleForClass: [self class]]];
@@ -26,9 +24,8 @@
   return self;
 }
 
-+ (id) controllerForConfiguration: (Configuration *) aConfiguration {
++ (id) controller {
   ProjectsPreferencesViewController *controller = [[self alloc] init] ;
-  [controller setConfiguration: aConfiguration] ;
   return controller ;
 }
 

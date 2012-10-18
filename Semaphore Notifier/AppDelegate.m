@@ -17,7 +17,6 @@
 @implementation AppDelegate
 
 @synthesize statusItem = _statusItem ;
-@synthesize configuration = _configuration ;
 @synthesize preferencesController = _preferencesController ;
 
 - (void)dealloc {
@@ -36,7 +35,6 @@
 
 - (id) init {
   if((self = [super init])) {
-    self.configuration = [[Configuration alloc] init] ;
   }
   return self ;
 }
@@ -69,9 +67,9 @@
 
   if(! self.preferencesController) {
     NSArray *controllers = @[
-                                [ConfigurationPreferencesViewController controllerForConfiguration: self.configuration],
-                                [ProjectsPreferencesViewController controllerForConfiguration: self.configuration],
-                                [AdvancedPreferencesViewController controllerForConfiguration: self.configuration]
+                                [ConfigurationPreferencesViewController controller],
+                                [ProjectsPreferencesViewController controller],
+                                [AdvancedPreferencesViewController controller]
                             ] ;
     self.preferencesController = [[MASPreferencesWindowController alloc] initWithViewControllers:controllers title: @"Preferences"] ;
   }

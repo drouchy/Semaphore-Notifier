@@ -14,8 +14,6 @@
 
 @implementation AdvancedPreferencesViewController
 
-@synthesize configuration = _configuration ;
-
 - (id)init {
   self = [super initWithNibName:@"AdvancedPreferencesView" bundle: [NSBundle bundleForClass: [self class]]];
   if (self) {
@@ -25,9 +23,8 @@
   return self;
 }
 
-+ (id) controllerForConfiguration: (Configuration *) aConfiguration {
++ (id) controller {
   AdvancedPreferencesViewController *controller = [[self alloc] init] ;
-  [controller setConfiguration: aConfiguration] ;
   return controller ;
 }
 

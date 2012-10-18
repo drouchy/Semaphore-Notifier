@@ -38,8 +38,6 @@
 		3B9FCB75162F205C0013F015 /* Project.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9FCB73162F205C0013F015 /* Project.m */; };
 		3B9FCB78162F206A0013F015 /* ProjectSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9FCB77162F206A0013F015 /* ProjectSpec.m */; };
 		3B9FCB83162F23470013F015 /* AppDelegateSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9FCB82162F23470013F015 /* AppDelegateSpec.m */; };
-		3B9FCB86162F25540013F015 /* Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9FCB85162F25540013F015 /* Configuration.m */; };
-		3B9FCB87162F25540013F015 /* Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9FCB85162F25540013F015 /* Configuration.m */; };
 		3B9FCB8A162F256C0013F015 /* ConfigurationSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9FCB89162F256C0013F015 /* ConfigurationSpec.m */; };
 		3B9FCB99162F28CE0013F015 /* MASPreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B9FCB93162F28CE0013F015 /* MASPreferencesWindow.xib */; };
 		3B9FCB9A162F28CE0013F015 /* MASPreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B9FCB93162F28CE0013F015 /* MASPreferencesWindow.xib */; };
@@ -162,8 +160,6 @@
 		3B9FCB73162F205C0013F015 /* Project.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Project.m; sourceTree = "<group>"; };
 		3B9FCB77162F206A0013F015 /* ProjectSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectSpec.m; sourceTree = "<group>"; };
 		3B9FCB82162F23470013F015 /* AppDelegateSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegateSpec.m; sourceTree = "<group>"; };
-		3B9FCB84162F25540013F015 /* Configuration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Configuration.h; sourceTree = "<group>"; };
-		3B9FCB85162F25540013F015 /* Configuration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Configuration.m; sourceTree = "<group>"; };
 		3B9FCB89162F256C0013F015 /* ConfigurationSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigurationSpec.m; sourceTree = "<group>"; };
 		3B9FCB92162F28CE0013F015 /* MASPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASPreferencesViewController.h; sourceTree = "<group>"; };
 		3B9FCB93162F28CE0013F015 /* MASPreferencesWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MASPreferencesWindow.xib; sourceTree = "<group>"; };
@@ -403,8 +399,6 @@
 			children = (
 				3B9FCB72162F205C0013F015 /* Project.h */,
 				3B9FCB73162F205C0013F015 /* Project.m */,
-				3B9FCB84162F25540013F015 /* Configuration.h */,
-				3B9FCB85162F25540013F015 /* Configuration.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -607,7 +601,6 @@
 				3B7B5603162F0BF500D7CDCB /* main.m in Sources */,
 				3B7B560A162F0BF500D7CDCB /* AppDelegate.m in Sources */,
 				3B9FCB74162F205C0013F015 /* Project.m in Sources */,
-				3B9FCB86162F25540013F015 /* Configuration.m in Sources */,
 				3B9FCB9B162F28CE0013F015 /* MASPreferencesWindowController.m in Sources */,
 				3B9FCBA4162F295E0013F015 /* ConfigurationPreferencesViewController.m in Sources */,
 				3B9FCBB3163055CE0013F015 /* ProjectsPreferencesViewController.m in Sources */,
@@ -626,7 +619,6 @@
 				3B9FCB75162F205C0013F015 /* Project.m in Sources */,
 				3B9FCB78162F206A0013F015 /* ProjectSpec.m in Sources */,
 				3B9FCB83162F23470013F015 /* AppDelegateSpec.m in Sources */,
-				3B9FCB87162F25540013F015 /* Configuration.m in Sources */,
 				3B9FCB8A162F256C0013F015 /* ConfigurationSpec.m in Sources */,
 				3B9FCB9C162F28CE0013F015 /* MASPreferencesWindowController.m in Sources */,
 				3B9FCBA5162F295E0013F015 /* ConfigurationPreferencesViewController.m in Sources */,

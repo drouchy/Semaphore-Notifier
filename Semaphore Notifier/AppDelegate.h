@@ -7,7 +7,6 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "Configuration.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
@@ -17,5 +16,4 @@
 
 @property (nonatomic, retain) NSWindowController *preferencesController ;
 
-@property (strong, nonatomic) Configuration *configuration ;
 @end
