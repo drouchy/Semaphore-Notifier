@@ -14,6 +14,8 @@
 
 @implementation AdvancedPreferencesViewController
 
+@synthesize configuration = _configuration ;
+
 - (id)init {
   self = [super initWithNibName:@"AdvancedPreferencesView" bundle: [NSBundle bundleForClass: [self class]]];
   if (self) {

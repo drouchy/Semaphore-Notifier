@@ -11,6 +11,6 @@
 @interface Configuration : NSObject
 
 @property (assign) NSString *authKey ;
-@property (assign) NSArray *projects ;
+@property (readwrite, copy) NSMutableArray *projects ;
 
 @end

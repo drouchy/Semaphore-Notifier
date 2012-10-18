@@ -28,6 +28,18 @@ describe(@"project", ^{
     it(@"has a api key", ^{
       expect(project.apiKey).to.equal(@"project key") ;
     }) ;
+
+    it(@"has a default name", ^{
+      project = [[Project alloc] init] ;
+
+      expect(project.name).to.equal(@"Set the project name") ;
+    }) ;
+
+    it(@"has a default apiKey", ^{
+      project = [[Project alloc] init] ;
+
+      expect(project.apiKey).to.equal(@"Set the project API key") ;
+    }) ;
   }) ;
 
   describe(@"projectWithName:andKey:", ^{

@@ -22,7 +22,7 @@ describe(@"Configuration", ^{
                   [Project projectWithName: @"project 2" andKey: @"key2"] ] ;
 
     configuration.authKey = @"1234a" ;
-    configuration.projects = projects ;
+    configuration.projects = [NSMutableArray arrayWithArray: projects] ;
   }) ;
 
   describe(@"init", ^{
@@ -32,6 +32,12 @@ describe(@"Configuration", ^{
     
     it(@"has some projects", ^{
       expect(configuration.projects).to.equal(projects) ;
+    }) ;
+
+    it(@"has a default list of projects", ^{
+      configuration = [[Configuration alloc] init] ;
+
+      expect(configuration.projects).to.beEmpty() ;
     }) ;
   }) ;
 }) ;

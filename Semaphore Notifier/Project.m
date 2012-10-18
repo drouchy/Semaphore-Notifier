@@ -19,4 +19,12 @@
   project.apiKey = aKey ;
   return project ;
 }
+
+- (id) init {
+  if((self = [super init])) {
+    self.name = @"Set the project name" ;
+    self.apiKey = @"Set the project API key" ;
+  }
+  return self ;
+}
 @end

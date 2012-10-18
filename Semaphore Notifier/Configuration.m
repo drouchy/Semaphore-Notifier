@@ -7,10 +7,17 @@
 //
 
 #import "Configuration.h"
+#import "Project.h"
 
 @implementation Configuration
 
 @synthesize authKey = _authKey ;
 @synthesize projects = _projects ;
 
+- (id) init {
+  if((self = [super init])) {
+    _projects = [[NSMutableArray alloc] init] ;
+  }
+  return self ;
+}
 @end

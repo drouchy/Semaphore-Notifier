@@ -14,6 +14,8 @@
 
 @implementation ConfigurationPreferencesViewController
 
+@synthesize configuration = _configuration ;
+
 - (id)init
 {
     self = [super initWithNibName:@"ConfigurationPreferencesView" bundle: [NSBundle bundleForClass: [self class]]];
