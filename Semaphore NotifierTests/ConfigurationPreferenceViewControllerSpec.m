@@ -7,16 +7,22 @@
 //
 
 #import "SpecHelper.h"
-#import "ConfigurationPreferenceViewController.h"
+#import "ConfigurationPreferencesViewController.h"
+
+@interface ConfigurationPreferencesViewController()
+- (NSString *) identifier ;
+- (NSImage *)  toolbarItemImage ;
+- (NSString *) toolbarItemLabel ;
+@end
 
 SpecBegin(ConfigurationPreferenceViewControllerSpec)
 
 describe(@"ConfigurationPreferenceViewController", ^{
-  __block ConfigurationPreferenceViewController *controller ;
+  __block ConfigurationPreferencesViewController *controller ;
   __block Configuration *configuration ;
   
   beforeEach(^{
-    controller = [[ConfigurationPreferenceViewController alloc] init] ;
+    controller = [[ConfigurationPreferencesViewController alloc] init] ;
     configuration = [[Configuration alloc] init] ;
 
     controller.configuration = configuration  ;
@@ -31,15 +37,31 @@ describe(@"ConfigurationPreferenceViewController", ^{
   describe(@"controllerForConfiguration", ^{
     
     it(@"creates a controller", ^{
-      id created = [ConfigurationPreferenceViewController controllerForConfiguration: configuration] ;
+      id created = [ConfigurationPreferencesViewController controllerForConfiguration: configuration] ;
 
-      expect(created).to.beKindOf([ConfigurationPreferenceViewController class]) ;
+      expect(created).to.beKindOf([ConfigurationPreferencesViewController class]) ;
     }) ;
 
     it(@"links it with the configuration", ^{
-      id created = [ConfigurationPreferenceViewController controllerForConfiguration: configuration] ;
+      id created = [ConfigurationPreferencesViewController controllerForConfiguration: configuration] ;
 
       expect([created configuration]).to.beIdenticalTo(configuration) ;
+    }) ;
+
+    it(@"creates one configuration preferences view controller", ^{}) ;
+  }) ;
+
+  describe(@"MASPreferencesViewController protocol", ^{
+    it(@"has a identifier", ^{
+      expect([controller identifier]).to.equal(@"GeneralPreferences") ;
+    }) ;
+
+    it(@"has a toolbar item image", ^{
+      expect([controller toolbarItemImage].name).to.equal(@"NSPreferencesGeneral") ;
+    }) ;
+
+    it(@"has a toolbar item label", ^{
+      expect([controller toolbarItemLabel]).to.equal(@"General") ;
     }) ;
   }) ;
 }) ;

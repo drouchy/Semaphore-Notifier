@@ -7,11 +7,14 @@
 //
 
 #import "AppDelegate.h"
+#import "MASPreferencesWindowController.h"
+#import "ConfigurationPreferencesViewController.h"
 
 @implementation AppDelegate
 
 @synthesize statusItem = _statusItem ;
 @synthesize configuration = _configuration ;
+@synthesize preferencesController = _preferencesController ;
 
 - (void)dealloc {
   [super dealloc];
@@ -25,7 +28,7 @@
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-
+  [[NSApplication sharedApplication] activateIgnoringOtherApps:NO];
 }
 
 - (void) awakeFromNib {
@@ -40,5 +43,14 @@
   statusItem.menu = self.statusMenu ;
   
   return statusItem ;
+}
+
+- (void) launchPreferences:(id) sender {
+  NSLog(@"launchPreferences") ;
+  if(! self.preferencesController) {
+    NSArray *controllers = @[ [ConfigurationPreferencesViewController controllerForConfiguration: self.configuration]] ;
+    self.preferencesController = [[MASPreferencesWindowController alloc] initWithViewControllers:controllers title: @"Preferences"] ;
+  }
+  [self.preferencesController showWindow:nil] ;
 }
 @end

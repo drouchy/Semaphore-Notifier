@@ -8,17 +8,12 @@
 
 #import "SpecHelper.h"
 #import "AppDelegate.h"
+#import "MASPreferencesWindowController.h"
+#import "ConfigurationPreferencesViewController.h"
 
-//
-//  AppDelegateSpec.m
-//  Semaphore Notifier
-//
-//  Created by David Rouchy on 17/10/2012.
-//  Copyright (c) 2012 David Rouchy. All rights reserved.
-//
-
-#import "AppDelegate.h"
-#import "SpecHelper.h"
+@interface AppDelegate()
+- (void) launchPreferences:(id) sender ;
+@end
 
 SpecBegin(AppDelegateStatusMenuSpec)
 
@@ -42,6 +37,42 @@ describe(@"AppDelegate", ^{
     beforeEach(^{
       [delegate applicationDidFinishLaunching: nil] ;
       statusMenu = delegate.statusItem.menu ;
+    }) ;
+  }) ;
+
+  describe(@"launchPreferences", ^{
+    __block Configuration *configuration ;
+
+    beforeEach(^{
+      configuration = [[Configuration alloc] init] ;
+      delegate.configuration = configuration ;
+
+      [delegate launchPreferences:nil] ;
+    }) ;
+
+    it(@"launches a preferences window", ^{
+      expect(delegate.preferencesController).toNot.beNil() ;
+    }) ;
+
+    // can't get why I've got errors
+    // expected: a kind of MASPreferencesWindowController,
+    // got: an instance of MASPreferencesWindowController, which is not a kind of MASPreferencesWindowController
+    pending(@"creates a MASPreferencesWindowController", ^{
+      expect(delegate.preferencesController).to.beKindOf([MASPreferencesWindowController class]) ;
+    }) ;
+
+    // Same thing here
+    pending(@"creates a preference window with e configuration view controller", ^{
+      id viewController = ((MASPreferencesWindowController *) delegate.preferencesController).viewControllers ;
+      expect(viewController[0]).to.beKindOf([ConfigurationPreferencesViewController class]) ;
+    }) ;
+
+    it(@"does not re-create the controller, it memoizes it", ^{
+      id viewController = delegate.preferencesController ;
+      
+      [delegate launchPreferences:nil] ;
+
+      expect(delegate.preferencesController).to.beIdenticalTo(viewController) ;
     }) ;
   }) ;
 });

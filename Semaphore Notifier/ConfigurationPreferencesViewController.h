@@ -8,8 +8,9 @@
 
 #import <Cocoa/Cocoa.h>
 #import "Configuration.h"
+#import "MASPreferencesViewController.h"
 
-@interface ConfigurationPreferenceViewController : NSViewController
+@interface ConfigurationPreferencesViewController : NSViewController <MASPreferencesViewController>
 
 @property (retain) Configuration *configuration ;
 

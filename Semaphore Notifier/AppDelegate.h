@@ -15,5 +15,7 @@
 @property (assign) IBOutlet NSMenu *statusMenu;
 @property (strong, nonatomic) NSStatusItem *statusItem ;
 
+@property (nonatomic, retain) NSWindowController *preferencesController ;
+
 @property (strong, nonatomic) Configuration *configuration ;
 @end
