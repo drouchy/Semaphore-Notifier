@@ -43,10 +43,11 @@
 						<int key="NSvFlags">268</int>
 						<string key="NSFrame">{{18, 83}, {102, 18}}</string>
 						<reference key="NSSuperview" ref="1005"/>
+						<reference key="NSNextKeyView" ref="856435427"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSButtonCell" key="NSCell" id="82881105">
-							<int key="NSCellFlags">-2080374784</int>
+							<int key="NSCellFlags">-1543503872</int>
 							<int key="NSCellFlags2">268435456</int>
 							<string key="NSContents">Notifications</string>
 							<object class="NSFont" key="NSSupport" id="857089188">
@@ -77,10 +78,11 @@
 						<int key="NSvFlags">268</int>
 						<string key="NSFrame">{{30, 18}, {140, 18}}</string>
 						<reference key="NSSuperview" ref="1005"/>
+						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSButtonCell" key="NSCell" id="568321291">
-							<int key="NSCellFlags">-2080374784</int>
+							<int key="NSCellFlags">-1543503872</int>
 							<int key="NSCellFlags2">268435456</int>
 							<string key="NSContents">after every failures</string>
 							<reference key="NSSupport" ref="857089188"/>
@@ -102,10 +104,11 @@
 						<int key="NSvFlags">268</int>
 						<string key="NSFrame">{{30, 38}, {166, 18}}</string>
 						<reference key="NSSuperview" ref="1005"/>
+						<reference key="NSNextKeyView" ref="310288523"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSButtonCell" key="NSCell" id="25706795">
-							<int key="NSCellFlags">-2080374784</int>
+							<int key="NSCellFlags">-1543503872</int>
 							<int key="NSCellFlags2">268435456</int>
 							<string key="NSContents">from success to failure</string>
 							<reference key="NSSupport" ref="857089188"/>
@@ -127,10 +130,11 @@
 						<int key="NSvFlags">268</int>
 						<string key="NSFrame">{{30, 58}, {166, 18}}</string>
 						<reference key="NSSuperview" ref="1005"/>
+						<reference key="NSNextKeyView" ref="447634949"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSButtonCell" key="NSCell" id="1017444595">
-							<int key="NSCellFlags">-2080374784</int>
+							<int key="NSCellFlags">-1543503872</int>
 							<int key="NSCellFlags2">268435456</int>
 							<string key="NSContents">from failure to success</string>
 							<reference key="NSSupport" ref="857089188"/>
@@ -150,7 +154,7 @@
 				</array>
 				<string key="NSFrameSize">{480, 119}</string>
 				<reference key="NSSuperview"/>
-				<reference key="NSNextKeyView"/>
+				<reference key="NSNextKeyView" ref="1042079065"/>
 				<string key="NSClassName">NSView</string>
 			</object>
 		</array>
