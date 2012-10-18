@@ -26,6 +26,11 @@
 		3B7B566B162F1B2B00D7CDCB /* statusIconTemplate@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B7B5668162F1B2B00D7CDCB /* statusIconTemplate@2x.png */; };
 		3B7B566C162F1B2B00D7CDCB /* statusIconTemplate@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B7B5668162F1B2B00D7CDCB /* statusIconTemplate@2x.png */; };
 		3B7B566F162F1BCD00D7CDCB /* StatusBarMenuSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7B566E162F1BCD00D7CDCB /* StatusBarMenuSpec.m */; };
+		3B8C73101630A18F0092ADE8 /* ProjectMenuItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8C730E1630A18F0092ADE8 /* ProjectMenuItemViewController.m */; };
+		3B8C73111630A18F0092ADE8 /* ProjectMenuItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8C730E1630A18F0092ADE8 /* ProjectMenuItemViewController.m */; };
+		3B8C73121630A18F0092ADE8 /* ProjectMenuItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B8C730F1630A18F0092ADE8 /* ProjectMenuItemView.xib */; };
+		3B8C73131630A18F0092ADE8 /* ProjectMenuItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B8C730F1630A18F0092ADE8 /* ProjectMenuItemView.xib */; };
+		3B8C73161630A3D20092ADE8 /* ProjectMenuItemViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8C73151630A3D20092ADE8 /* ProjectMenuItemViewControllerSpec.m */; };
 		3B9FCB74162F205C0013F015 /* Project.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9FCB73162F205C0013F015 /* Project.m */; };
 		3B9FCB75162F205C0013F015 /* Project.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9FCB73162F205C0013F015 /* Project.m */; };
 		3B9FCB78162F206A0013F015 /* ProjectSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9FCB77162F206A0013F015 /* ProjectSpec.m */; };
@@ -145,6 +150,10 @@
 		3B7B5667162F1B2B00D7CDCB /* statusIconTemplate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = statusIconTemplate.png; sourceTree = "<group>"; };
 		3B7B5668162F1B2B00D7CDCB /* statusIconTemplate@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "statusIconTemplate@2x.png"; sourceTree = "<group>"; };
 		3B7B566E162F1BCD00D7CDCB /* StatusBarMenuSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusBarMenuSpec.m; sourceTree = "<group>"; };
+		3B8C730D1630A18F0092ADE8 /* ProjectMenuItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectMenuItemViewController.h; sourceTree = "<group>"; };
+		3B8C730E1630A18F0092ADE8 /* ProjectMenuItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectMenuItemViewController.m; sourceTree = "<group>"; };
+		3B8C730F1630A18F0092ADE8 /* ProjectMenuItemView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProjectMenuItemView.xib; sourceTree = "<group>"; };
+		3B8C73151630A3D20092ADE8 /* ProjectMenuItemViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectMenuItemViewControllerSpec.m; sourceTree = "<group>"; };
 		3B9FCB72162F205C0013F015 /* Project.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Project.h; sourceTree = "<group>"; };
 		3B9FCB73162F205C0013F015 /* Project.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Project.m; sourceTree = "<group>"; };
 		3B9FCB77162F206A0013F015 /* ProjectSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectSpec.m; sourceTree = "<group>"; };
@@ -355,6 +364,28 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
+		3B8C730A1630A15A0092ADE8 /* preferences */ = {
+			isa = PBXGroup;
+			children = (
+				3B9FCBA1162F295E0013F015 /* ConfigurationPreferencesViewController.h */,
+				3B9FCBA2162F295E0013F015 /* ConfigurationPreferencesViewController.m */,
+				3B9FCBB0163055CE0013F015 /* ProjectsPreferencesViewController.h */,
+				3B9FCBB1163055CE0013F015 /* ProjectsPreferencesViewController.m */,
+				3B9FCBB7163058F90013F015 /* AdvancedPreferencesViewController.h */,
+				3B9FCBB8163058F90013F015 /* AdvancedPreferencesViewController.m */,
+			);
+			name = preferences;
+			sourceTree = "<group>";
+		};
+		3B8C730C1630A1630092ADE8 /* status menu */ = {
+			isa = PBXGroup;
+			children = (
+				3B8C730D1630A18F0092ADE8 /* ProjectMenuItemViewController.h */,
+				3B8C730E1630A18F0092ADE8 /* ProjectMenuItemViewController.m */,
+			);
+			name = "status menu";
+			sourceTree = "<group>";
+		};
 		3B9FCB6F162F20400013F015 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -407,12 +438,8 @@
 		3B9FCBA0162F293D0013F015 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				3B9FCBA1162F295E0013F015 /* ConfigurationPreferencesViewController.h */,
-				3B9FCBA2162F295E0013F015 /* ConfigurationPreferencesViewController.m */,
-				3B9FCBB0163055CE0013F015 /* ProjectsPreferencesViewController.h */,
-				3B9FCBB1163055CE0013F015 /* ProjectsPreferencesViewController.m */,
-				3B9FCBB7163058F90013F015 /* AdvancedPreferencesViewController.h */,
-				3B9FCBB8163058F90013F015 /* AdvancedPreferencesViewController.m */,
+				3B8C730C1630A1630092ADE8 /* status menu */,
+				3B8C730A1630A15A0092ADE8 /* preferences */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -424,6 +451,7 @@
 				3B9FCBC8163072120013F015 /* ProjectsPreferencesViewControllerSpec.m */,
 				3B9FCBCB1630721E0013F015 /* AdvancedPreferencesViewControllerSpec.m */,
 				3B9FCBC6163069E40013F015 /* PreferencesViewControllerSharedExamples.h */,
+				3B8C73151630A3D20092ADE8 /* ProjectMenuItemViewControllerSpec.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -434,6 +462,7 @@
 				3B9FCBB9163058F90013F015 /* AdvancedPreferencesView.xib */,
 				3B9FCBB2163055CE0013F015 /* ProjectsPreferencesView.xib */,
 				3B9FCBA3162F295E0013F015 /* ConfigurationPreferencesView.xib */,
+				3B8C730F1630A18F0092ADE8 /* ProjectMenuItemView.xib */,
 			);
 			name = Preferences;
 			sourceTree = "<group>";
@@ -520,6 +549,7 @@
 				3B9FCBA6162F295E0013F015 /* ConfigurationPreferencesView.xib in Resources */,
 				3B9FCBB5163055CE0013F015 /* ProjectsPreferencesView.xib in Resources */,
 				3B9FCBBC163058F90013F015 /* AdvancedPreferencesView.xib in Resources */,
+				3B8C73121630A18F0092ADE8 /* ProjectMenuItemView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,6 +565,7 @@
 				3B9FCBA7162F295E0013F015 /* ConfigurationPreferencesView.xib in Resources */,
 				3B9FCBB6163055CE0013F015 /* ProjectsPreferencesView.xib in Resources */,
 				3B9FCBBD163058F90013F015 /* AdvancedPreferencesView.xib in Resources */,
+				3B8C73131630A18F0092ADE8 /* ProjectMenuItemView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -569,6 +600,7 @@
 				3B9FCBA4162F295E0013F015 /* ConfigurationPreferencesViewController.m in Sources */,
 				3B9FCBB3163055CE0013F015 /* ProjectsPreferencesViewController.m in Sources */,
 				3B9FCBBA163058F90013F015 /* AdvancedPreferencesViewController.m in Sources */,
+				3B8C73101630A18F0092ADE8 /* ProjectMenuItemViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -590,6 +622,8 @@
 				3B9FCBBB163058F90013F015 /* AdvancedPreferencesViewController.m in Sources */,
 				3B9FCBC9163072120013F015 /* ProjectsPreferencesViewControllerSpec.m in Sources */,
 				3B9FCBCC1630721E0013F015 /* AdvancedPreferencesViewControllerSpec.m in Sources */,
+				3B8C73111630A18F0092ADE8 /* ProjectMenuItemViewController.m in Sources */,
+				3B8C73161630A3D20092ADE8 /* ProjectMenuItemViewControllerSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
