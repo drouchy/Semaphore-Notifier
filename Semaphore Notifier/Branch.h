@@ -8,8 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+extern int const BuildStatusNone ;
+extern int const BuildStatusSuccess ;
+extern int const BuildStatusFailure ;
+extern int const BuildStatusUnknown ;
+
 @interface Branch : NSObject
 
-@property (copy, nonatomic) NSString *name ;
+@property (copy, nonatomic) NSString  *name ;
+@property (copy, nonatomic) NSNumber *status ;
 
 @end

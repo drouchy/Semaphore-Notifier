@@ -23,6 +23,10 @@ describe(@"Branch", ^{
     it(@"has a name", ^{
       expect(branch.name).to.equal(@"branch name") ;
     }) ;
+
+    it(@"has a uknown status by default", ^{
+      expect(branch.status).to.equal(BuildStatusNone) ;
+    }) ;
   }) ;
 }) ;
 
