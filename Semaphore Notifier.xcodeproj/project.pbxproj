@@ -34,6 +34,7 @@
 		3B8C73181630B6640092ADE8 /* ProjectsPreferencesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B8C73171630B6640092ADE8 /* ProjectsPreferencesView.xib */; };
 		3B8C73341630BB190092ADE8 /* SMXObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8C73331630BB190092ADE8 /* SMXObject.m */; };
 		3B8C73351630BB190092ADE8 /* SMXObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8C73331630BB190092ADE8 /* SMXObject.m */; };
+		3B8C733716311FC60092ADE8 /* License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3B8C733616311FC60092ADE8 /* License.txt */; };
 		3B9FCB74162F205C0013F015 /* Project.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9FCB73162F205C0013F015 /* Project.m */; };
 		3B9FCB75162F205C0013F015 /* Project.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9FCB73162F205C0013F015 /* Project.m */; };
 		3B9FCB78162F206A0013F015 /* ProjectSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9FCB77162F206A0013F015 /* ProjectSpec.m */; };
@@ -156,6 +157,7 @@
 		3B8C73171630B6640092ADE8 /* ProjectsPreferencesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProjectsPreferencesView.xib; sourceTree = "<group>"; };
 		3B8C73321630BB190092ADE8 /* SMXObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMXObject.h; sourceTree = "<group>"; };
 		3B8C73331630BB190092ADE8 /* SMXObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMXObject.m; sourceTree = "<group>"; };
+		3B8C733616311FC60092ADE8 /* License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = License.txt; sourceTree = "<group>"; };
 		3B9FCB72162F205C0013F015 /* Project.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Project.h; sourceTree = "<group>"; };
 		3B9FCB73162F205C0013F015 /* Project.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Project.m; sourceTree = "<group>"; };
 		3B9FCB77162F206A0013F015 /* ProjectSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectSpec.m; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 		3B7B55E7162F0BF500D7CDCB = {
 			isa = PBXGroup;
 			children = (
+				3B8C733616311FC60092ADE8 /* License.txt */,
 				3B7B55FC162F0BF500D7CDCB /* Semaphore Notifier */,
 				3B7B5619162F0BF500D7CDCB /* Semaphore NotifierTests */,
 				3B7B55F5162F0BF500D7CDCB /* Frameworks */,
@@ -557,6 +560,7 @@
 				3B9FCBBC163058F90013F015 /* AdvancedPreferencesView.xib in Resources */,
 				3B8C73121630A18F0092ADE8 /* ProjectMenuItemView.xib in Resources */,
 				3B8C73181630B6640092ADE8 /* ProjectsPreferencesView.xib in Resources */,
+				3B8C733716311FC60092ADE8 /* License.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
