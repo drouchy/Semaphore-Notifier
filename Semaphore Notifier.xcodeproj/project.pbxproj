@@ -41,6 +41,9 @@
 		3B8C73431631392F0092ADE8 /* BranchMenuItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B8C73401631392F0092ADE8 /* BranchMenuItemView.xib */; };
 		3B8C73441631392F0092ADE8 /* BranchMenuItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B8C73401631392F0092ADE8 /* BranchMenuItemView.xib */; };
 		3B8C73471631396C0092ADE8 /* BranchMenuItemViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8C73461631396C0092ADE8 /* BranchMenuItemViewControllerSpec.m */; };
+		3B8C734A163139CA0092ADE8 /* Branch.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8C7349163139CA0092ADE8 /* Branch.m */; };
+		3B8C734B163139CA0092ADE8 /* Branch.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8C7349163139CA0092ADE8 /* Branch.m */; };
+		3B8C734E163139D50092ADE8 /* BranchSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8C734D163139D50092ADE8 /* BranchSpec.m */; };
 		3B9FCB74162F205C0013F015 /* Project.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9FCB73162F205C0013F015 /* Project.m */; };
 		3B9FCB75162F205C0013F015 /* Project.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9FCB73162F205C0013F015 /* Project.m */; };
 		3B9FCB78162F206A0013F015 /* ProjectSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9FCB77162F206A0013F015 /* ProjectSpec.m */; };
@@ -168,6 +171,9 @@
 		3B8C733F1631392E0092ADE8 /* BranchMenuItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BranchMenuItemViewController.m; sourceTree = "<group>"; };
 		3B8C73401631392F0092ADE8 /* BranchMenuItemView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BranchMenuItemView.xib; sourceTree = "<group>"; };
 		3B8C73461631396C0092ADE8 /* BranchMenuItemViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BranchMenuItemViewControllerSpec.m; sourceTree = "<group>"; };
+		3B8C7348163139CA0092ADE8 /* Branch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Branch.h; sourceTree = "<group>"; };
+		3B8C7349163139CA0092ADE8 /* Branch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Branch.m; sourceTree = "<group>"; };
+		3B8C734D163139D50092ADE8 /* BranchSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BranchSpec.m; sourceTree = "<group>"; };
 		3B9FCB72162F205C0013F015 /* Project.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Project.h; sourceTree = "<group>"; };
 		3B9FCB73162F205C0013F015 /* Project.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Project.m; sourceTree = "<group>"; };
 		3B9FCB77162F206A0013F015 /* ProjectSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectSpec.m; sourceTree = "<group>"; };
@@ -423,6 +429,8 @@
 			children = (
 				3B9FCB72162F205C0013F015 /* Project.h */,
 				3B9FCB73162F205C0013F015 /* Project.m */,
+				3B8C7348163139CA0092ADE8 /* Branch.h */,
+				3B8C7349163139CA0092ADE8 /* Branch.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -431,6 +439,7 @@
 			isa = PBXGroup;
 			children = (
 				3B9FCB77162F206A0013F015 /* ProjectSpec.m */,
+				3B8C734D163139D50092ADE8 /* BranchSpec.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -636,6 +645,7 @@
 				3B8C73101630A18F0092ADE8 /* ProjectMenuItemViewController.m in Sources */,
 				3B8C73341630BB190092ADE8 /* SMXObject.m in Sources */,
 				3B8C73411631392F0092ADE8 /* BranchMenuItemViewController.m in Sources */,
+				3B8C734A163139CA0092ADE8 /* Branch.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -660,6 +670,8 @@
 				3B8C73351630BB190092ADE8 /* SMXObject.m in Sources */,
 				3B8C73421631392F0092ADE8 /* BranchMenuItemViewController.m in Sources */,
 				3B8C73471631396C0092ADE8 /* BranchMenuItemViewControllerSpec.m in Sources */,
+				3B8C734B163139CA0092ADE8 /* Branch.m in Sources */,
+				3B8C734E163139D50092ADE8 /* BranchSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
