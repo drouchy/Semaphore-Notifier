@@ -26,7 +26,7 @@
 + (void) initialize {
   NSDictionary *defaults = @{
     @"authKey": @"",
-    @"projects": [NSKeyedArchiver archivedDataWithRootObject:[NSMutableArray array]]
+    @"projects": [NSMutableArray array]
   } ;
   
   [[NSUserDefaults standardUserDefaults] registerDefaults: [defaults mutableCopy]] ;
