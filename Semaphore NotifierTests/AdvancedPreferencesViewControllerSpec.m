@@ -19,13 +19,9 @@ SpecBegin(AdvancedPreferencesViewControllerSpec)
 
 describe(@"AdvancedPreferencesViewController.h", ^{
   __block AdvancedPreferencesViewController *controller ;
-  __block Configuration *configuration ;
   
   beforeEach(^{
     controller = [[AdvancedPreferencesViewController alloc] init] ;
-    configuration = [[Configuration alloc] init] ;
-    
-    controller.configuration = configuration  ;
   }) ;
   
   itBehavesLike(@"a preferences view controller", @{ @"controllerClass": [AdvancedPreferencesViewController class]}) ;

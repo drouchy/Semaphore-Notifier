@@ -10,7 +10,6 @@
 #define Semaphore_Notifier_PreferencesViewControllerSharedExamples_h
 
 #import "SpecHelper.h"
-#import "Configuration.h"
 
 SharedExampleGroupsBegin(PreferencesViewControllerShared)
 
@@ -18,35 +17,22 @@ sharedExamplesFor(@"a preferences view controller", ^(NSDictionary *data) {
   __block Class controllerClass ;
   
   __block id controller ;
-  __block Configuration *configuration ;
   
   beforeEach(^{
     controllerClass = data[@"controllerClass"] ;
     
     controller = [[controllerClass alloc] init] ;
-    configuration = [[Configuration alloc] init] ;
-    
-    [controller performSelector: @selector(setConfiguration:) withObject:configuration ]  ;
   }) ;
   
   describe(@"init", ^{
-    it(@"has a configuration", ^{
-      expect([controller performSelector: @selector(configuration)]).to.beIdenticalTo(configuration) ;
-    }) ;
   }) ;
   
   describe(@"controllerForConfiguration", ^{
     
     it(@"creates a controller", ^{
-      id created = [controllerClass performSelector: @selector(controllerForConfiguration:) withObject:configuration] ;
+      id created = [controllerClass performSelector: @selector(controller)] ;
       
       expect(created).to.beKindOf(controllerClass) ;
-    }) ;
-    
-    it(@"links it with the configuration", ^{
-      id created = [controllerClass performSelector: @selector(controllerForConfiguration:) withObject:configuration] ;
-      
-      expect([created performSelector: @selector(configuration)]).to.beIdenticalTo(configuration) ;
     }) ;
   }) ;
   
@@ -59,8 +45,6 @@ sharedExamplesFor(@"a MASPreferences controller", ^(NSDictionary *data) {
     Class controllerClass = data[@"controllerClass"] ;
     
     controller = [[controllerClass alloc] init] ;
-    
-    [controller performSelector: @selector(setConfiguration:) withObject:[[Configuration alloc] init] ]  ;
   }) ;
   
   it(@"has a identifier", ^{

@@ -20,13 +20,9 @@ SpecBegin(ConfigurationPreferenceViewControllerSpec)
 
 describe(@"ConfigurationPreferenceViewController", ^{
   __block ConfigurationPreferencesViewController *controller ;
-  __block Configuration *configuration ;
   
   beforeEach(^{
     controller = [[ConfigurationPreferencesViewController alloc] init] ;
-    configuration = [[Configuration alloc] init] ;
-
-    controller.configuration = configuration  ;
   }) ;
 
   itBehavesLike(@"a preferences view controller", @{ @"controllerClass": [ConfigurationPreferencesViewController class]}) ;

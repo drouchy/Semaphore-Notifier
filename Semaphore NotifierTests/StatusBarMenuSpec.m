@@ -43,12 +43,7 @@ describe(@"AppDelegate", ^{
   }) ;
 
   describe(@"launchPreferences", ^{
-    __block Configuration *configuration ;
-
     beforeEach(^{
-      configuration = [[Configuration alloc] init] ;
-      delegate.configuration = configuration ;
-
       [delegate launchPreferences:nil] ;
     }) ;
 

@@ -13,6 +13,7 @@
 
 @property (copy, nonatomic) NSString *name ;
 @property (copy, nonatomic) NSString *apiKey ;
+@property (nonatomic)       Boolean enabled ;
 
 + (id) projectWithName: (NSString *) aName andKey: (NSString *) aKey ;
 @end

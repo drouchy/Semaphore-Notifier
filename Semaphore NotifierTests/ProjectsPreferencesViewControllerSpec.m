@@ -19,13 +19,9 @@ SpecBegin(ProjectsPreferencesViewControllerSpec)
 
 describe(@"ProjectsPreferencesViewController", ^{
   __block ProjectsPreferencesViewController *controller ;
-  __block Configuration *configuration ;
   
   beforeEach(^{
     controller = [[ProjectsPreferencesViewController alloc] init] ;
-    configuration = [[Configuration alloc] init] ;
-    
-    controller.configuration = configuration  ;
   }) ;
   
   itBehavesLike(@"a preferences view controller", @{ @"controllerClass": [ProjectsPreferencesViewController class]}) ;

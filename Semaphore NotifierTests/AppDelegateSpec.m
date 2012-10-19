@@ -8,7 +8,6 @@
 
 #import "AppDelegate.h"
 #import "SpecHelper.h"
-#import "Configuration.h"
 
 SpecBegin(AppDelegateSpec)
 
@@ -23,15 +22,10 @@ describe(@"AppDelegate", ^{
     beforeEach(^{
     }) ;
 
-    it(@"has a default configuration", ^{
-      expect(delegate.configuration).toNot.beNil() ;
+    pending(@"has a default configuration", ^{
     }) ;
 
-    it(@"has a configuration", ^{
-      Configuration *configuration = [[Configuration alloc] init] ;
-      delegate.configuration = configuration ;
-
-      expect(delegate.configuration).to.equal(configuration) ;
+    pending(@"has a configuration", ^{
     }) ;
   }) ;
 
