@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B3B012816316F4500CF6246 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3B012716316F4500CF6246 /* Constants.m */; };
+		3B3B012916316F4500CF6246 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3B012716316F4500CF6246 /* Constants.m */; };
+		3B3B012D16316FC500CF6246 /* BuildSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3B012C16316FC500CF6246 /* BuildSpec.m */; };
 		3B7B55F7162F0BF500D7CDCB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B7B55F6162F0BF500D7CDCB /* Cocoa.framework */; };
 		3B7B5601162F0BF500D7CDCB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B7B55FF162F0BF500D7CDCB /* InfoPlist.strings */; };
 		3B7B5603162F0BF500D7CDCB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7B5602162F0BF500D7CDCB /* main.m */; };
@@ -44,6 +47,8 @@
 		3B8C734A163139CA0092ADE8 /* Branch.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8C7349163139CA0092ADE8 /* Branch.m */; };
 		3B8C734B163139CA0092ADE8 /* Branch.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8C7349163139CA0092ADE8 /* Branch.m */; };
 		3B8C734E163139D50092ADE8 /* BranchSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8C734D163139D50092ADE8 /* BranchSpec.m */; };
+		3B8C735216316C4E0092ADE8 /* Build.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8C735116316C4E0092ADE8 /* Build.m */; };
+		3B8C735316316C4E0092ADE8 /* Build.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8C735116316C4E0092ADE8 /* Build.m */; };
 		3B9FCB74162F205C0013F015 /* Project.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9FCB73162F205C0013F015 /* Project.m */; };
 		3B9FCB75162F205C0013F015 /* Project.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9FCB73162F205C0013F015 /* Project.m */; };
 		3B9FCB78162F206A0013F015 /* ProjectSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9FCB77162F206A0013F015 /* ProjectSpec.m */; };
@@ -93,6 +98,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3B3B012616316F4500CF6246 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		3B3B012716316F4500CF6246 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		3B3B012C16316FC500CF6246 /* BuildSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuildSpec.m; sourceTree = "<group>"; };
 		3B7B55F2162F0BF500D7CDCB /* Semaphore Notifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Semaphore Notifier.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B7B55F6162F0BF500D7CDCB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		3B7B55F9162F0BF500D7CDCB /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -174,6 +182,8 @@
 		3B8C7348163139CA0092ADE8 /* Branch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Branch.h; sourceTree = "<group>"; };
 		3B8C7349163139CA0092ADE8 /* Branch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Branch.m; sourceTree = "<group>"; };
 		3B8C734D163139D50092ADE8 /* BranchSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BranchSpec.m; sourceTree = "<group>"; };
+		3B8C735016316C4E0092ADE8 /* Build.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Build.h; sourceTree = "<group>"; };
+		3B8C735116316C4E0092ADE8 /* Build.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Build.m; sourceTree = "<group>"; };
 		3B9FCB72162F205C0013F015 /* Project.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Project.h; sourceTree = "<group>"; };
 		3B9FCB73162F205C0013F015 /* Project.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Project.m; sourceTree = "<group>"; };
 		3B9FCB77162F206A0013F015 /* ProjectSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectSpec.m; sourceTree = "<group>"; };
@@ -431,6 +441,10 @@
 				3B9FCB73162F205C0013F015 /* Project.m */,
 				3B8C7348163139CA0092ADE8 /* Branch.h */,
 				3B8C7349163139CA0092ADE8 /* Branch.m */,
+				3B8C735016316C4E0092ADE8 /* Build.h */,
+				3B8C735116316C4E0092ADE8 /* Build.m */,
+				3B3B012616316F4500CF6246 /* Constants.h */,
+				3B3B012716316F4500CF6246 /* Constants.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -440,6 +454,7 @@
 			children = (
 				3B9FCB77162F206A0013F015 /* ProjectSpec.m */,
 				3B8C734D163139D50092ADE8 /* BranchSpec.m */,
+				3B3B012C16316FC500CF6246 /* BuildSpec.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -646,6 +661,8 @@
 				3B8C73341630BB190092ADE8 /* SMXObject.m in Sources */,
 				3B8C73411631392F0092ADE8 /* BranchMenuItemViewController.m in Sources */,
 				3B8C734A163139CA0092ADE8 /* Branch.m in Sources */,
+				3B8C735216316C4E0092ADE8 /* Build.m in Sources */,
+				3B3B012816316F4500CF6246 /* Constants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -672,6 +689,9 @@
 				3B8C73471631396C0092ADE8 /* BranchMenuItemViewControllerSpec.m in Sources */,
 				3B8C734B163139CA0092ADE8 /* Branch.m in Sources */,
 				3B8C734E163139D50092ADE8 /* BranchSpec.m in Sources */,
+				3B8C735316316C4E0092ADE8 /* Build.m in Sources */,
+				3B3B012916316F4500CF6246 /* Constants.m in Sources */,
+				3B3B012D16316FC500CF6246 /* BuildSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

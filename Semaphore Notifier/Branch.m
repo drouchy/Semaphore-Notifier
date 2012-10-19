@@ -7,18 +7,17 @@
 //
 
 #import "Branch.h"
-
-int const BuildStatusNone = 0 ;
-int const BuildStatusSuccess = 1 ;
-int const BuildStatusFailure = 2 ;
-int const BuildStatusUnknown = 3 ;
+#import "Constants.h"
 
 @implementation Branch
 
 - (id) init {
   if((self = [super init])) {
-    self.status = [NSNumber numberWithInt: BuildStatusNone] ;
   }
   return self ;
+}
+
+- (int) lastStatus {
+  return BuildStatusNone ;
 }
 @end

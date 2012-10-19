@@ -7,15 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SMXObject.h"
 
-extern int const BuildStatusNone ;
-extern int const BuildStatusSuccess ;
-extern int const BuildStatusFailure ;
-extern int const BuildStatusUnknown ;
-
-@interface Branch : NSObject
+@interface Branch : SMXObject
 
 @property (copy, nonatomic) NSString  *name ;
-@property (copy, nonatomic) NSNumber *status ;
+@property (copy, nonatomic) NSURL *url ;
+@property (copy, nonatomic) NSURL *statusUrl ;
+@property (copy, nonatomic) NSURL *historyUrl ;
 
+- (int) lastStatus ;
 @end

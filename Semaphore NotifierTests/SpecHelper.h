@@ -13,5 +13,6 @@
 #import "Expecta.h"
 #import "Specta.h"
 #import <OCMock/OCMock.h>
+#import "Constants.h"
 
 #endif

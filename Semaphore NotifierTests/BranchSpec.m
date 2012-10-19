@@ -18,14 +18,29 @@ describe(@"Branch", ^{
     beforeEach(^{
       branch = [[Branch alloc] init] ;
       branch.name = @"branch name" ;
+      branch.url = [NSURL URLWithString: @"http://host/branch"];
+      branch.statusUrl = [NSURL URLWithString: @"http://host/status"];
+      branch.historyUrl = [NSURL URLWithString: @"http://host/history"];
     }) ;
     
     it(@"has a name", ^{
       expect(branch.name).to.equal(@"branch name") ;
     }) ;
 
-    it(@"has a uknown status by default", ^{
-      expect(branch.status).to.equal(BuildStatusNone) ;
+    it(@"has a url", ^{
+      expect(branch.url).to.equal([NSURL URLWithString: @"http://host/branch"]) ;
+    }) ;
+
+    it(@"has a statusUrl", ^{
+      expect(branch.statusUrl).to.equal([NSURL URLWithString: @"http://host/status"]) ;
+    }) ;
+
+    it(@"has a name", ^{
+      expect(branch.historyUrl).to.equal([NSURL URLWithString: @"http://host/history"]) ;
+    }) ;
+
+    it(@"has a uknown last status by default", ^{
+      expect([branch lastStatus]).to.equal(BuildStatusNone) ;
     }) ;
   }) ;
 }) ;
