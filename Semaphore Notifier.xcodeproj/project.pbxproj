@@ -36,6 +36,11 @@
 		3B8C73351630BB190092ADE8 /* SMXObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8C73331630BB190092ADE8 /* SMXObject.m */; };
 		3B8C733716311FC60092ADE8 /* License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3B8C733616311FC60092ADE8 /* License.txt */; };
 		3B8C733C16312E780092ADE8 /* semaphore-notifier.icns in Resources */ = {isa = PBXBuildFile; fileRef = 3B8C733B16312E780092ADE8 /* semaphore-notifier.icns */; };
+		3B8C73411631392F0092ADE8 /* BranchMenuItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8C733F1631392E0092ADE8 /* BranchMenuItemViewController.m */; };
+		3B8C73421631392F0092ADE8 /* BranchMenuItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8C733F1631392E0092ADE8 /* BranchMenuItemViewController.m */; };
+		3B8C73431631392F0092ADE8 /* BranchMenuItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B8C73401631392F0092ADE8 /* BranchMenuItemView.xib */; };
+		3B8C73441631392F0092ADE8 /* BranchMenuItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B8C73401631392F0092ADE8 /* BranchMenuItemView.xib */; };
+		3B8C73471631396C0092ADE8 /* BranchMenuItemViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8C73461631396C0092ADE8 /* BranchMenuItemViewControllerSpec.m */; };
 		3B9FCB74162F205C0013F015 /* Project.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9FCB73162F205C0013F015 /* Project.m */; };
 		3B9FCB75162F205C0013F015 /* Project.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9FCB73162F205C0013F015 /* Project.m */; };
 		3B9FCB78162F206A0013F015 /* ProjectSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9FCB77162F206A0013F015 /* ProjectSpec.m */; };
@@ -159,6 +164,10 @@
 		3B8C73331630BB190092ADE8 /* SMXObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMXObject.m; sourceTree = "<group>"; };
 		3B8C733616311FC60092ADE8 /* License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = License.txt; sourceTree = "<group>"; };
 		3B8C733B16312E780092ADE8 /* semaphore-notifier.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "semaphore-notifier.icns"; sourceTree = "<group>"; };
+		3B8C733E1631392E0092ADE8 /* BranchMenuItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BranchMenuItemViewController.h; sourceTree = "<group>"; };
+		3B8C733F1631392E0092ADE8 /* BranchMenuItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BranchMenuItemViewController.m; sourceTree = "<group>"; };
+		3B8C73401631392F0092ADE8 /* BranchMenuItemView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BranchMenuItemView.xib; sourceTree = "<group>"; };
+		3B8C73461631396C0092ADE8 /* BranchMenuItemViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BranchMenuItemViewControllerSpec.m; sourceTree = "<group>"; };
 		3B9FCB72162F205C0013F015 /* Project.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Project.h; sourceTree = "<group>"; };
 		3B9FCB73162F205C0013F015 /* Project.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Project.m; sourceTree = "<group>"; };
 		3B9FCB77162F206A0013F015 /* ProjectSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectSpec.m; sourceTree = "<group>"; };
@@ -385,6 +394,8 @@
 			children = (
 				3B8C730D1630A18F0092ADE8 /* ProjectMenuItemViewController.h */,
 				3B8C730E1630A18F0092ADE8 /* ProjectMenuItemViewController.m */,
+				3B8C733E1631392E0092ADE8 /* BranchMenuItemViewController.h */,
+				3B8C733F1631392E0092ADE8 /* BranchMenuItemViewController.m */,
 			);
 			name = "status menu";
 			sourceTree = "<group>";
@@ -396,6 +407,15 @@
 				3B8C73331630BB190092ADE8 /* SMXObject.m */,
 			);
 			path = SMXObject;
+			sourceTree = "<group>";
+		};
+		3B8C733D163138EE0092ADE8 /* Menu Items */ = {
+			isa = PBXGroup;
+			children = (
+				3B8C73401631392F0092ADE8 /* BranchMenuItemView.xib */,
+				3B8C730F1630A18F0092ADE8 /* ProjectMenuItemView.xib */,
+			);
+			name = "Menu Items";
 			sourceTree = "<group>";
 		};
 		3B9FCB6F162F20400013F015 /* Models */ = {
@@ -440,7 +460,7 @@
 			isa = PBXGroup;
 			children = (
 				3B9FCBBE16305A580013F015 /* Preferences */,
-				3B8C730F1630A18F0092ADE8 /* ProjectMenuItemView.xib */,
+				3B8C733D163138EE0092ADE8 /* Menu Items */,
 				3B7B560B162F0BF500D7CDCB /* MainMenu.xib */,
 			);
 			name = Nibs;
@@ -463,6 +483,7 @@
 				3B9FCBCB1630721E0013F015 /* AdvancedPreferencesViewControllerSpec.m */,
 				3B9FCBC6163069E40013F015 /* PreferencesViewControllerSharedExamples.h */,
 				3B8C73151630A3D20092ADE8 /* ProjectMenuItemViewControllerSpec.m */,
+				3B8C73461631396C0092ADE8 /* BranchMenuItemViewControllerSpec.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -562,6 +583,7 @@
 				3B8C73181630B6640092ADE8 /* ProjectsPreferencesView.xib in Resources */,
 				3B8C733716311FC60092ADE8 /* License.txt in Resources */,
 				3B8C733C16312E780092ADE8 /* semaphore-notifier.icns in Resources */,
+				3B8C73431631392F0092ADE8 /* BranchMenuItemView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -577,6 +599,7 @@
 				3B9FCBA7162F295E0013F015 /* ConfigurationPreferencesView.xib in Resources */,
 				3B9FCBBD163058F90013F015 /* AdvancedPreferencesView.xib in Resources */,
 				3B8C73131630A18F0092ADE8 /* ProjectMenuItemView.xib in Resources */,
+				3B8C73441631392F0092ADE8 /* BranchMenuItemView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -612,6 +635,7 @@
 				3B9FCBBA163058F90013F015 /* AdvancedPreferencesViewController.m in Sources */,
 				3B8C73101630A18F0092ADE8 /* ProjectMenuItemViewController.m in Sources */,
 				3B8C73341630BB190092ADE8 /* SMXObject.m in Sources */,
+				3B8C73411631392F0092ADE8 /* BranchMenuItemViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -634,6 +658,8 @@
 				3B8C73111630A18F0092ADE8 /* ProjectMenuItemViewController.m in Sources */,
 				3B8C73161630A3D20092ADE8 /* ProjectMenuItemViewControllerSpec.m in Sources */,
 				3B8C73351630BB190092ADE8 /* SMXObject.m in Sources */,
+				3B8C73421631392F0092ADE8 /* BranchMenuItemViewController.m in Sources */,
+				3B8C73471631396C0092ADE8 /* BranchMenuItemViewControllerSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
