@@ -24,6 +24,7 @@
   if((self = [super init])) {
     self.name = @"Set the project name" ;
     self.apiKey = @"Set the project API key" ;
+    self.enabled = YES ;
   }
   return self ;
 }

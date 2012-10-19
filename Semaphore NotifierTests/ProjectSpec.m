@@ -40,6 +40,16 @@ describe(@"project", ^{
 
       expect(project.apiKey).to.equal(@"Set the project API key") ;
     }) ;
+
+    it(@"is enable by default", ^{
+      expect(project.enabled).to.beTruthy() ;
+    }) ;
+
+    it(@"can be disbled", ^{
+      project.enabled = NO ;
+
+      expect(project.enabled).to.beFalsy() ;
+    }) ;
   }) ;
 
   describe(@"projectWithName:andKey:", ^{
