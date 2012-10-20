@@ -11,6 +11,7 @@
 
 @interface Branch : SMXObject
 
+@property (copy, nonatomic) NSNumber *branchId ;
 @property (copy, nonatomic) NSString  *name ;
 @property (copy, nonatomic) NSURL *url ;
 @property (copy, nonatomic) NSURL *statusUrl ;

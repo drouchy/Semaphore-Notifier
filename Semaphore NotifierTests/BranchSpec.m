@@ -18,11 +18,16 @@ describe(@"Branch", ^{
     beforeEach(^{
       branch = [[Branch alloc] init] ;
       branch.name = @"branch name" ;
+      branch.branchId = @3 ;
       branch.url = [NSURL URLWithString: @"http://host/branch"];
       branch.statusUrl = [NSURL URLWithString: @"http://host/status"];
       branch.historyUrl = [NSURL URLWithString: @"http://host/history"];
     }) ;
-    
+
+    it(@"has a id", ^{
+      expect(branch.branchId).to.equal(3) ;
+    }) ;
+
     it(@"has a name", ^{
       expect(branch.name).to.equal(@"branch name") ;
     }) ;
