@@ -11,9 +11,10 @@
 
 @interface Project : SemaphoreResource
 
-@property (copy, nonatomic) NSString *name ;
-@property (copy, nonatomic) NSString *apiKey ;
-@property (nonatomic)       Boolean enabled ;
+@property (copy, nonatomic)   NSString *name ;
+@property (copy, nonatomic)   NSString *apiKey ;
+@property (nonatomic)         Boolean enabled ;
+@property (retain, nonatomic) NSMutableArray *branches ;
 
 + (id) projectWithName: (NSString *) aName andKey: (NSString *) aKey ;
 

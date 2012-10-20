@@ -14,3 +14,8 @@ extern int const BuildStatusFailure ;
 extern int const BuildStatusUnknown ;
 
 extern NSString *SemaphoreApiUrl ;
+
+extern int const ResourceStatusNone ;
+extern int const ResourceStatusSuccess ;
+extern int const ResourceStatusFailure ;
+extern int const ResourceStatusLoading ;

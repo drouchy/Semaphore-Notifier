@@ -50,6 +50,10 @@ describe(@"project", ^{
 
       expect(project.enabled).to.beFalsy() ;
     }) ;
+
+    it(@"does not have any branches", ^{
+      expect(project.branches).to.beEmpty() ;
+    }) ;
   }) ;
 
   describe(@"projectWithName:andKey:", ^{
