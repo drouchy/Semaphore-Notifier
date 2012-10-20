@@ -18,6 +18,7 @@ static UserDefaultsProvider *provider ;
 
 @interface AppDelegate()
 @property (retain, nonatomic) NSMutableArray *projects ;
+@property (retain, nonatomic) NSArray *projectMenuControllers ;
 @end
 
 @implementation AppDelegate
@@ -94,6 +95,10 @@ static UserDefaultsProvider *provider ;
   }
 }
 
+- (void) loadProjectMenuItems {
+  NSLog(@"loading projects menu items %@", _projects) ;
+}
+
 - (void) launchPreferences:(id) sender {
   NSLog(@"launchPreferences") ;
 
@@ -106,5 +111,17 @@ static UserDefaultsProvider *provider ;
     self.preferencesController = [[MASPreferencesWindowController alloc] initWithViewControllers:controllers title: @"Preferences"] ;
   }
   [self.preferencesController showWindow:nil] ;
+}
+
+// Don't know how to test that
+- (void)menuWillOpen:(NSMenu *)menu {
+  NSTimer *timer = [NSTimer timerWithTimeInterval:0.1 target:self selector:@selector(animateProgress:) userInfo:nil repeats:YES];
+  [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSEventTrackingRunLoopMode];
+}
+
+- (void)animateProgress:(NSTimer *)timer {
+  for(ProjectMenuItemViewController *controller in self.projectMenuControllers) {
+    //[controller showIndicator] ;
+  }
 }
 @end

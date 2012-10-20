@@ -12,7 +12,10 @@
 #import "UserDefaultsProvider.h"
 
 @interface AppDelegate()
+
 @property (retain, nonatomic) NSArray *projects ;
+
+- (void) loadProjectMenuItems ;
 @end
 
 SpecBegin(AppDelegateSpec)
@@ -58,8 +61,22 @@ describe(@"AppDelegate", ^{
       expect([projects[0] apiKey]).to.equal(@"key 1") ;
     }) ;
   }) ;
-  
-  describe(@"properties", ^{
+
+  describe(@"loadProjectMenuItems", ^{
+    __block NSMenu *menu ;
+    
+    beforeEach(^{
+      NSApplication *application = [NSApplication sharedApplication];
+      [NSBundle loadNibNamed:@"MainMenu" owner:application];
+      delegate = [application delegate] ;
+
+      [delegate loadProjectMenuItems] ;
+      menu = delegate.statusMenu ;
+    }) ;
+
+    it(@"creates an entry for every enabled projects", ^{
+      expect([menu.itemArray count]).to.equal(8) ;
+    }) ;
   }) ;
 });
 SpecEnd
