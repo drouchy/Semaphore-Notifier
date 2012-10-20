@@ -18,7 +18,7 @@ static UserDefaultsProvider *provider ;
 
 @interface AppDelegate()
 @property (retain, nonatomic) NSMutableArray *projects ;
-@property (retain, nonatomic) NSArray *projectMenuControllers ;
+@property (retain, nonatomic) NSMutableArray *projectMenuControllers ;
 @end
 
 @implementation AppDelegate
@@ -68,6 +68,7 @@ static UserDefaultsProvider *provider ;
 
 - (void) awakeFromNib {
   self.statusItem = [self createStatusItem] ;
+  [self loadProjectMenuItems] ;
 }
 
 - (NSStatusItem *) createStatusItem {
@@ -97,6 +98,21 @@ static UserDefaultsProvider *provider ;
 
 - (void) loadProjectMenuItems {
   NSLog(@"loading projects menu items %@", _projects) ;
+  int i = 2 ;
+  _projectMenuControllers = [NSMutableArray array] ;
+  for(Project *project in _projects) {
+    NSLog(@"loadin project %@", project.name) ;
+    if(project.enabled) {
+      ProjectMenuItemViewController *controller = [[ProjectMenuItemViewController alloc] init] ;
+      controller.project = project ;
+      [_projectMenuControllers addObject: controller] ;
+
+      NSMenuItem *menuItem = [[NSMenuItem alloc] init] ;
+      menuItem.view = controller.view ;
+      [self.statusMenu insertItem: menuItem atIndex:i] ;
+      i++ ;
+    }
+  }
 }
 
 - (void) launchPreferences:(id) sender {

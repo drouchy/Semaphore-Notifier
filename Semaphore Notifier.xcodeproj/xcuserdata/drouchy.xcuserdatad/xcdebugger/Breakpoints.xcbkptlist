@@ -8,55 +8,55 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Semaphore Notifier/AppDelegate.m"
-         timestampString = "372435062.468376"
+         timestampString = "372435847.422942"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "132"
-         endingLineNumber = "132">
+         startingLineNumber = "148"
+         endingLineNumber = "148">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Semaphore NotifierTests/AppDelegateSpec.m"
-         timestampString = "372435278.022424"
+         timestampString = "372435938.727291"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "92"
-         endingLineNumber = "92">
+         startingLineNumber = "98"
+         endingLineNumber = "98">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Semaphore NotifierTests/AppDelegateSpec.m"
-         timestampString = "372435278.022424"
+         timestampString = "372435938.727291"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "93"
-         endingLineNumber = "93">
+         startingLineNumber = "99"
+         endingLineNumber = "99">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Semaphore Notifier/AppDelegate.m"
-         timestampString = "372435062.468376"
+         timestampString = "372435847.422942"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "176"
-         endingLineNumber = "176">
+         startingLineNumber = "192"
+         endingLineNumber = "192">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Semaphore NotifierTests/AppDelegateSpec.m"
-         timestampString = "372435062.468376"
+         timestampString = "372435886.629688"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "35"
-         endingLineNumber = "35">
+         startingLineNumber = "33"
+         endingLineNumber = "33">
       </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>
