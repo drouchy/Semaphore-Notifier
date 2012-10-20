@@ -17,8 +17,8 @@
 static UserDefaultsProvider *provider ;
 
 @interface AppDelegate()
-@property (retain, nonatomic) NSMutableArray *projects ;
-@property (retain, nonatomic) NSMutableArray *projectMenuControllers ;
+@property (retain, nonatomic) NSArray *projects ;
+@property (retain, nonatomic) NSArray *projectMenuControllers ;
 @end
 
 @implementation AppDelegate
@@ -85,27 +85,29 @@ static UserDefaultsProvider *provider ;
   NSLog(@"loading projects") ;
   NSUserDefaults *userDefaults = [self loadUserDefaults] ;
   
-  self.projects = [NSMutableArray array] ;
+  NSMutableArray *array = [NSMutableArray array] ;
   for(NSDictionary *entry in [userDefaults objectForKey: @"projects"]) {
     Project *project = [[Project alloc] init] ;
     project.name = entry[@"name"] ;
     project.enabled = [entry[@"enabled"] boolValue] ;
     project.apiKey = entry[@"apiKey"] ;
 
-    [self.projects addObject: project] ;
+    [array addObject: project] ;
   }
+  
+  self.projects = [array copy] ;
 }
 
 - (void) loadProjectMenuItems {
   NSLog(@"loading projects menu items %@", _projects) ;
   int i = 2 ;
-  _projectMenuControllers = [NSMutableArray array] ;
+  NSMutableArray *controllers = [NSMutableArray array] ;
   for(Project *project in _projects) {
     NSLog(@"loadin project %@", project.name) ;
     if(project.enabled) {
       ProjectMenuItemViewController *controller = [[ProjectMenuItemViewController alloc] init] ;
       controller.project = project ;
-      [_projectMenuControllers addObject: controller] ;
+      [controllers addObject: controller] ;
 
       NSMenuItem *menuItem = [[NSMenuItem alloc] init] ;
       menuItem.view = controller.view ;
@@ -113,6 +115,7 @@ static UserDefaultsProvider *provider ;
       i++ ;
     }
   }
+  _projectMenuControllers = [controllers copy] ;
 }
 
 - (void) launchPreferences:(id) sender {
@@ -131,14 +134,14 @@ static UserDefaultsProvider *provider ;
 
 // Don't know how to test that
 - (void)menuWillOpen:(NSMenu *)menu {
-  NSTimer *timer = [NSTimer timerWithTimeInterval:0.1 target:self selector:@selector(animateProgress:) userInfo:nil repeats:NO];
+  NSTimer *timer = [NSTimer timerWithTimeInterval:0 target:self selector:@selector(animateProgress:) userInfo:nil repeats:NO];
   [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSEventTrackingRunLoopMode];
 }
 
 - (void)animateProgress:(NSTimer *)timer {
-//  NSLog(@"animate progress: %@", self.projectMenuControllers) ;
-//  for(ProjectMenuItemViewController *controller in self.projectMenuControllers) {
-//    [controller showIndicator] ;
-//  }
+  NSLog(@"animate progress: %@", self.projectMenuControllers) ;
+  for(ProjectMenuItemViewController *controller in self.projectMenuControllers) {
+    [controller showIndicator] ;
+  }
 }
 @end
