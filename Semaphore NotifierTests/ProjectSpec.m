@@ -8,6 +8,7 @@
 
 #import "SpecHelper.h"
 #import "Project.h"
+#import "Branch.h"
 
 SpecBegin(ProjectSpec)
 
@@ -71,6 +72,30 @@ describe(@"project", ^{
     
     it(@"set the api key", ^{
       expect(project.apiKey).to.equal(@"project key") ;
+    }) ;
+  }) ;
+
+  describe(@"parseBranches", ^{
+    __block NSArray *json  ;
+    __block Branch *oneBranch ;
+    
+    beforeEach(^{
+      json = @[ @{@"id": @2, @"name": @"branch 1"}, @{@"id": @3, @"name": @"branch 2"}] ;
+      
+      [project loadBranches: json] ;
+      oneBranch = project.branches[0] ;
+    }) ;
+
+    it(@"add the branches to the array", ^{
+      expect([project.branches count]).to.equal(2) ;
+    }) ;
+
+    it(@"parse the id", ^{
+      expect(oneBranch.branchId).to.equal(2) ;
+    }) ;
+
+    it(@"parse the name", ^{
+      expect(oneBranch.name).to.equal(@"branch 1") ;
     }) ;
   }) ;
 }) ;

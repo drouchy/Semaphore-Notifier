@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "SemaphoreResource.h"
+#import "Branch.h"
 
 @interface Project : SemaphoreResource
 
@@ -19,4 +20,5 @@
 + (id) projectWithName: (NSString *) aName andKey: (NSString *) aKey ;
 
 - (NSURL *) branchListUrl ;
+- (void) loadBranches: (NSArray *) json ;
 @end

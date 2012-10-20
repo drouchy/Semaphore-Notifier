@@ -34,4 +34,14 @@
   NSString *branchListUrl = [NSString stringWithFormat: @"%@/projects/%@/branches?auth_token=%@", SemaphoreApiUrl, self.apiKey, [self authToken]] ;
   return [NSURL URLWithString:branchListUrl];
 }
+
+- (void) loadBranches: (NSArray *) json {
+  for(NSDictionary *entry in json) {
+    Branch *branch = [[Branch alloc] init] ;
+    branch.branchId = entry[@"id"] ;
+    branch.name = entry[@"name"] ;
+    
+    [_branches addObject: branch] ;
+  }
+}
 @end
