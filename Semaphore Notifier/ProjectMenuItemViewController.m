@@ -9,10 +9,12 @@
 #import "ProjectMenuItemViewController.h"
 
 @interface ProjectMenuItemViewController ()
-
+@property (nonatomic) Boolean loading ;
 @end
 
 @implementation ProjectMenuItemViewController
+
+@synthesize loading = _loading ;
 
 - (id)init {
   self = [super initWithNibName:@"ProjectMenuItemView" bundle: [NSBundle bundleForClass: [self class]]];
@@ -28,11 +30,13 @@
 }
 
 - (void) showIndicator {
-  [self.loadingIndicator performSelector:@selector(startAnimation:)
-                              withObject:self
-                              afterDelay:0.0
-                                 inModes:[NSArray
-                         arrayWithObject:NSEventTrackingRunLoopMode]];
+  if(self.loading) {
+    [self.loadingIndicator performSelector:@selector(startAnimation:)
+                                withObject:self
+                                afterDelay:0.0
+                                   inModes:[NSArray
+                           arrayWithObject:NSEventTrackingRunLoopMode]];
+  }
 }
 
 @end
