@@ -16,6 +16,10 @@
 
 static UserDefaultsProvider *provider ;
 
+@interface AppDelegate()
+@property (retain, nonatomic) NSMutableArray *projects ;
+@end
+
 @implementation AppDelegate
 
 @synthesize statusItem = _statusItem ;
@@ -77,6 +81,17 @@ static UserDefaultsProvider *provider ;
 
 - (void) loadProjects {
   NSLog(@"loading projects") ;
+  NSUserDefaults *userDefaults = [self loadUserDefaults] ;
+  
+  self.projects = [NSMutableArray array] ;
+  for(NSDictionary *entry in [userDefaults objectForKey: @"projects"]) {
+    Project *project = [[Project alloc] init] ;
+    project.name = entry[@"name"] ;
+    project.enabled = [entry[@"enabled"] boolValue] ;
+    project.apiKey = entry[@"apiKey"] ;
+
+    [self.projects addObject: project] ;
+  }
 }
 
 - (void) launchPreferences:(id) sender {

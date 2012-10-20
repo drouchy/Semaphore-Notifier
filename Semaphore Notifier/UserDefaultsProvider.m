@@ -14,16 +14,24 @@
 
 @implementation UserDefaultsProvider
 
+@synthesize userDefaults = _userDefaults ;
+
 + (id) providerWithSettings: (NSDictionary *) settings {
   UserDefaultsProvider *provider = [[self alloc] init] ;
   NSUserDefaults *defaults = [[NSUserDefaults alloc] init] ;
   [defaults registerDefaults: settings] ;
+  
+  for(NSString *key in [settings allKeys]) {
+    [defaults setObject: settings[key] forKey: key] ;
+  }
+  
+  provider.userDefaults = defaults ;
   return provider ;
 }
 
 - (NSUserDefaults *) userDefaults {
-  if(self.userDefaults) {
-    return self.userDefaults ;
+  if(_userDefaults) {
+    return _userDefaults ;
   }
   return [NSUserDefaults standardUserDefaults] ;
 }

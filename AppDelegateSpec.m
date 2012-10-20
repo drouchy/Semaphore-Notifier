@@ -8,8 +8,8 @@
 
 #import "AppDelegate.h"
 #import "SpecHelper.h"
+#import "ApplicationUserDefaultsMock.h"
 #import "Project.h"
-#import "UserDefaultsProvider.h"
 
 @interface AppDelegate()
 @property (retain, nonatomic) NSArray *projects ;
@@ -19,21 +19,19 @@ SpecBegin(AppDelegateSpec)
 
 describe(@"AppDelegate", ^{
   __block AppDelegate *delegate ;
-  __block  NSDictionary *settings ;
+  __block  NSDictionary *settings =  @{ @"projects": @[
+                                            @{@"name": @"project 1", @"enabled": @YES, @"apiKey": @"key 1"},
+                                            @{@"name": @"project 2", @"enabled": @NO, @"apiKey": @"key 2"},
+                                            @{@"name": @"project 3", @"enabled": @YES, @"apiKey": @"key 3"} ]} ;
   
-  __block UserDefaultsProvider *provider ;
+  __block ApplicationUserDefaultsMock *provider ;
   
   beforeEach(^{
-    settings =  @{ @"projects": @[
-                          @{@"name": @"project 1", @"enabled": @YES, @"apiKey": @"key 1"},
-                          @{@"name": @"project 2", @"enabled": @NO, @"apiKey": @"key 2"},
-                          @{@"name": @"project 3", @"enabled": @YES, @"apiKey": @"key 3"} ]} ;
-    
-    provider = [UserDefaultsProvider providerWithSettings: settings] ;
-    [AppDelegate registerUserDefaultsProvider: provider] ;
+    provider = [ApplicationUserDefaultsMock mockWithDefaults: settings] ;
+    [provider mockUserDefaultsForApp] ;
     delegate = [[AppDelegate alloc] init] ;
   }) ;
-  
+
   describe(@"init", ^{
     __block NSArray *projects ;
     
@@ -45,15 +43,15 @@ describe(@"AppDelegate", ^{
       expect([projects count]).to.equal(3) ;
       NSLog(@"%@", projects) ;
     }) ;
-    
+
     it(@"sets the project name from the user defautls", ^{
       expect([projects[0] name]).to.equal(@"project 1") ;;
     }) ;
-    
+
     it(@"sets the project enabled from the user defautls", ^{
-      expect([projects[1] enabled]).to.beFalsy() ;
+      expect([projects[0] enabled]).to.beTruthy() ;
     }) ;
-    
+
     it(@"sets the project api key from the user defautls", ^{
       expect([projects[0] apiKey]).to.equal(@"key 1") ;
     }) ;
