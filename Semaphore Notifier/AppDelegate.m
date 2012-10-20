@@ -14,6 +14,8 @@
 #import "Project.h"
 #import "ProjectMenuItemViewController.h"
 
+static UserDefaultsProvider *provider ;
+
 @implementation AppDelegate
 
 @synthesize statusItem = _statusItem ;
@@ -24,19 +26,35 @@
 }
 
 + (void) initialize {
+  [self registerUserDefaults] ;
+}
+
++ (void) registerUserDefaults {
   NSDictionary *defaults = @{
-    @"authKey": @"",
-    @"projects": [NSMutableArray array]
-  } ;
+                              @"authKey": @"",
+                              @"projects": [NSMutableArray array]
+                            } ;
   
   [[NSUserDefaults standardUserDefaults] registerDefaults: [defaults mutableCopy]] ;
   NSLog(@"registered defaults %@", defaults) ;
 }
 
++ (void) registerUserDefaultsProvider: (UserDefaultsProvider *) aProvider {
+  provider = aProvider ;
+}
+
 - (id) init {
   if((self = [super init])) {
+    [self loadProjects] ;
   }
   return self ;
+}
+
+- (NSUserDefaults *) loadUserDefaults {
+  if(!provider) {
+    provider = [[UserDefaultsProvider alloc] init] ;
+  }
+  return [provider userDefaults] ;
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
@@ -45,7 +63,6 @@
 
 - (void) awakeFromNib {
   self.statusItem = [self createStatusItem] ;
-  [self loadProjects] ;
 }
 
 - (NSStatusItem *) createStatusItem {
@@ -59,7 +76,7 @@
 }
 
 - (void) loadProjects {
-
+  NSLog(@"loading projects") ;
 }
 
 - (void) launchPreferences:(id) sender {

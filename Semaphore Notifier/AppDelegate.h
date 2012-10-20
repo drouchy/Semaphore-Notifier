@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "UserDefaultsProvider.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
@@ -15,5 +16,7 @@
 @property (strong, nonatomic) NSStatusItem *statusItem ;
 
 @property (nonatomic, retain) NSWindowController *preferencesController ;
+
++ (void) registerUserDefaultsProvider: (UserDefaultsProvider *) provider ;
 
 @end

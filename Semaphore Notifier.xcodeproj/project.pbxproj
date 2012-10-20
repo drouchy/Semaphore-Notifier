@@ -72,6 +72,8 @@
 		3B9FCBBD163058F90013F015 /* AdvancedPreferencesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B9FCBB9163058F90013F015 /* AdvancedPreferencesView.xib */; };
 		3B9FCBC9163072120013F015 /* ProjectsPreferencesViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9FCBC8163072120013F015 /* ProjectsPreferencesViewControllerSpec.m */; };
 		3B9FCBCC1630721E0013F015 /* AdvancedPreferencesViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9FCBCB1630721E0013F015 /* AdvancedPreferencesViewControllerSpec.m */; };
+		3BE8FF1E1632DC15000D2088 /* UserDefaultsProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE8FF1D1632DC15000D2088 /* UserDefaultsProvider.m */; };
+		3BE8FF1F1632DC15000D2088 /* UserDefaultsProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE8FF1D1632DC15000D2088 /* UserDefaultsProvider.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -205,6 +207,8 @@
 		3B9FCBC6163069E40013F015 /* PreferencesViewControllerSharedExamples.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesViewControllerSharedExamples.h; sourceTree = "<group>"; };
 		3B9FCBC8163072120013F015 /* ProjectsPreferencesViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectsPreferencesViewControllerSpec.m; sourceTree = "<group>"; };
 		3B9FCBCB1630721E0013F015 /* AdvancedPreferencesViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdvancedPreferencesViewControllerSpec.m; sourceTree = "<group>"; };
+		3BE8FF1C1632DC15000D2088 /* UserDefaultsProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDefaultsProvider.h; sourceTree = "<group>"; };
+		3BE8FF1D1632DC15000D2088 /* UserDefaultsProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDefaultsProvider.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -288,6 +292,8 @@
 				3B7B5663162F19A200D7CDCB /* Assets */,
 				3B9FCB9F162F292C0013F015 /* Nibs */,
 				3B7B55FD162F0BF500D7CDCB /* Supporting Files */,
+				3BE8FF1C1632DC15000D2088 /* UserDefaultsProvider.h */,
+				3BE8FF1D1632DC15000D2088 /* UserDefaultsProvider.m */,
 			);
 			path = "Semaphore Notifier";
 			sourceTree = "<group>";
@@ -663,6 +669,7 @@
 				3B8C734A163139CA0092ADE8 /* Branch.m in Sources */,
 				3B8C735216316C4E0092ADE8 /* Build.m in Sources */,
 				3B3B012816316F4500CF6246 /* Constants.m in Sources */,
+				3BE8FF1E1632DC15000D2088 /* UserDefaultsProvider.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -692,6 +699,7 @@
 				3B8C735316316C4E0092ADE8 /* Build.m in Sources */,
 				3B3B012916316F4500CF6246 /* Constants.m in Sources */,
 				3B3B012D16316FC500CF6246 /* BuildSpec.m in Sources */,
+				3BE8FF1F1632DC15000D2088 /* UserDefaultsProvider.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
