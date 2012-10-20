@@ -7,13 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "SMXObject.h"
+#import "SemaphoreResource.h"
 
-@interface Project : SMXObject
+@interface Project : SemaphoreResource
 
 @property (copy, nonatomic) NSString *name ;
 @property (copy, nonatomic) NSString *apiKey ;
 @property (nonatomic)       Boolean enabled ;
 
 + (id) projectWithName: (NSString *) aName andKey: (NSString *) aKey ;
+
+- (NSURL *) branchListUrl ;
 @end

@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		3B11AE401632E9AF005E9F88 /* StatusBarMenuItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B11AE3F1632E9AF005E9F88 /* StatusBarMenuItemView.m */; };
 		3B11AE411632E9AF005E9F88 /* StatusBarMenuItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B11AE3F1632E9AF005E9F88 /* StatusBarMenuItemView.m */; };
+		3B11AE4C16330098005E9F88 /* SemaphoreResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B11AE4B16330098005E9F88 /* SemaphoreResource.m */; };
+		3B11AE4D16330098005E9F88 /* SemaphoreResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B11AE4B16330098005E9F88 /* SemaphoreResource.m */; };
+		3B11AE5116330485005E9F88 /* SemaphoreResourceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B11AE5016330485005E9F88 /* SemaphoreResourceSpec.m */; };
 		3B3B012816316F4500CF6246 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3B012716316F4500CF6246 /* Constants.m */; };
 		3B3B012916316F4500CF6246 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3B012716316F4500CF6246 /* Constants.m */; };
 		3B3B012D16316FC500CF6246 /* BuildSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3B012C16316FC500CF6246 /* BuildSpec.m */; };
@@ -104,6 +107,9 @@
 /* Begin PBXFileReference section */
 		3B11AE3E1632E9AF005E9F88 /* StatusBarMenuItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusBarMenuItemView.h; sourceTree = "<group>"; };
 		3B11AE3F1632E9AF005E9F88 /* StatusBarMenuItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusBarMenuItemView.m; sourceTree = "<group>"; };
+		3B11AE4A16330098005E9F88 /* SemaphoreResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SemaphoreResource.h; sourceTree = "<group>"; };
+		3B11AE4B16330098005E9F88 /* SemaphoreResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SemaphoreResource.m; sourceTree = "<group>"; };
+		3B11AE5016330485005E9F88 /* SemaphoreResourceSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SemaphoreResourceSpec.m; sourceTree = "<group>"; };
 		3B3B012616316F4500CF6246 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		3B3B012716316F4500CF6246 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		3B3B012C16316FC500CF6246 /* BuildSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuildSpec.m; sourceTree = "<group>"; };
@@ -465,6 +471,8 @@
 				3B8C735116316C4E0092ADE8 /* Build.m */,
 				3B3B012616316F4500CF6246 /* Constants.h */,
 				3B3B012716316F4500CF6246 /* Constants.m */,
+				3B11AE4A16330098005E9F88 /* SemaphoreResource.h */,
+				3B11AE4B16330098005E9F88 /* SemaphoreResource.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -475,6 +483,7 @@
 				3B9FCB77162F206A0013F015 /* ProjectSpec.m */,
 				3B8C734D163139D50092ADE8 /* BranchSpec.m */,
 				3B3B012C16316FC500CF6246 /* BuildSpec.m */,
+				3B11AE5016330485005E9F88 /* SemaphoreResourceSpec.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -685,6 +694,7 @@
 				3B3B012816316F4500CF6246 /* Constants.m in Sources */,
 				3BE8FF1E1632DC15000D2088 /* UserDefaultsProvider.m in Sources */,
 				3B11AE401632E9AF005E9F88 /* StatusBarMenuItemView.m in Sources */,
+				3B11AE4C16330098005E9F88 /* SemaphoreResource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -716,6 +726,8 @@
 				3B3B012D16316FC500CF6246 /* BuildSpec.m in Sources */,
 				3BE8FF1F1632DC15000D2088 /* UserDefaultsProvider.m in Sources */,
 				3B11AE411632E9AF005E9F88 /* StatusBarMenuItemView.m in Sources */,
+				3B11AE4D16330098005E9F88 /* SemaphoreResource.m in Sources */,
+				3B11AE5116330485005E9F88 /* SemaphoreResourceSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -28,4 +28,9 @@
   }
   return self ;
 }
+
+- (NSURL *) branchListUrl {
+  NSString *branchListUrl = [NSString stringWithFormat: @"%@/projects/%@/branches?auth_token=%@", SemaphoreApiUrl, self.apiKey, [self authToken]] ;
+  return [NSURL URLWithString:branchListUrl];
+}
 @end

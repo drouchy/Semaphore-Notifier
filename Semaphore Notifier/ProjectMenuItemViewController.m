@@ -26,7 +26,13 @@
 }
 
 - (void) awakeFromNib {
-  [self showIndicator] ;
+  [self queryProjectBranches] ;
+}
+
+- (void) queryProjectBranches {
+  NSLog(@"Requesting the branches of project %@", self.project.name) ;
+  NSURL *url = [self.project branchListUrl] ;
+  NSLog(@"opening url %@", url) ;
 }
 
 - (void) showIndicator {

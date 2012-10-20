@@ -12,3 +12,5 @@ int const BuildStatusNone    = 0 ;
 int const BuildStatusSuccess = 1 ;
 int const BuildStatusFailure = 2 ;
 int const BuildStatusUnknown = 3 ;
+
+NSString *SemaphoreApiUrl = @"https://semaphoreapp.com/api/v1";
