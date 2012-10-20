@@ -131,13 +131,14 @@ static UserDefaultsProvider *provider ;
 
 // Don't know how to test that
 - (void)menuWillOpen:(NSMenu *)menu {
-  NSTimer *timer = [NSTimer timerWithTimeInterval:0.1 target:self selector:@selector(animateProgress:) userInfo:nil repeats:YES];
+  NSTimer *timer = [NSTimer timerWithTimeInterval:0.1 target:self selector:@selector(animateProgress:) userInfo:nil repeats:NO];
   [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSEventTrackingRunLoopMode];
 }
 
 - (void)animateProgress:(NSTimer *)timer {
-  for(ProjectMenuItemViewController *controller in self.projectMenuControllers) {
-    //[controller showIndicator] ;
-  }
+//  NSLog(@"animate progress: %@", self.projectMenuControllers) ;
+//  for(ProjectMenuItemViewController *controller in self.projectMenuControllers) {
+//    [controller showIndicator] ;
+//  }
 }
 @end

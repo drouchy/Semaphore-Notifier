@@ -13,4 +13,6 @@
 
 @property (retain, nonatomic) Project *project ;
 @property (assign) IBOutlet NSProgressIndicator *loadingIndicator;
+
+- (void) showIndicator ;
 @end
