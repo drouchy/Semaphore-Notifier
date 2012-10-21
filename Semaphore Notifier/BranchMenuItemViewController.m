@@ -14,6 +14,11 @@
 
 @implementation BranchMenuItemViewController
 
++ (id) controllerWithBranch: (Branch *) aBranch {
+  BranchMenuItemViewController *controller = [[BranchMenuItemViewController alloc] init] ;
+  controller.branch = aBranch ;
+  return controller ;
+}
 - (id)init {
   self = [super initWithNibName:@"BranchMenuItemView" bundle:[NSBundle bundleForClass: [self class]]];
   if (self) {
@@ -23,4 +28,9 @@
   return self;
 }
 
+- (NSMenuItem *) buildMenuItem {
+  NSMenuItem *menuItem = [[NSMenuItem alloc] init] ;
+  menuItem.view = self.view ;
+  return menuItem ;
+}
 @end
