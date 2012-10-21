@@ -98,10 +98,16 @@
   if(jsonArray) {
     NSLog(@"parsing the JSON message: %@", jsonArray) ;
     [_project loadBranches: jsonArray] ;
+    [self loadBranches] ;
   } else {
     _status = [NSNumber numberWithInt: ResourceStatusFailure] ;
     NSLog(@"Failed to parse the response (%@)", self.project.name) ;
   }
 }
-                                               
+
+- (void) loadBranches {
+  for(Branch *branch in self.project.branches) {
+    NSLog(@"Loading branch: %@ (%@)", branch.name, self.project.name) ;
+  }
+}
 @end
