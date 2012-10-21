@@ -64,13 +64,13 @@
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "Semaphore Notifier/Project.m"
-         timestampString = "372449561.313202"
+         filePath = "Semaphore Notifier/ProjectMenuItemViewController.m"
+         timestampString = "372498255.134675"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "39"
-         endingLineNumber = "39"
-         landmarkName = "-loadBranhces:"
+         startingLineNumber = "87"
+         endingLineNumber = "87"
+         landmarkName = "-connectionDidFinishLoading:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

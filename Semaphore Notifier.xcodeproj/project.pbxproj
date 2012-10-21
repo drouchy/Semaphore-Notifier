@@ -254,6 +254,15 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		3B11AE521633D8A2005E9F88 /* status menu */ = {
+			isa = PBXGroup;
+			children = (
+				3B8C73151630A3D20092ADE8 /* ProjectMenuItemViewControllerSpec.m */,
+				3B8C73461631396C0092ADE8 /* BranchMenuItemViewControllerSpec.m */,
+			);
+			name = "status menu";
+			sourceTree = "<group>";
+		};
 		3B7B55E7162F0BF500D7CDCB = {
 			isa = PBXGroup;
 			children = (
@@ -535,8 +544,7 @@
 				3B9FCBC8163072120013F015 /* ProjectsPreferencesViewControllerSpec.m */,
 				3B9FCBCB1630721E0013F015 /* AdvancedPreferencesViewControllerSpec.m */,
 				3B9FCBC6163069E40013F015 /* PreferencesViewControllerSharedExamples.h */,
-				3B8C73151630A3D20092ADE8 /* ProjectMenuItemViewControllerSpec.m */,
-				3B8C73461631396C0092ADE8 /* BranchMenuItemViewControllerSpec.m */,
+				3B11AE521633D8A2005E9F88 /* status menu */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
