@@ -66,6 +66,10 @@ static UserDefaultsProvider *provider ;
 - (void) awakeFromNib {
   self.statusItem = [self createStatusItem] ;
   [self loadProjectMenuItems] ;
+  
+  NSTimer *timer = [NSTimer timerWithTimeInterval: 5*60.0 target:self selector:@selector(refresh:) userInfo:nil repeats:YES];
+  [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSDefaultRunLoopMode];
+  
 }
 
 - (NSStatusItem *) createStatusItem {

@@ -8,11 +8,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Semaphore Notifier/AppDelegate.m"
-         timestampString = "372518432.199782"
+         timestampString = "372519432.125689"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "153"
-         endingLineNumber = "153">
+         startingLineNumber = "157"
+         endingLineNumber = "157">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -41,11 +41,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Semaphore Notifier/AppDelegate.m"
-         timestampString = "372518432.199782"
+         timestampString = "372519432.125689"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "197"
-         endingLineNumber = "197">
+         startingLineNumber = "201"
+         endingLineNumber = "201">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
