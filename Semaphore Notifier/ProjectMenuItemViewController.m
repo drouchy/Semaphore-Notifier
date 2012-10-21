@@ -76,12 +76,13 @@
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
   NSLog(@"did receive response (%@)", self.project.name) ;
-  _receivedData = [NSMutableData data];
+  _receivedData = [[NSMutableData alloc] init];
   [_receivedData setLength:0];
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
   NSLog(@"did receive data (%@)", self.project.name) ;
+  NSLog(@"%@", _receivedData) ;
   [_receivedData appendData:data];
 }
 
