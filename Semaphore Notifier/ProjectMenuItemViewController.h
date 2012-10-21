@@ -14,5 +14,7 @@
 @property (retain, nonatomic) Project *project ;
 @property (assign) IBOutlet NSProgressIndicator *loadingIndicator;
 
++ (id) controllerWithProject: (Project *) aProject ;
+
 - (void) showIndicator ;
 @end

@@ -19,6 +19,12 @@
 @synthesize status = _status ;
 @synthesize receivedData = _receivedData;
 
++ (id) controllerWithProject: (Project *) aProject {
+  ProjectMenuItemViewController *controller = [[self alloc] init] ;
+  controller.project = aProject ;
+  return controller ;
+}
+
 - (id)init {
   self = [super initWithNibName:@"ProjectMenuItemView" bundle: [NSBundle bundleForClass: [self class]]];
   if (self) {

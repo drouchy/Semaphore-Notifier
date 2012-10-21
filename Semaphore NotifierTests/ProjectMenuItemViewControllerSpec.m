@@ -31,6 +31,20 @@ describe(@"ProjectMenuItemViewController", ^{
     controller.project = project ;
   }) ;
 
+  describe(@"controllerWithProject", ^{
+    beforeEach(^{
+      controller = [ProjectMenuItemViewController controllerWithProject: project] ;
+    }) ;
+
+    it(@"creates a project controller", ^{
+      expect(controller).to.beKindOf([ProjectMenuItemViewController class]) ;
+    }) ;
+
+    it(@"links it to the project", ^{
+      expect(controller.project).to.beIdenticalTo(project) ;
+    }) ;
+  }) ;
+
   describe(@"NSUrlConnection delegate", ^{
     __block id connection ;
     __block id response ;
