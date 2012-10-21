@@ -108,9 +108,7 @@ static UserDefaultsProvider *provider ;
       ProjectMenuItemViewController *controller = [ProjectMenuItemViewController controllerWithProject: project] ;
       [controllers addObject: controller] ;
 
-      NSMenuItem *menuItem = [[NSMenuItem alloc] init] ;
-      menuItem.view = controller.view ;
-      [self.statusMenu insertItem: menuItem atIndex:i] ;
+      [self.statusMenu insertItem: [controller buildMenuItem] atIndex:i] ;
       i++ ;
     }
   }

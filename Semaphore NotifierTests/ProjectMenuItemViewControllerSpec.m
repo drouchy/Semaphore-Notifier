@@ -8,6 +8,7 @@
 
 #import "ProjectMenuItemViewController.h"
 #import "SpecHelper.h"
+#import "StatusBarMenuItemView.h"
 
 @interface ProjectMenuItemViewController ()
 @property (retain, nonatomic) NSNumber *status ;
@@ -98,6 +99,7 @@ describe(@"ProjectMenuItemViewController", ^{
         expect(controller.status).to.equal(ResourceStatusFailure) ;
       }) ;
     }) ;
+
     describe(@"connectionDidFinishLoading", ^{
       beforeEach(^{
         controller.receivedData = [[@"[{\"id\": \"1\", \"name\": \"branch\"}]"  dataUsingEncoding:NSUTF8StringEncoding] mutableCopy];
@@ -120,6 +122,19 @@ describe(@"ProjectMenuItemViewController", ^{
 
         expect(controller.status).to.equal(ResourceStatusFailure) ;
       }) ;
+    }) ;
+  }) ;
+
+  describe(@"buildMenuItem", ^{
+    __block NSMenuItem *item ;
+
+    beforeEach(^{
+      item = [controller buildMenuItem] ;
+    }) ;
+
+    // Still the issue with the class comparison
+    pending(@"creates a menu item with a specific view", ^{
+      expect([item view]).to.beKindOf([StatusBarMenuItemView class]) ;
     }) ;
   }) ;
 }) ;

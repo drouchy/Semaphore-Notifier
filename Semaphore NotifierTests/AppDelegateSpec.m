@@ -78,11 +78,6 @@ describe(@"AppDelegate", ^{
     it(@"creates an entry for every enabled projects", ^{
       expect([menu.itemArray count]).to.equal(8) ;
     }) ;
-
-    // Still the issue with the class comparison
-    pending(@"creates a menu item with a specific view", ^{
-      expect([menu.itemArray[3] view]).to.beKindOf([StatusBarMenuItemView class]) ;
-    }) ;
   }) ;
 });
 SpecEnd

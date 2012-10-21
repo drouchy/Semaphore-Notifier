@@ -8,11 +8,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Semaphore Notifier/AppDelegate.m"
-         timestampString = "372501390.6398"
+         timestampString = "372501632.238445"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "151"
-         endingLineNumber = "151"
+         startingLineNumber = "149"
+         endingLineNumber = "149"
          landmarkName = "-loadProjects"
          landmarkType = "5">
       </FileBreakpoint>
@@ -21,33 +21,33 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Semaphore NotifierTests/AppDelegateSpec.m"
-         timestampString = "372435938.727291"
+         timestampString = "372501590.748109"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "98"
-         endingLineNumber = "98">
+         startingLineNumber = "93"
+         endingLineNumber = "93">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Semaphore NotifierTests/AppDelegateSpec.m"
-         timestampString = "372435938.727291"
+         timestampString = "372501590.748109"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "99"
-         endingLineNumber = "99">
+         startingLineNumber = "94"
+         endingLineNumber = "94">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Semaphore Notifier/AppDelegate.m"
-         timestampString = "372501390.6398"
+         timestampString = "372501632.238445"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "195"
-         endingLineNumber = "195">
+         startingLineNumber = "193"
+         endingLineNumber = "193">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -65,11 +65,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Semaphore Notifier/ProjectMenuItemViewController.m"
-         timestampString = "372501390.6398"
+         timestampString = "372501655.34124"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "94"
-         endingLineNumber = "94"
+         startingLineNumber = "100"
+         endingLineNumber = "100"
          landmarkName = "-connectionDidFinishLoading:"
          landmarkType = "5">
       </FileBreakpoint>

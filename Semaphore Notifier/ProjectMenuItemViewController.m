@@ -38,6 +38,12 @@
   [self queryProjectBranches] ;
 }
 
+- (NSMenuItem *) buildMenuItem {
+  NSMenuItem *menuItem = [[NSMenuItem alloc] init] ;
+  menuItem.view = self.view ;
+  return menuItem ;
+}
+
 // Check how to test that
 - (void) queryProjectBranches {
   NSLog(@"Requesting the branches of project %@", self.project.name) ;
