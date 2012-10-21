@@ -16,5 +16,4 @@
 
 + (id) controllerWithProject: (Project *) aProject ;
 
-- (void) showIndicator ;
 @end

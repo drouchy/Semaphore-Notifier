@@ -18,5 +18,6 @@
 
 - (NSMenuItem *) buildMenuItem ;
 
+- (void) showIndicator ;
 - (void) parseJson: (NSArray *) json ;
 @end

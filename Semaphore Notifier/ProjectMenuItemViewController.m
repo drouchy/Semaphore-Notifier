@@ -56,16 +56,6 @@
   }
 }
 
-- (void) showIndicator {
-  if([self.status intValue] == ResourceStatusLoading) {
-    [self.loadingIndicator performSelector:@selector(startAnimation:)
-                                withObject:self
-                                afterDelay:0.0
-                                   inModes:[NSArray
-                           arrayWithObject:NSEventTrackingRunLoopMode]];
-  }
-}
-
 - (void) parseJson: (NSArray *) json {
   NSLog(@"parsing the JSON message: %@", json) ;
   [_project loadBranches: json] ;
