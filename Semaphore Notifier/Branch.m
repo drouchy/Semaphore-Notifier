@@ -42,6 +42,21 @@
 }
 
 - (void) loadBuild: (NSDictionary *) json {
-  [self.builds insertObject:[Build buildWithJson: json] atIndex:0] ;
+  if(json[@"build_number"] != [self lastBuild].number) {
+    NSLog(@"add the new build %@ on branch %@", json[@"build_number"], self.name) ;
+    [self.builds insertObject:[Build buildWithJson: json] atIndex:0] ;
+    if([self.builds count] > 2) {
+      [self.builds removeLastObject] ;
+    }
+  } else {
+    NSLog(@"no new build") ;
+  }
+}
+
+- (Build *) lastBuild {
+  if([self.builds count] == 0) {
+    return nil ;
+  }
+  return [self.builds objectAtIndex: 0] ;
 }
 @end
