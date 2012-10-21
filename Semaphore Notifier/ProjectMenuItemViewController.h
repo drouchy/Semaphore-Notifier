@@ -12,7 +12,7 @@
 
 @interface ProjectMenuItemViewController : MenuItemViewController
 
-@property (retain, nonatomic) Project *project ;
+@property (nonatomic) Project *project ;
 
 + (id) controllerWithProject: (Project *) aProject ;
 

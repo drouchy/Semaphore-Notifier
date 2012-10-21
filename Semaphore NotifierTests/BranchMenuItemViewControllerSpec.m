@@ -13,8 +13,8 @@
 SpecBegin(BranchMenuItemViewControllerSpec)
 
 describe(@"BranchMenuItemViewController", ^{
-  __block BranchMenuItemViewController *controller ;
-  __block Branch *branch ;
+  __weak BranchMenuItemViewController *controller ;
+  __weak Branch *branch ;
   
   beforeEach(^{
     controller = [[BranchMenuItemViewController alloc] init] ;
@@ -37,7 +37,7 @@ describe(@"BranchMenuItemViewController", ^{
   }) ;
 
   describe(@"buildMenuItem", ^{
-    __block NSMenuItem *item ;
+    __weak NSMenuItem *item ;
     
     beforeEach(^{
       //item = [controller buildMenuItem] ;

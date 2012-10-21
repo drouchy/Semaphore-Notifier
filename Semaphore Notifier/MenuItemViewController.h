@@ -11,13 +11,14 @@
 
 @interface MenuItemViewController : NSViewController
 
-@property (assign) IBOutlet NSProgressIndicator *loadingIndicator;
-@property (retain, nonatomic) NSNumber *status ;
-@property (retain, nonatomic) NSMutableData *receivedData;
-@property (retain, nonatomic) NSMenuItem *menuItem;
+@property (weak) IBOutlet NSProgressIndicator *loadingIndicator;
+@property (strong, nonatomic) NSNumber *status ;
+@property (strong, nonatomic) NSMutableData *receivedData;
+@property (strong, nonatomic) NSMenuItem *menuItem;
 
-- (NSMenuItem *) buildMenuItem ;
+- (NSMenuItem *) buildMenuItem: (id) delegate ;
 
 - (void) showIndicator ;
-- (void) parseJson: (NSArray *) json ;
+- (void) parseJson: (id) json ;
+- (void) redrawMenuItem ;
 @end

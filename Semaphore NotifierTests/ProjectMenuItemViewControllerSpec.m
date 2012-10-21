@@ -27,8 +27,8 @@
 SpecBegin(ProjectMenuItemViewControllerSpec)
 
 describe(@"ProjectMenuItemViewController", ^{
-  __block ProjectMenuItemViewController *controller ;
-  __block Project *project ;
+  __weak ProjectMenuItemViewController *controller ;
+  __weak Project *project ;
   
   beforeEach(^{
     controller = [[ProjectMenuItemViewController alloc] init] ;
@@ -51,8 +51,8 @@ describe(@"ProjectMenuItemViewController", ^{
   }) ;
 
   describe(@"NSUrlConnection delegate", ^{
-    __block id connection ;
-    __block id response ;
+    __unsafe_unretained id connection ;
+    __unsafe_unretained id response ;
 
     beforeEach(^{
       connection = [OCMockObject niceMockForClass:[NSConnection class]] ;
@@ -130,7 +130,7 @@ describe(@"ProjectMenuItemViewController", ^{
   }) ;
 
   describe(@"buildMenuItem", ^{
-    __block NSMenuItem *item ;
+    __weak NSMenuItem *item ;
 
     beforeEach(^{
       item = [controller buildMenuItem] ;

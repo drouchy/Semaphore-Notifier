@@ -8,16 +8,40 @@
 
 #import "Branch.h"
 #import "Constants.h"
+#import "Build.h"
 
 @implementation Branch
 
+@synthesize project = _project ;
+
++ (id) branchWithProject: (id) project {
+  Branch *branch = [[self alloc] init] ;
+  branch.project = project ;
+  return branch ;
+}
+
 - (id) init {
   if((self = [super init])) {
+    self.builds = [[NSMutableArray alloc] init] ;
   }
   return self ;
 }
 
 - (int) lastStatus {
-  return BuildStatusNone ;
+  if([self.builds count] == 0) {
+    return BuildStatusNone ;
+  }
+  Build *lastBuild = self.builds[0] ;
+  return lastBuild.status ;
+}
+
+- (NSURL *) lastBuildUrl {
+  NSString *apiKey = [self.project performSelector: @selector(apiKey)] ;
+  NSString *branchListUrl = [NSString stringWithFormat: @"%@/projects/%@/%@/status?auth_token=%@", SemaphoreApiUrl, apiKey, self.branchId, [self authToken]] ;
+  return [NSURL URLWithString:branchListUrl];
+}
+
+- (void) loadBuild: (NSDictionary *) json {
+  [self.builds insertObject:[Build buildWithJson: json] atIndex:0] ;
 }
 @end

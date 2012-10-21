@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "Build.h"
 #import "SMXObject.h"
+#import "Constants.h"
 
 @interface Build : SMXObject
 
@@ -18,4 +19,6 @@
 @property (copy, nonatomic) NSDate *finishedAt ;
 @property (nonatomic) int status ;
 
++ (id) buildWithJson:(NSDictionary *) json ;
+- (void) parse: (NSDictionary *) json ;
 @end

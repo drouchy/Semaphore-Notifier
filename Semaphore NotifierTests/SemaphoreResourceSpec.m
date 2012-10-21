@@ -37,7 +37,7 @@ describe(@"SemaphoreResource", ^{
     }) ;
     
     describe(@"Project.branchListUrl", ^{
-      __block Project *project ;
+      __weak Project *project ;
 
       beforeEach(^{
         project = [Project projectWithName:@"project name" andKey: @"projectkey"] ;

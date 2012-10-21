@@ -13,7 +13,7 @@
 SpecBegin(ProjectSpec)
 
 describe(@"project", ^{
-  __block Project *project ;
+  __weak Project *project ;
 
   describe(@"init", ^{
     beforeEach(^{
@@ -77,7 +77,7 @@ describe(@"project", ^{
 
   describe(@"parseBranches", ^{
     __block NSArray *json  ;
-    __block Branch *oneBranch ;
+    __weak Branch *oneBranch ;
     
     beforeEach(^{
       json = @[ @{@"id": @2, @"name": @"branch 1"}, @{@"id": @3, @"name": @"branch 2"}] ;

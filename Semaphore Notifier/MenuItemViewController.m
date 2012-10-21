@@ -18,10 +18,11 @@
 @synthesize receivedData = _receivedData;
 @synthesize menuItem = _menuItem;
 
-- (NSMenuItem *) buildMenuItem {
+- (NSMenuItem *) buildMenuItem: (id) delegate {
   self.menuItem = [[NSMenuItem alloc] init] ;
   self.menuItem.view = self.view ;
   self.menuItem.submenu = [[NSMenu alloc] init] ;
+  self.menuItem.submenu.delegate = delegate ;
   return self.menuItem ;
 }
 
@@ -44,6 +45,7 @@
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
   NSLog(@"did fail with error") ;
   self.status = [NSNumber numberWithInt: ResourceStatusFailure] ;
+  [self redrawMenuItem] ;
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
@@ -57,6 +59,7 @@
     self.status = [NSNumber numberWithInt: ResourceStatusFailure] ;
     NSLog(@"Failed to parse the response") ;
   }
+  [self redrawMenuItem] ;
 }
 
 
@@ -68,5 +71,9 @@
                                    inModes:[NSArray
                            arrayWithObject:NSEventTrackingRunLoopMode]];
   }
+}
+
+- (void) redrawMenuItem {
+  NSLog(@"mark the menu item as need to redraw") ;
 }
 @end

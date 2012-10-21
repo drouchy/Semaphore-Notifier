@@ -8,13 +8,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Semaphore Notifier/AppDelegate.m"
-         timestampString = "372501632.238445"
+         timestampString = "372517529.507822"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "149"
-         endingLineNumber = "149"
-         landmarkName = "-loadProjects"
-         landmarkType = "5">
+         startingLineNumber = "146"
+         endingLineNumber = "146">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -43,11 +41,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Semaphore Notifier/AppDelegate.m"
-         timestampString = "372501632.238445"
+         timestampString = "372517529.507822"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "193"
-         endingLineNumber = "193">
+         startingLineNumber = "190"
+         endingLineNumber = "190">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -59,6 +57,32 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "33"
          endingLineNumber = "33">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Semaphore Notifier/Build.m"
+         timestampString = "372517206.314977"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "20"
+         endingLineNumber = "20"
+         landmarkName = "-parse:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Semaphore Notifier/Build.m"
+         timestampString = "372517308.240282"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "29"
+         endingLineNumber = "29"
+         landmarkName = "-parseStatus:"
+         landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>

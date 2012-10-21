@@ -19,7 +19,7 @@
 SpecBegin(AppDelegateSpec)
 
 describe(@"AppDelegate", ^{
-  __block AppDelegate *delegate ;
+  __weak AppDelegate *delegate ;
   __block  NSDictionary *settings ;
   
   __block UserDefaultsProvider *provider ;
@@ -36,7 +36,7 @@ describe(@"AppDelegate", ^{
   }) ;
   
   describe(@"init", ^{
-    __block NSArray *projects ;
+    __weak NSArray *projects ;
     
     beforeEach(^{
       projects = delegate.projects ;
@@ -61,7 +61,7 @@ describe(@"AppDelegate", ^{
   }) ;
 
   describe(@"loadProjectMenuItems", ^{
-    __block NSMenu *menu ;
+    __weak NSMenu *menu ;
     
     beforeEach(^{
       NSApplication *application = [NSApplication sharedApplication];

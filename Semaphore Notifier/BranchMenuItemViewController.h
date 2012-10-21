@@ -9,12 +9,15 @@
 #import <Cocoa/Cocoa.h>
 #import "Branch.h"
 #import "MenuItemViewController.h"
+#import "Constants.h"
 
 @interface BranchMenuItemViewController : MenuItemViewController
 
-@property (assign) IBOutlet NSImageView *branchStatusImage;
+@property (weak) IBOutlet NSImageView *branchStatusImage;
 
-@property (retain, nonatomic) Branch * branch ;
+@property (nonatomic) Branch * branch ;
+@property (nonatomic) NSImage *lastBuildImage ;
 
 + (id) controllerWithBranch: (Branch *) aBranch ;
+- (void) queryBranchStatus ;
 @end

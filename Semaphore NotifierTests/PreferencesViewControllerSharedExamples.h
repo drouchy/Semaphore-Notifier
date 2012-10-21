@@ -39,7 +39,7 @@ sharedExamplesFor(@"a preferences view controller", ^(NSDictionary *data) {
 });
 
 sharedExamplesFor(@"a MASPreferences controller", ^(NSDictionary *data) {
-  __block id controller ;
+  __unsafe_unretained id controller ;
   
   beforeEach(^{
     Class controllerClass = data[@"controllerClass"] ;

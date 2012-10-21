@@ -17,8 +17,8 @@
 static UserDefaultsProvider *provider ;
 
 @interface AppDelegate()
-@property (retain, nonatomic) NSArray *projects ;
-@property (retain, nonatomic) NSArray *projectMenuControllers ;
+@property (strong, nonatomic) NSArray *projects ;
+@property (strong, nonatomic) NSArray *projectMenuControllers ;
 @end
 
 @implementation AppDelegate
@@ -26,9 +26,6 @@ static UserDefaultsProvider *provider ;
 @synthesize statusItem = _statusItem ;
 @synthesize preferencesController = _preferencesController ;
 
-- (void)dealloc {
-  [super dealloc];
-}
 
 + (void) initialize {
   [self registerUserDefaults] ;
@@ -108,7 +105,7 @@ static UserDefaultsProvider *provider ;
       ProjectMenuItemViewController *controller = [ProjectMenuItemViewController controllerWithProject: project] ;
       [controllers addObject: controller] ;
 
-      [self.statusMenu insertItem: [controller buildMenuItem] atIndex:i] ;
+      [self.statusMenu insertItem: [controller buildMenuItem: self] atIndex:i] ;
       i++ ;
     }
   }

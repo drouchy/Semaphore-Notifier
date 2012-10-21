@@ -12,7 +12,7 @@
 SpecBegin(BranchSpec)
 
 describe(@"Branch", ^{
-  __block Branch *branch ;
+  __weak Branch *branch ;
   
   describe(@"init", ^{
     beforeEach(^{

@@ -12,7 +12,7 @@
 SpecBegin(AppDelegateLoadingSpec)
 
 describe(@"AppDelegate", ^{
-  __block AppDelegate *delegate ;
+  __weak AppDelegate *delegate ;
   __block NSApplication *application;
   
   beforeEach(^{
@@ -44,7 +44,7 @@ describe(@"AppDelegate", ^{
   }) ;
 
   describe(@"statusBarItem", ^{
-    __block NSStatusItem *statusItem ;
+    __weak NSStatusItem *statusItem ;
     
     beforeEach(^{
       [delegate applicationDidFinishLaunching: nil] ;

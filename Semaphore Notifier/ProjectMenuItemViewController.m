@@ -12,7 +12,7 @@
 #import "Branch.h"
 
 @interface ProjectMenuItemViewController ()
-@property (retain, nonatomic) NSMutableArray *branchesController ;
+@property (strong, nonatomic) NSMutableArray *branchesController ;
 @end
 
 @implementation ProjectMenuItemViewController
@@ -56,7 +56,7 @@
   }
 }
 
-- (void) parseJson: (NSArray *) json {
+- (void) parseJson: (id) json {
   NSLog(@"parsing the JSON message: %@", json) ;
   [_project loadBranches: json] ;
   [self loadBranches] ;
@@ -66,7 +66,8 @@
   for(Branch *branch in self.project.branches) {
     NSLog(@"Loading branch: %@ (%@)", branch.name, self.project.name) ;
     BranchMenuItemViewController *controller = [BranchMenuItemViewController controllerWithBranch: branch] ;
-    [self.menuItem.submenu addItem: [controller buildMenuItem] ] ;
+    [controller queryBranchStatus] ;
+    [self.menuItem.submenu addItem: [controller buildMenuItem: self.menuItem.menu.delegate] ] ;
   }
 }
 @end

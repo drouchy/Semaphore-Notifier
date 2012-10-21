@@ -20,7 +20,7 @@
 SpecBegin(AppDelegateStatusMenuSpec)
 
 describe(@"AppDelegate", ^{
-  __block AppDelegate *delegate ;
+  __weak AppDelegate *delegate ;
   __block NSApplication *application;
   
   beforeEach(^{

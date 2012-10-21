@@ -12,7 +12,7 @@
 SpecBegin(BuildSpec)
 
 describe(@"Build", ^{
-  __block Build *build ;
+  __weak Build *build ;
   __block NSDate *startDate = [NSDate dateWithString:@"2012-03-24 10:45:32 +0600"] ;
   __block NSDate *endDate = [NSDate dateWithString:@"2012-03-24 10:55:32 +0600"] ;
 
