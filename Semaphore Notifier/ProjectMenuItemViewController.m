@@ -7,17 +7,23 @@
 //
 
 #import "ProjectMenuItemViewController.h"
+#import "BranchMenuItemViewController.h"
+
 #import "Branch.h"
 
 @interface ProjectMenuItemViewController ()
 @property (retain, nonatomic) NSNumber *status ;
 @property (retain, nonatomic) NSMutableData *receivedData;
+@property (retain, nonatomic) NSMenuItem *menuItem;
+@property (retain, nonatomic) NSMutableArray *branchesController ;
 @end
 
 @implementation ProjectMenuItemViewController
 
 @synthesize status = _status ;
 @synthesize receivedData = _receivedData;
+@synthesize menuItem = _menuItem;
+@synthesize branchesController = _branchesController ;
 
 + (id) controllerWithProject: (Project *) aProject {
   ProjectMenuItemViewController *controller = [[self alloc] init] ;
@@ -39,9 +45,10 @@
 }
 
 - (NSMenuItem *) buildMenuItem {
-  NSMenuItem *menuItem = [[NSMenuItem alloc] init] ;
-  menuItem.view = self.view ;
-  return menuItem ;
+  _menuItem = [[NSMenuItem alloc] init] ;
+  _menuItem.view = self.view ;
+  _menuItem.submenu = [[NSMenu alloc] init] ;
+  return _menuItem ;
 }
 
 // Check how to test that
@@ -109,6 +116,8 @@
 - (void) loadBranches {
   for(Branch *branch in self.project.branches) {
     NSLog(@"Loading branch: %@ (%@)", branch.name, self.project.name) ;
+    BranchMenuItemViewController *controller = [BranchMenuItemViewController controllerWithBranch: branch] ;
+    [_menuItem.submenu addItem: [controller buildMenuItem] ] ;
   }
 }
 @end

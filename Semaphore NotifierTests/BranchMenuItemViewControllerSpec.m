@@ -40,7 +40,7 @@ describe(@"BranchMenuItemViewController", ^{
     __block NSMenuItem *item ;
     
     beforeEach(^{
-      item = [controller buildMenuItem] ;
+      //item = [controller buildMenuItem] ;
       [item view] ;
     }) ;
 

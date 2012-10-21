@@ -13,11 +13,15 @@
 @interface ProjectMenuItemViewController ()
 @property (retain, nonatomic) NSNumber *status ;
 @property (retain, nonatomic) NSMutableData *receivedData;
+@property (retain, nonatomic) NSMenuItem *menuItem;
+@property (retain, nonatomic) NSMutableArray *branchesController ;
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response ;
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data ;
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error ;
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection ;
+
+- (void) loadBranches ;
 @end
 
 SpecBegin(ProjectMenuItemViewControllerSpec)
@@ -135,6 +139,25 @@ describe(@"ProjectMenuItemViewController", ^{
     // Still the issue with the class comparison
     pending(@"creates a menu item with a specific view", ^{
       expect([item view]).to.beKindOf([StatusBarMenuItemView class]) ;
+    }) ;
+
+    // can't load the controller view
+    pending(@"adds a submenuf for the branch list", ^{
+      expect(controller.menuItem.submenu).toNot.beNil() ;
+    }) ;
+  }) ;
+
+  describe(@"loadBranches", ^{
+  
+    beforeEach(^{
+      NSArray *branches = @[ [[Branch alloc] init], [[Branch alloc] init]] ;
+      project.branches = [branches mutableCopy] ;
+    }) ;
+
+    // can't load the controller view
+    pendin(@"adds a submenu item for each branch", ^{
+      [controller loadBranches] ;
+      expect([[controller.menuItem.submenu itemArray] count]).to.equal(2) ;
     }) ;
   }) ;
 }) ;

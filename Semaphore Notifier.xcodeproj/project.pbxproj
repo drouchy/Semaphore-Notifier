@@ -15,6 +15,12 @@
 		3B3B012816316F4500CF6246 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3B012716316F4500CF6246 /* Constants.m */; };
 		3B3B012916316F4500CF6246 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3B012716316F4500CF6246 /* Constants.m */; };
 		3B3B012D16316FC500CF6246 /* BuildSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3B012C16316FC500CF6246 /* BuildSpec.m */; };
+		3B57E5701633FA7A0004FF18 /* statusFailure.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B57E56D1633FA7A0004FF18 /* statusFailure.png */; };
+		3B57E5711633FA7A0004FF18 /* statusFailure.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B57E56D1633FA7A0004FF18 /* statusFailure.png */; };
+		3B57E5721633FA7A0004FF18 /* statusSuccess.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B57E56E1633FA7A0004FF18 /* statusSuccess.png */; };
+		3B57E5731633FA7A0004FF18 /* statusSuccess.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B57E56E1633FA7A0004FF18 /* statusSuccess.png */; };
+		3B57E5741633FA7A0004FF18 /* statusUnknown.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B57E56F1633FA7A0004FF18 /* statusUnknown.png */; };
+		3B57E5751633FA7A0004FF18 /* statusUnknown.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B57E56F1633FA7A0004FF18 /* statusUnknown.png */; };
 		3B7B55F7162F0BF500D7CDCB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B7B55F6162F0BF500D7CDCB /* Cocoa.framework */; };
 		3B7B5601162F0BF500D7CDCB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B7B55FF162F0BF500D7CDCB /* InfoPlist.strings */; };
 		3B7B5603162F0BF500D7CDCB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7B5602162F0BF500D7CDCB /* main.m */; };
@@ -113,6 +119,9 @@
 		3B3B012616316F4500CF6246 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		3B3B012716316F4500CF6246 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		3B3B012C16316FC500CF6246 /* BuildSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuildSpec.m; sourceTree = "<group>"; };
+		3B57E56D1633FA7A0004FF18 /* statusFailure.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = statusFailure.png; sourceTree = "<group>"; };
+		3B57E56E1633FA7A0004FF18 /* statusSuccess.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = statusSuccess.png; sourceTree = "<group>"; };
+		3B57E56F1633FA7A0004FF18 /* statusUnknown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = statusUnknown.png; sourceTree = "<group>"; };
 		3B7B55F2162F0BF500D7CDCB /* Semaphore Notifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Semaphore Notifier.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B7B55F6162F0BF500D7CDCB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		3B7B55F9162F0BF500D7CDCB /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -421,6 +430,9 @@
 		3B7B5663162F19A200D7CDCB /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				3B57E56D1633FA7A0004FF18 /* statusFailure.png */,
+				3B57E56E1633FA7A0004FF18 /* statusSuccess.png */,
+				3B57E56F1633FA7A0004FF18 /* statusUnknown.png */,
 				3B7B5667162F1B2B00D7CDCB /* statusIconTemplate.png */,
 				3B7B5668162F1B2B00D7CDCB /* statusIconTemplate@2x.png */,
 			);
@@ -645,6 +657,9 @@
 				3B8C733716311FC60092ADE8 /* License.txt in Resources */,
 				3B8C733C16312E780092ADE8 /* semaphore-notifier.icns in Resources */,
 				3B8C73431631392F0092ADE8 /* BranchMenuItemView.xib in Resources */,
+				3B57E5701633FA7A0004FF18 /* statusFailure.png in Resources */,
+				3B57E5721633FA7A0004FF18 /* statusSuccess.png in Resources */,
+				3B57E5741633FA7A0004FF18 /* statusUnknown.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -661,6 +676,9 @@
 				3B9FCBBD163058F90013F015 /* AdvancedPreferencesView.xib in Resources */,
 				3B8C73131630A18F0092ADE8 /* ProjectMenuItemView.xib in Resources */,
 				3B8C73441631392F0092ADE8 /* BranchMenuItemView.xib in Resources */,
+				3B57E5711633FA7A0004FF18 /* statusFailure.png in Resources */,
+				3B57E5731633FA7A0004FF18 /* statusSuccess.png in Resources */,
+				3B57E5751633FA7A0004FF18 /* statusUnknown.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
