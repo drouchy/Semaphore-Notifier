@@ -138,4 +138,11 @@ static UserDefaultsProvider *provider ;
     [controller showIndicator] ;
   }
 }
+
+- (void) refresh: (id) sender {
+  NSLog(@"refresh data") ;
+  for(ProjectMenuItemViewController *controller in self.projectMenuControllers) {
+    [controller refresh: sender] ;
+  }
+}
 @end

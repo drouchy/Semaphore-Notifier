@@ -74,4 +74,8 @@
   [self didChangeValueForKey:@"lastBuildImage"] ;
 }
 
+- (void) refresh: (id) sender {
+  NSLog(@"refreshing branch %@ (%@)", self.branch.name, [self.branch.project name]) ;
+  [self queryBranchStatus] ;
+}
 @end

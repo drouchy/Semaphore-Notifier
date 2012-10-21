@@ -21,4 +21,5 @@
 - (void) showIndicator ;
 - (void) parseJson: (id) json ;
 - (void) redrawMenuItem ;
+- (void) refresh: (id) sender ;
 @end

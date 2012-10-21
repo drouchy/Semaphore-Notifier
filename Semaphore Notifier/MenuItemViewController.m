@@ -76,4 +76,7 @@
 - (void) redrawMenuItem {
   NSLog(@"mark the menu item as need to redraw") ;
 }
+
+- (void) refresh: (id) sender {
+}
 @end

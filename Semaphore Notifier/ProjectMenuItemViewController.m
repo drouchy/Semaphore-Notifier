@@ -28,7 +28,7 @@
 - (id)init {
   self = [super initWithNibName:@"ProjectMenuItemView" bundle: [NSBundle bundleForClass: [self class]]];
   if (self) {
-      // Initialization code here.
+    self.branchesController = [[NSMutableArray alloc] init] ;
   }
   
   return self;
@@ -68,6 +68,14 @@
     BranchMenuItemViewController *controller = [BranchMenuItemViewController controllerWithBranch: branch] ;
     [controller queryBranchStatus] ;
     [self.menuItem.submenu addItem: [controller buildMenuItem: self.menuItem.menu.delegate] ] ;
+    [self.branchesController addObject: controller] ;
+  }
+}
+
+- (void) refresh: (id) sender {
+  NSLog(@"refreshing project %@", self.project.name) ;
+  for(BranchMenuItemViewController *controller in self.branchesController) {
+    [controller refresh: sender] ;
   }
 }
 @end
