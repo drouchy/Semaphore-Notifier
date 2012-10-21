@@ -27,7 +27,7 @@ __attribute__((__visibility__("default")))
 
 @property (nonatomic, readonly) NSArray *viewControllers;
 @property (nonatomic, readonly) NSUInteger indexOfSelectedController;
-@property (nonatomic, readonly, retain) NSViewController <MASPreferencesViewController> *selectedViewController;
+@property (nonatomic, readonly, strong) NSViewController <MASPreferencesViewController> *selectedViewController;
 @property (nonatomic, readonly) NSString *title;
 
 - (id)initWithViewControllers:(NSArray *)viewControllers;
