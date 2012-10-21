@@ -8,14 +8,13 @@
 
 #import <Cocoa/Cocoa.h>
 #import "Project.h"
+#import "MenuItemViewController.h"
 
-@interface ProjectMenuItemViewController : NSViewController
+@interface ProjectMenuItemViewController : MenuItemViewController
 
 @property (retain, nonatomic) Project *project ;
-@property (assign) IBOutlet NSProgressIndicator *loadingIndicator;
 
 + (id) controllerWithProject: (Project *) aProject ;
 
 - (void) showIndicator ;
-- (NSMenuItem *) buildMenuItem ;
 @end

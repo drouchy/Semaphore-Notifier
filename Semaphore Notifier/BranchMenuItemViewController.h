@@ -8,8 +8,9 @@
 
 #import <Cocoa/Cocoa.h>
 #import "Branch.h"
+#import "MenuItemViewController.h"
 
-@interface BranchMenuItemViewController : NSViewController
+@interface BranchMenuItemViewController : MenuItemViewController
 
 @property (assign) IBOutlet NSProgressIndicator *progressIndicator;
 @property (assign) IBOutlet NSImageView *branchStatusImage;
@@ -17,6 +18,4 @@
 @property (retain, nonatomic) Branch * branch ;
 
 + (id) controllerWithBranch: (Branch *) aBranch ;
-
-- (NSMenuItem *) buildMenuItem ;
 @end
