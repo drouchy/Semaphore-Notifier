@@ -11,11 +11,12 @@
 
 @interface Branch : SMXObject
 
-@property (copy, nonatomic) NSNumber *branchId ;
-@property (copy, nonatomic) NSString  *name ;
-@property (copy, nonatomic) NSURL *url ;
-@property (copy, nonatomic) NSURL *statusUrl ;
-@property (copy, nonatomic) NSURL *historyUrl ;
+@property (nonatomic) NSNumber *branchId ;
+@property (nonatomic) NSString  *name ;
+@property (nonatomic) NSURL *url ;
+@property (nonatomic) NSURL *statusUrl ;
+@property (nonatomic) NSURL *historyUrl ;
 
 - (int) lastStatus ;
+- (void) updateFromJson: (NSDictionary *) json ;
 @end

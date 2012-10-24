@@ -20,4 +20,10 @@
 - (int) lastStatus {
   return BuildStatusNone ;
 }
+
+- (void) updateFromJson: (NSDictionary *) json {
+  _url = json[@"branch_url"];
+  _statusUrl = json[@"branch_status_url"];
+  _historyUrl = json[@"branch_history_url"];
+}
 @end
