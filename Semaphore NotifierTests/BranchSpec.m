@@ -47,6 +47,10 @@ describe(@"Branch", ^{
     it(@"has a uknown last status by default", ^{
       expect([branch lastStatus]).to.equal(BuildStatusNone) ;
     }) ;
+
+    it(@"has no builds", ^{
+      expect(branch.builds).to.beEmpty() ;
+    }) ;
   }) ;
 
   describe(@"parseJson", ^{

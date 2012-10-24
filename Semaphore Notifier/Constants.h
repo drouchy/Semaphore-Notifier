@@ -8,14 +8,21 @@
 
 #import <Foundation/Foundation.h>
 
-extern int const BuildStatusNone ;
-extern int const BuildStatusSuccess ;
-extern int const BuildStatusFailure ;
-extern int const BuildStatusUnknown ;
-
 extern NSString *SemaphoreApiUrl ;
 
-extern int const ResourceStatusNone ;
-extern int const ResourceStatusSuccess ;
-extern int const ResourceStatusFailure ;
-extern int const ResourceStatusLoading ;
+typedef enum BuildStatus : NSInteger {
+  BuildStatusNone,
+  BuildStatusPending,
+  BuildStatusSuccess,
+  BuildStatusFailure,
+  BuildStatusUnknown
+
+} BuildStatus ;
+
+typedef enum ResourceStatus : NSInteger {
+  ResourceStatusNone,
+  ResourceStatusSuccess,
+  ResourceStatusFailure,
+  ResourceStatusLoading
+  
+} ResourceStatus ;

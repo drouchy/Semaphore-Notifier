@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "Build.h"
 #import "SMXObject.h"
+#import "Constants.h"
 
 @interface Build : SMXObject
 
@@ -16,6 +17,7 @@
 @property (copy, nonatomic) NSURL *url ;
 @property (copy, nonatomic) NSDate *startedAt ;
 @property (copy, nonatomic) NSDate *finishedAt ;
-@property (nonatomic) int status ;
+@property (nonatomic)       ResourceStatus status ;
 
+- (void) updateFromJson: (NSDictionary *) json ;
 @end

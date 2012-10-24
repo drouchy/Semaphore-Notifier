@@ -23,7 +23,6 @@ describe(@"Build", ^{
       build.url = [NSURL URLWithString: @"http://host/build"];
       build.startedAt = startDate;
       build.finishedAt = endDate;
-      build.status = 1 ;
     }) ;
     
     it(@"has a number", ^{
@@ -43,7 +42,75 @@ describe(@"Build", ^{
     }) ;
 
     it(@"has a status", ^{
-      expect(build.status).to.equal(1) ;
+      expect(build.status).to.equal(BuildStatusNone) ;
+    }) ;
+  }) ;
+
+  describe(@"updateFromJson", ^{
+    __block NSMutableDictionary *json ;
+    __block NSDateFormatter* dateFormatter ;
+
+    beforeEach(^{
+      json = [@{ @"branch_name": @"master", @"branch_url": @"https://semaphoreapp.com/projects/12/branches/5",
+                @"branch_status_url": @"https://semaphoreapp.com/api/v1/projects/23/5682/status?auth_token=12",
+                @"branch_history_url": @"https://semaphoreapp.com/api/v1/projects/212/3?auth_token=12",
+                @"build_url": @"https://semaphoreapp.com/projects/297/branches/3/builds/8",
+                @"build_number": @"8", @"result": @"success",
+                @"started_at": @"2012-03-24T04:45:32Z", @"finished_at": @"2012-03-24T04:55:32Z",
+                @"commit": @{
+                  @"id": @"123a", @"url": @"https://github.com/shutl/quote_service/commit/123a",
+                  @"author_name": @"The Author", @"author_email": @"test@example.com",
+                  @"message" : @"merge branch test to master" , @"timestamp" : @"2012-10-24T16:18:07Z"
+                }
+              } mutableCopy];
+
+      build = [[Build alloc] init] ;
+      [build updateFromJson: json] ;
+
+      dateFormatter = [[NSDateFormatter alloc] init];
+      [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ssZ"];
+    }) ;
+
+    it(@"parses the number", ^{
+      expect(build.number).to.equal(8) ;
+    }) ;
+
+    it(@"parses the url", ^{
+      expect([build.url absoluteString]).to.equal(@"https://semaphoreapp.com/projects/297/branches/3/builds/8") ;
+    }) ;
+
+    it(@"parses the startedAt", ^{
+      expect(build.startedAt).to.equal(startDate) ;
+    }) ;
+
+    it(@"parses the finishedAt", ^{
+      expect(build.finishedAt).to.equal(endDate) ;
+    }) ;
+
+    describe(@"status", ^{
+      it(@"parses the success", ^{
+        expect(build.status).to.equal(BuildStatusSuccess) ;
+      }) ;
+      it(@"parses the failure", ^{
+        json[@"result"] = @"failure" ;
+        [build updateFromJson: json] ;
+
+        expect(build.status).to.equal(BuildStatusFailure) ;
+      }) ;
+
+      it(@"parses the pending", ^{
+        json[@"result"] = @"pending" ;
+        [build updateFromJson: json] ;
+
+        expect(build.status).to.equal(BuildStatusPending) ;
+      }) ;
+
+      it(@"parses an unknown", ^{
+        json[@"result"] = @"foo" ;
+        [build updateFromJson: json] ;
+
+        expect(build.status).to.equal(BuildStatusUnknown) ;
+      }) ;
     }) ;
   }) ;
 }) ;

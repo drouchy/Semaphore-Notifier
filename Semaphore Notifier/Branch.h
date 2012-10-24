@@ -16,6 +16,7 @@
 @property (nonatomic) NSURL *url ;
 @property (nonatomic) NSURL *statusUrl ;
 @property (nonatomic) NSURL *historyUrl ;
+@property (readonly, nonatomic) NSMutableArray *builds ;
 
 - (int) lastStatus ;
 - (void) updateFromJson: (NSDictionary *) json ;
