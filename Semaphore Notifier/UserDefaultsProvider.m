@@ -9,7 +9,7 @@
 #import "UserDefaultsProvider.h"
 
 @interface UserDefaultsProvider()
-@property (retain, nonatomic) NSUserDefaults *userDefaults ;
+@property (strong, nonatomic) NSUserDefaults *userDefaults ;
 @end
 
 @implementation UserDefaultsProvider

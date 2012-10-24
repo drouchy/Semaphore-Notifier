@@ -11,8 +11,8 @@
 
 @interface ProjectMenuItemViewController : NSViewController
 
-@property (retain, nonatomic) Project *project ;
-@property (assign) IBOutlet NSProgressIndicator *loadingIndicator;
+@property (strong, nonatomic) Project *project ;
+@property (weak) IBOutlet NSProgressIndicator *loadingIndicator;
 
 + (id) controllerWithProject: (Project *) aProject ;
 

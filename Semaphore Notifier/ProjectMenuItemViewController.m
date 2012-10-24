@@ -12,10 +12,10 @@
 #import "Branch.h"
 
 @interface ProjectMenuItemViewController ()
-@property (retain, nonatomic) NSNumber *status ;
-@property (retain, nonatomic) NSMutableData *receivedData;
-@property (retain, nonatomic) NSMenuItem *menuItem;
-@property (retain, nonatomic) NSMutableArray *branchesController ;
+@property (strong, nonatomic) NSNumber *status ;
+@property (strong, nonatomic) NSMutableData *receivedData;
+@property (strong, nonatomic) NSMenuItem *menuItem;
+@property (strong, nonatomic) NSMutableArray *branchesController ;
 @end
 
 @implementation ProjectMenuItemViewController

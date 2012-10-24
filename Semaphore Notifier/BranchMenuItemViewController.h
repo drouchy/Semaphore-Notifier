@@ -11,10 +11,10 @@
 
 @interface BranchMenuItemViewController : NSViewController
 
-@property (assign) IBOutlet NSProgressIndicator *progressIndicator;
-@property (assign) IBOutlet NSImageView *branchStatusImage;
+@property (weak) IBOutlet NSProgressIndicator *progressIndicator;
+@property (weak) IBOutlet NSImageView *branchStatusImage;
 
-@property (retain, nonatomic) Branch * branch ;
+@property (strong, nonatomic) Branch * branch ;
 
 + (id) controllerWithBranch: (Branch *) aBranch ;
 
