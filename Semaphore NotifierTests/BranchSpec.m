@@ -8,6 +8,7 @@
 
 #import "Branch.h"
 #import "SpecHelper.h"
+#import "Build.h"
 
 SpecBegin(BranchSpec)
 
@@ -54,21 +55,21 @@ describe(@"Branch", ^{
   }) ;
 
   describe(@"parseJson", ^{
-    __block NSDictionary *json ;
+    __block NSMutableDictionary *json ;
 
     beforeEach(^{
-      json = @{ @"branch_name": @"master", @"branch_url": @"https://semaphoreapp.com/projects/12/branches/5",
-                @"branch_status_url": @"https://semaphoreapp.com/api/v1/projects/23/5682/status?auth_token=12",
-                @"branch_history_url": @"https://semaphoreapp.com/api/v1/projects/212/3?auth_token=12",
-                @"build_url": @"https://semaphoreapp.com/projects/297/branches/3/builds/8",
-                @"build_number": @"8", @"result": @"success",
-                @"started_at": @"2012-10-24T16:18:24Z", @"finished_at": @"2012-10-24T16:19:32Z",
-                @"commit": @{
-                      @"id": @"123a", @"url": @"https://github.com/shutl/quote_service/commit/123a",
-                      @"author_name": @"The Author", @"author_email": @"test@example.com",
-                      @"message" : @"merge branch test to master" , @"timestamp" : @"2012-10-24T16:18:07Z" 
-                    }
-      };
+      json = [ @{ @"branch_name": @"master", @"branch_url": @"https://semaphoreapp.com/projects/12/branches/5",
+                  @"branch_status_url": @"https://semaphoreapp.com/api/v1/projects/23/5682/status?auth_token=12",
+                  @"branch_history_url": @"https://semaphoreapp.com/api/v1/projects/212/3?auth_token=12",
+                  @"build_url": @"https://semaphoreapp.com/projects/297/branches/3/builds/8",
+                  @"build_number": @"8", @"result": @"success",
+                  @"started_at": @"2012-10-24T16:18:24Z", @"finished_at": @"2012-10-24T16:19:32Z",
+                  @"commit": @{
+                        @"id": @"123a", @"url": @"https://github.com/shutl/quote_service/commit/123a",
+                        @"author_name": @"The Author", @"author_email": @"test@example.com",
+                        @"message" : @"merge branch test to master" , @"timestamp" : @"2012-10-24T16:18:07Z" 
+                      }
+      } mutableCopy];
 
       branch = [[Branch alloc] init] ;
       [branch updateFromJson: json] ;
@@ -84,6 +85,50 @@ describe(@"Branch", ^{
 
     it(@"parses the history url", ^{
       expect(branch.historyUrl).to.equal(@"https://semaphoreapp.com/api/v1/projects/212/3?auth_token=12") ;
+    }) ;
+
+    describe(@"parsing the build", ^{
+      it(@"adds the build", ^{
+        expect([branch.builds count]).to.equal(1) ;
+      }) ;
+      
+      it(@"parses the build based on the json parameters", ^{
+        Build *build = branch.builds[0] ;
+        
+        expect([build.url absoluteString]).to.equal(@"https://semaphoreapp.com/projects/297/branches/3/builds/8") ;
+      }) ;
+
+      it(@"adds an other build", ^{
+        json[@"build_number"] = @"9" ;
+
+        [branch updateFromJson: json] ;
+
+        expect([branch.builds count]).to.equal(2) ;
+      }) ;
+
+      it(@"adds the last build at the first index", ^{
+        json[@"build_number"] = @"9" ;
+        
+        [branch updateFromJson: json] ;
+
+        Build *build = branch.builds[0] ;
+        expect(build.number).to.equal(9) ;
+      }) ;
+
+      it(@"keeps only the last 2 builds", ^{
+        json[@"build_number"] = @"9" ;
+        [branch updateFromJson: json] ;
+        json[@"build_number"] = @"10" ;
+        [branch updateFromJson: json] ;
+        
+        expect([branch.builds count]).to.equal(2) ;
+      }) ;
+
+      it(@"does not add the build if it is already there", ^{
+        [branch updateFromJson: json] ;
+
+        expect([branch.builds count]).to.equal(1) ;
+      }) ;
     }) ;
   }) ;
 }) ;

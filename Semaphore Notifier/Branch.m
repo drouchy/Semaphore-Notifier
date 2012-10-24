@@ -8,6 +8,7 @@
 
 #import "Branch.h"
 #import "Constants.h"
+#import "Build.h"
 
 @implementation Branch
 
@@ -26,5 +27,24 @@
   _url = json[@"branch_url"];
   _statusUrl = json[@"branch_status_url"];
   _historyUrl = json[@"branch_history_url"];
+
+  Build *build = [[Build alloc] init] ;
+  [build updateFromJson: json] ;
+  [self addBuild: build] ;
+}
+
+- (void) addBuild: (Build *) build {
+  if([self lastBuild].number != build.number) {
+    [_builds insertObject: build atIndex:0] ;
+    if([_builds count] > 2) {
+      [_builds removeLastObject] ;
+    }
+  }
+  
+}
+
+- (Build *) lastBuild {
+  if([_builds count] == 0) return nil ;
+  return _builds[0] ;
 }
 @end
