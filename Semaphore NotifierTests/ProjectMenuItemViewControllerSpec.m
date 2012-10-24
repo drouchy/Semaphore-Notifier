@@ -155,7 +155,7 @@ describe(@"ProjectMenuItemViewController", ^{
     }) ;
 
     // can't load the controller view
-    pendin(@"adds a submenu item for each branch", ^{
+    pending(@"adds a submenu item for each branch", ^{
       [controller loadBranches] ;
       expect([[controller.menuItem.submenu itemArray] count]).to.equal(2) ;
     }) ;
