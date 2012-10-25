@@ -119,6 +119,7 @@
 		3B3B012616316F4500CF6246 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		3B3B012716316F4500CF6246 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		3B3B012C16316FC500CF6246 /* BuildSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuildSpec.m; sourceTree = "<group>"; };
+		3B41B36016392DED0060AE19 /* Semaphore Notifier.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Semaphore Notifier.entitlements"; sourceTree = "<group>"; };
 		3B57E56D1633FA7A0004FF18 /* statusFailure.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = statusFailure.png; sourceTree = "<group>"; };
 		3B57E56E1633FA7A0004FF18 /* statusSuccess.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = statusSuccess.png; sourceTree = "<group>"; };
 		3B57E56F1633FA7A0004FF18 /* statusUnknown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = statusUnknown.png; sourceTree = "<group>"; };
@@ -322,6 +323,7 @@
 		3B7B55FC162F0BF500D7CDCB /* Semaphore Notifier */ = {
 			isa = PBXGroup;
 			children = (
+				3B41B36016392DED0060AE19 /* Semaphore Notifier.entitlements */,
 				3B11AE3C1632E996005E9F88 /* Views */,
 				3B9FCBA0162F293D0013F015 /* Controllers */,
 				3B9FCB6F162F20400013F015 /* Models */,
@@ -858,6 +860,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_ENTITLEMENTS = "Semaphore Notifier/Semaphore Notifier.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Semaphore Notifier/Semaphore Notifier-Prefix.pch";
@@ -871,6 +875,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_ENTITLEMENTS = "Semaphore Notifier/Semaphore Notifier.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Semaphore Notifier/Semaphore Notifier-Prefix.pch";
