@@ -29,9 +29,9 @@
 }
 
 - (BuildStatus) parseStatus: (NSString *) status {
-  if([status isEqualToString: @"success"]) {
+  if([status isEqualToString: @"passed"]) {
     return BuildStatusSuccess ;
-  } else if([status isEqualToString: @"failure"]) {
+  } else if([status isEqualToString: @"failed"]) {
     return BuildStatusFailure ;
   } else if([status isEqualToString: @"pending"]) {
     return BuildStatusPending ;

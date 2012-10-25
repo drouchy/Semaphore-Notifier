@@ -55,7 +55,7 @@ describe(@"Build", ^{
                 @"branch_status_url": @"https://semaphoreapp.com/api/v1/projects/23/5682/status?auth_token=12",
                 @"branch_history_url": @"https://semaphoreapp.com/api/v1/projects/212/3?auth_token=12",
                 @"build_url": @"https://semaphoreapp.com/projects/297/branches/3/builds/8",
-                @"build_number": @"8", @"result": @"success",
+                @"build_number": @"8", @"result": @"passed",
                 @"started_at": @"2012-03-24T04:45:32Z", @"finished_at": @"2012-03-24T04:55:32Z",
                 @"commit": @{
                   @"id": @"123a", @"url": @"https://github.com/shutl/quote_service/commit/123a",
@@ -92,7 +92,7 @@ describe(@"Build", ^{
         expect(build.status).to.equal(BuildStatusSuccess) ;
       }) ;
       it(@"parses the failure", ^{
-        json[@"result"] = @"failure" ;
+        json[@"result"] = @"failed" ;
         [build updateFromJson: json] ;
 
         expect(build.status).to.equal(BuildStatusFailure) ;

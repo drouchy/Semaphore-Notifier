@@ -67,9 +67,7 @@
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "48"
-         endingLineNumber = "48"
-         landmarkName = "-parse:"
-         landmarkType = "5">
+         endingLineNumber = "48">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -80,9 +78,7 @@
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "57"
-         endingLineNumber = "57"
-         landmarkName = "-parseStatus:"
-         landmarkType = "5">
+         endingLineNumber = "57">
       </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>
