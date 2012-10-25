@@ -14,9 +14,23 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3B445F791639C428002C0E6F"
-               BuildableName = "Semaphore Notifier.app"
-               BlueprintName = "Semaphore Notifier"
+               BlueprintIdentifier = "3B7B55F1162F0BF500D7CDCB"
+               BuildableName = "Semaphore Notifier No Sandbox.app"
+               BlueprintName = "Semaphore Notifier No Sandbox"
+               ReferencedContainer = "container:Semaphore Notifier.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "3B7B5612162F0BF500D7CDCB"
+               BuildableName = "Semaphore NotifierTests.octest"
+               BlueprintName = "Semaphore NotifierTests"
                ReferencedContainer = "container:Semaphore Notifier.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,13 +42,23 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "3B7B5612162F0BF500D7CDCB"
+               BuildableName = "Semaphore NotifierTests.octest"
+               BlueprintName = "Semaphore NotifierTests"
+               ReferencedContainer = "container:Semaphore Notifier.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3B445F791639C428002C0E6F"
-            BuildableName = "Semaphore Notifier.app"
-            BlueprintName = "Semaphore Notifier"
+            BlueprintIdentifier = "3B7B55F1162F0BF500D7CDCB"
+            BuildableName = "Semaphore Notifier No Sandbox.app"
+            BlueprintName = "Semaphore Notifier No Sandbox"
             ReferencedContainer = "container:Semaphore Notifier.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -51,9 +75,9 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3B445F791639C428002C0E6F"
-            BuildableName = "Semaphore Notifier.app"
-            BlueprintName = "Semaphore Notifier"
+            BlueprintIdentifier = "3B7B55F1162F0BF500D7CDCB"
+            BuildableName = "Semaphore Notifier No Sandbox.app"
+            BlueprintName = "Semaphore Notifier No Sandbox"
             ReferencedContainer = "container:Semaphore Notifier.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -69,9 +93,9 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3B445F791639C428002C0E6F"
-            BuildableName = "Semaphore Notifier.app"
-            BlueprintName = "Semaphore Notifier"
+            BlueprintIdentifier = "3B7B55F1162F0BF500D7CDCB"
+            BuildableName = "Semaphore Notifier No Sandbox.app"
+            BlueprintName = "Semaphore Notifier No Sandbox"
             ReferencedContainer = "container:Semaphore Notifier.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

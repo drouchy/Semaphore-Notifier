@@ -15,6 +15,40 @@
 		3B3B012816316F4500CF6246 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3B012716316F4500CF6246 /* Constants.m */; };
 		3B3B012916316F4500CF6246 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3B012716316F4500CF6246 /* Constants.m */; };
 		3B3B012D16316FC500CF6246 /* BuildSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3B012C16316FC500CF6246 /* BuildSpec.m */; };
+		3B445F7B1639C428002C0E6F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7B5602162F0BF500D7CDCB /* main.m */; };
+		3B445F7C1639C428002C0E6F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7B5609162F0BF500D7CDCB /* AppDelegate.m */; };
+		3B445F7D1639C428002C0E6F /* Project.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9FCB73162F205C0013F015 /* Project.m */; };
+		3B445F7E1639C428002C0E6F /* MASPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9FCB95162F28CE0013F015 /* MASPreferencesWindowController.m */; };
+		3B445F7F1639C428002C0E6F /* ConfigurationPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9FCBA2162F295E0013F015 /* ConfigurationPreferencesViewController.m */; };
+		3B445F801639C428002C0E6F /* ProjectsPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9FCBB1163055CE0013F015 /* ProjectsPreferencesViewController.m */; };
+		3B445F811639C428002C0E6F /* AdvancedPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9FCBB8163058F90013F015 /* AdvancedPreferencesViewController.m */; };
+		3B445F821639C428002C0E6F /* ProjectMenuItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8C730E1630A18F0092ADE8 /* ProjectMenuItemViewController.m */; };
+		3B445F831639C428002C0E6F /* SMXObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8C73331630BB190092ADE8 /* SMXObject.m */; };
+		3B445F841639C428002C0E6F /* BranchMenuItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8C733F1631392E0092ADE8 /* BranchMenuItemViewController.m */; };
+		3B445F851639C428002C0E6F /* Branch.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8C7349163139CA0092ADE8 /* Branch.m */; };
+		3B445F861639C428002C0E6F /* Build.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8C735116316C4E0092ADE8 /* Build.m */; };
+		3B445F871639C428002C0E6F /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3B012716316F4500CF6246 /* Constants.m */; };
+		3B445F881639C428002C0E6F /* UserDefaultsProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE8FF1D1632DC15000D2088 /* UserDefaultsProvider.m */; };
+		3B445F891639C428002C0E6F /* StatusBarMenuItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B11AE3F1632E9AF005E9F88 /* StatusBarMenuItemView.m */; };
+		3B445F8A1639C428002C0E6F /* SemaphoreResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B11AE4B16330098005E9F88 /* SemaphoreResource.m */; };
+		3B445F8C1639C428002C0E6F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B7B55F6162F0BF500D7CDCB /* Cocoa.framework */; };
+		3B445F8E1639C428002C0E6F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B7B55FF162F0BF500D7CDCB /* InfoPlist.strings */; };
+		3B445F8F1639C428002C0E6F /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 3B7B5605162F0BF500D7CDCB /* Credits.rtf */; };
+		3B445F901639C428002C0E6F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B7B560B162F0BF500D7CDCB /* MainMenu.xib */; };
+		3B445F911639C428002C0E6F /* statusIconTemplate.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B7B5667162F1B2B00D7CDCB /* statusIconTemplate.png */; };
+		3B445F921639C428002C0E6F /* statusIconTemplate@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B7B5668162F1B2B00D7CDCB /* statusIconTemplate@2x.png */; };
+		3B445F931639C428002C0E6F /* MASPreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B9FCB93162F28CE0013F015 /* MASPreferencesWindow.xib */; };
+		3B445F941639C428002C0E6F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3B9FCB96162F28CE0013F015 /* README.md */; };
+		3B445F951639C428002C0E6F /* ConfigurationPreferencesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B9FCBA3162F295E0013F015 /* ConfigurationPreferencesView.xib */; };
+		3B445F961639C428002C0E6F /* AdvancedPreferencesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B9FCBB9163058F90013F015 /* AdvancedPreferencesView.xib */; };
+		3B445F971639C428002C0E6F /* ProjectMenuItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B8C730F1630A18F0092ADE8 /* ProjectMenuItemView.xib */; };
+		3B445F981639C428002C0E6F /* ProjectsPreferencesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B8C73171630B6640092ADE8 /* ProjectsPreferencesView.xib */; };
+		3B445F991639C428002C0E6F /* License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3B8C733616311FC60092ADE8 /* License.txt */; };
+		3B445F9A1639C428002C0E6F /* semaphore-notifier.icns in Resources */ = {isa = PBXBuildFile; fileRef = 3B8C733B16312E780092ADE8 /* semaphore-notifier.icns */; };
+		3B445F9B1639C428002C0E6F /* BranchMenuItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B8C73401631392F0092ADE8 /* BranchMenuItemView.xib */; };
+		3B445F9C1639C428002C0E6F /* statusFailure.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B57E56D1633FA7A0004FF18 /* statusFailure.png */; };
+		3B445F9D1639C428002C0E6F /* statusSuccess.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B57E56E1633FA7A0004FF18 /* statusSuccess.png */; };
+		3B445F9E1639C428002C0E6F /* statusUnknown.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B57E56F1633FA7A0004FF18 /* statusUnknown.png */; };
 		3B57E5701633FA7A0004FF18 /* statusFailure.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B57E56D1633FA7A0004FF18 /* statusFailure.png */; };
 		3B57E5711633FA7A0004FF18 /* statusFailure.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B57E56D1633FA7A0004FF18 /* statusFailure.png */; };
 		3B57E5721633FA7A0004FF18 /* statusSuccess.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B57E56E1633FA7A0004FF18 /* statusSuccess.png */; };
@@ -88,12 +122,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3B7B5617162F0BF500D7CDCB /* PBXContainerItemProxy */ = {
+		3B445FA51639C47E002C0E6F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3B7B55E9162F0BF500D7CDCB /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 3B7B55F1162F0BF500D7CDCB;
-			remoteInfo = "Semaphore Notifier";
+			remoteInfo = "Semaphore Notifier - no sandbox";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -120,15 +154,17 @@
 		3B3B012716316F4500CF6246 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		3B3B012C16316FC500CF6246 /* BuildSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuildSpec.m; sourceTree = "<group>"; };
 		3B41B36016392DED0060AE19 /* Semaphore Notifier.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Semaphore Notifier.entitlements"; sourceTree = "<group>"; };
+		3B445FA21639C428002C0E6F /* Semaphore Notifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Semaphore Notifier.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B445FA41639C428002C0E6F /* Semaphore Notifier-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Semaphore Notifier-Info.plist"; path = "/Users/drouchy/Developer/private/obj-c/Semaphore Notifier/Semaphore Notifier-Info.plist"; sourceTree = "<absolute>"; };
 		3B57E56D1633FA7A0004FF18 /* statusFailure.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = statusFailure.png; sourceTree = "<group>"; };
 		3B57E56E1633FA7A0004FF18 /* statusSuccess.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = statusSuccess.png; sourceTree = "<group>"; };
 		3B57E56F1633FA7A0004FF18 /* statusUnknown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = statusUnknown.png; sourceTree = "<group>"; };
-		3B7B55F2162F0BF500D7CDCB /* Semaphore Notifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Semaphore Notifier.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B7B55F2162F0BF500D7CDCB /* Semaphore Notifier No Sandbox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Semaphore Notifier No Sandbox.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B7B55F6162F0BF500D7CDCB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		3B7B55F9162F0BF500D7CDCB /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		3B7B55FA162F0BF500D7CDCB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		3B7B55FB162F0BF500D7CDCB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		3B7B55FE162F0BF500D7CDCB /* Semaphore Notifier-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Semaphore Notifier-Info.plist"; sourceTree = "<group>"; };
+		3B7B55FE162F0BF500D7CDCB /* Semaphore Notifier-no-sandbox-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Semaphore Notifier-no-sandbox-Info.plist"; sourceTree = "<group>"; };
 		3B7B5600162F0BF500D7CDCB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3B7B5602162F0BF500D7CDCB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3B7B5604162F0BF500D7CDCB /* Semaphore Notifier-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Semaphore Notifier-Prefix.pch"; sourceTree = "<group>"; };
@@ -232,6 +268,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3B445F8B1639C428002C0E6F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B445F8C1639C428002C0E6F /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3B7B55EF162F0BF500D7CDCB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -290,8 +334,9 @@
 		3B7B55F3162F0BF500D7CDCB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3B7B55F2162F0BF500D7CDCB /* Semaphore Notifier.app */,
+				3B7B55F2162F0BF500D7CDCB /* Semaphore Notifier No Sandbox.app */,
 				3B7B5613162F0BF500D7CDCB /* Semaphore NotifierTests.octest */,
+				3B445FA21639C428002C0E6F /* Semaphore Notifier.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -323,7 +368,6 @@
 		3B7B55FC162F0BF500D7CDCB /* Semaphore Notifier */ = {
 			isa = PBXGroup;
 			children = (
-				3B41B36016392DED0060AE19 /* Semaphore Notifier.entitlements */,
 				3B11AE3C1632E996005E9F88 /* Views */,
 				3B9FCBA0162F293D0013F015 /* Controllers */,
 				3B9FCB6F162F20400013F015 /* Models */,
@@ -341,7 +385,9 @@
 		3B7B55FD162F0BF500D7CDCB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				3B7B55FE162F0BF500D7CDCB /* Semaphore Notifier-Info.plist */,
+				3B41B36016392DED0060AE19 /* Semaphore Notifier.entitlements */,
+				3B445FA41639C428002C0E6F /* Semaphore Notifier-Info.plist */,
+				3B7B55FE162F0BF500D7CDCB /* Semaphore Notifier-no-sandbox-Info.plist */,
 				3B7B55FF162F0BF500D7CDCB /* InfoPlist.strings */,
 				3B7B5602162F0BF500D7CDCB /* main.m */,
 				3B7B5604162F0BF500D7CDCB /* Semaphore Notifier-Prefix.pch */,
@@ -576,9 +622,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3B7B55F1162F0BF500D7CDCB /* Semaphore Notifier */ = {
+		3B445F791639C428002C0E6F /* Semaphore Notifier */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3B7B5624162F0BF500D7CDCB /* Build configuration list for PBXNativeTarget "Semaphore Notifier" */;
+			buildConfigurationList = 3B445F9F1639C428002C0E6F /* Build configuration list for PBXNativeTarget "Semaphore Notifier" */;
+			buildPhases = (
+				3B445F7A1639C428002C0E6F /* Sources */,
+				3B445F8B1639C428002C0E6F /* Frameworks */,
+				3B445F8D1639C428002C0E6F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Semaphore Notifier";
+			productName = "Semaphore Notifier";
+			productReference = 3B445FA21639C428002C0E6F /* Semaphore Notifier.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3B7B55F1162F0BF500D7CDCB /* Semaphore Notifier No Sandbox */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B7B5624162F0BF500D7CDCB /* Build configuration list for PBXNativeTarget "Semaphore Notifier No Sandbox" */;
 			buildPhases = (
 				3B7B55EE162F0BF500D7CDCB /* Sources */,
 				3B7B55EF162F0BF500D7CDCB /* Frameworks */,
@@ -588,9 +651,9 @@
 			);
 			dependencies = (
 			);
-			name = "Semaphore Notifier";
+			name = "Semaphore Notifier No Sandbox";
 			productName = "Semaphore Notifier";
-			productReference = 3B7B55F2162F0BF500D7CDCB /* Semaphore Notifier.app */;
+			productReference = 3B7B55F2162F0BF500D7CDCB /* Semaphore Notifier No Sandbox.app */;
 			productType = "com.apple.product-type.application";
 		};
 		3B7B5612162F0BF500D7CDCB /* Semaphore NotifierTests */ = {
@@ -606,7 +669,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				3B7B5618162F0BF500D7CDCB /* PBXTargetDependency */,
+				3B445FA61639C47E002C0E6F /* PBXTargetDependency */,
 			);
 			name = "Semaphore NotifierTests";
 			productName = "Semaphore NotifierTests";
@@ -634,13 +697,38 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3B7B55F1162F0BF500D7CDCB /* Semaphore Notifier */,
+				3B7B55F1162F0BF500D7CDCB /* Semaphore Notifier No Sandbox */,
 				3B7B5612162F0BF500D7CDCB /* Semaphore NotifierTests */,
+				3B445F791639C428002C0E6F /* Semaphore Notifier */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		3B445F8D1639C428002C0E6F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B445F8E1639C428002C0E6F /* InfoPlist.strings in Resources */,
+				3B445F8F1639C428002C0E6F /* Credits.rtf in Resources */,
+				3B445F901639C428002C0E6F /* MainMenu.xib in Resources */,
+				3B445F911639C428002C0E6F /* statusIconTemplate.png in Resources */,
+				3B445F921639C428002C0E6F /* statusIconTemplate@2x.png in Resources */,
+				3B445F931639C428002C0E6F /* MASPreferencesWindow.xib in Resources */,
+				3B445F941639C428002C0E6F /* README.md in Resources */,
+				3B445F951639C428002C0E6F /* ConfigurationPreferencesView.xib in Resources */,
+				3B445F961639C428002C0E6F /* AdvancedPreferencesView.xib in Resources */,
+				3B445F971639C428002C0E6F /* ProjectMenuItemView.xib in Resources */,
+				3B445F981639C428002C0E6F /* ProjectsPreferencesView.xib in Resources */,
+				3B445F991639C428002C0E6F /* License.txt in Resources */,
+				3B445F9A1639C428002C0E6F /* semaphore-notifier.icns in Resources */,
+				3B445F9B1639C428002C0E6F /* BranchMenuItemView.xib in Resources */,
+				3B445F9C1639C428002C0E6F /* statusFailure.png in Resources */,
+				3B445F9D1639C428002C0E6F /* statusSuccess.png in Resources */,
+				3B445F9E1639C428002C0E6F /* statusUnknown.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3B7B55F0162F0BF500D7CDCB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -703,6 +791,29 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3B445F7A1639C428002C0E6F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B445F7B1639C428002C0E6F /* main.m in Sources */,
+				3B445F7C1639C428002C0E6F /* AppDelegate.m in Sources */,
+				3B445F7D1639C428002C0E6F /* Project.m in Sources */,
+				3B445F7E1639C428002C0E6F /* MASPreferencesWindowController.m in Sources */,
+				3B445F7F1639C428002C0E6F /* ConfigurationPreferencesViewController.m in Sources */,
+				3B445F801639C428002C0E6F /* ProjectsPreferencesViewController.m in Sources */,
+				3B445F811639C428002C0E6F /* AdvancedPreferencesViewController.m in Sources */,
+				3B445F821639C428002C0E6F /* ProjectMenuItemViewController.m in Sources */,
+				3B445F831639C428002C0E6F /* SMXObject.m in Sources */,
+				3B445F841639C428002C0E6F /* BranchMenuItemViewController.m in Sources */,
+				3B445F851639C428002C0E6F /* Branch.m in Sources */,
+				3B445F861639C428002C0E6F /* Build.m in Sources */,
+				3B445F871639C428002C0E6F /* Constants.m in Sources */,
+				3B445F881639C428002C0E6F /* UserDefaultsProvider.m in Sources */,
+				3B445F891639C428002C0E6F /* StatusBarMenuItemView.m in Sources */,
+				3B445F8A1639C428002C0E6F /* SemaphoreResource.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3B7B55EE162F0BF500D7CDCB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -762,10 +873,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3B7B5618162F0BF500D7CDCB /* PBXTargetDependency */ = {
+		3B445FA61639C47E002C0E6F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3B7B55F1162F0BF500D7CDCB /* Semaphore Notifier */;
-			targetProxy = 3B7B5617162F0BF500D7CDCB /* PBXContainerItemProxy */;
+			target = 3B7B55F1162F0BF500D7CDCB /* Semaphore Notifier No Sandbox */;
+			targetProxy = 3B445FA51639C47E002C0E6F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -805,6 +916,36 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		3B445FA01639C428002C0E6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_ENTITLEMENTS = "Semaphore Notifier/Semaphore Notifier.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Semaphore Notifier/Semaphore Notifier-Prefix.pch";
+				INFOPLIST_FILE = "Semaphore Notifier-Info.plist";
+				PRODUCT_NAME = "Semaphore Notifier";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3B445FA11639C428002C0E6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_ENTITLEMENTS = "Semaphore Notifier/Semaphore Notifier.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Semaphore Notifier/Semaphore Notifier-Prefix.pch";
+				INFOPLIST_FILE = "Semaphore Notifier-Info.plist";
+				PRODUCT_NAME = "Semaphore Notifier";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 		3B7B5622162F0BF500D7CDCB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -860,12 +1001,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_ENTITLEMENTS = "Semaphore Notifier/Semaphore Notifier.entitlements";
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Semaphore Notifier/Semaphore Notifier-Prefix.pch";
-				INFOPLIST_FILE = "Semaphore Notifier/Semaphore Notifier-Info.plist";
+				INFOPLIST_FILE = "Semaphore Notifier/Semaphore Notifier-no-sandbox-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -875,12 +1015,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_ENTITLEMENTS = "Semaphore Notifier/Semaphore Notifier.entitlements";
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Semaphore Notifier/Semaphore Notifier-Prefix.pch";
-				INFOPLIST_FILE = "Semaphore Notifier/Semaphore Notifier-Info.plist";
+				INFOPLIST_FILE = "Semaphore Notifier/Semaphore Notifier-no-sandbox-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -939,6 +1078,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3B445F9F1639C428002C0E6F /* Build configuration list for PBXNativeTarget "Semaphore Notifier" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B445FA01639C428002C0E6F /* Debug */,
+				3B445FA11639C428002C0E6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		3B7B55EC162F0BF500D7CDCB /* Build configuration list for PBXProject "Semaphore Notifier" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -948,7 +1096,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3B7B5624162F0BF500D7CDCB /* Build configuration list for PBXNativeTarget "Semaphore Notifier" */ = {
+		3B7B5624162F0BF500D7CDCB /* Build configuration list for PBXNativeTarget "Semaphore Notifier No Sandbox" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3B7B5625162F0BF500D7CDCB /* Debug */,
