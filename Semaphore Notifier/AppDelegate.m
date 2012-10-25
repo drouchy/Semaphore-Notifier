@@ -100,7 +100,7 @@ static UserDefaultsProvider *provider ;
   int i = 2 ;
   NSMutableArray *controllers = [NSMutableArray array] ;
   for(Project *project in _projects) {
-    NSLog(@"loadin project %@", project.name) ;
+    NSLog(@"loading project %@", project.name) ;
     if(project.enabled) {
       ProjectMenuItemViewController *controller = [ProjectMenuItemViewController controllerWithProject: project] ;
       [controllers addObject: controller] ;
