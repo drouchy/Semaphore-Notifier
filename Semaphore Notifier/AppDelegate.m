@@ -17,8 +17,8 @@
 static UserDefaultsProvider *provider ;
 
 @interface AppDelegate()
-@property (strong, nonatomic) NSArray *projects ;
-@property (strong, nonatomic) NSArray *projectMenuControllers ;
+@property (strong, nonatomic) NSMutableArray *projects ;
+@property (strong, nonatomic) NSMutableArray *projectMenuControllers ;
 @end
 
 @implementation AppDelegate
@@ -82,34 +82,33 @@ static UserDefaultsProvider *provider ;
   NSLog(@"loading projects") ;
   NSUserDefaults *userDefaults = [self loadUserDefaults] ;
   
-  NSMutableArray *array = [NSMutableArray array] ;
+  _projects = [NSMutableArray array] ;
   for(NSDictionary *entry in [userDefaults objectForKey: @"projects"]) {
     Project *project = [[Project alloc] init] ;
     project.name = entry[@"name"] ;
     project.enabled = [entry[@"enabled"] boolValue] ;
     project.apiKey = entry[@"apiKey"] ;
 
-    [array addObject: project] ;
-  }
-  
-  self.projects = [array copy] ;
+    [_projects addObject: project] ;
+  }  
 }
 
 - (void) loadProjectMenuItems {
   NSLog(@"loading projects menu items %@", _projects) ;
-  int i = 2 ;
-  NSMutableArray *controllers = [NSMutableArray array] ;
+  _projectMenuControllers = [NSMutableArray array] ;
   for(Project *project in _projects) {
     NSLog(@"loading project %@", project.name) ;
-    if(project.enabled) {
-      ProjectMenuItemViewController *controller = [ProjectMenuItemViewController controllerWithProject: project] ;
-      [controllers addObject: controller] ;
-
-      [self.statusMenu insertItem: [controller buildMenuItem] atIndex:i] ;
-      i++ ;
-    }
+    [self addMenuItemForProject: project] ;
   }
-  _projectMenuControllers = [controllers copy] ;
+}
+
+- (void) addMenuItemForProject: (Project *) project {
+  if(project.enabled) {
+    ProjectMenuItemViewController *controller = [ProjectMenuItemViewController controllerWithProject: project] ;
+    [_projectMenuControllers addObject: controller] ;
+    NSInteger index = [[self.statusMenu itemArray] count] - 4 ;
+    [self.statusMenu insertItem: [controller buildMenuItem] atIndex: index] ;
+  }
 }
 
 - (void) launchPreferences:(id) sender {

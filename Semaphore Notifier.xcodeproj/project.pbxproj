@@ -1028,7 +1028,7 @@
 		3B7B5628162F0BF500D7CDCB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Semaphore Notifier.app/Contents/MacOS/Semaphore Notifier";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Semaphore Notifier No Sandbox.app/Contents/MacOS/Semaphore Notifier No Sandbox";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1053,7 +1053,7 @@
 		3B7B5629162F0BF500D7CDCB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Semaphore Notifier.app/Contents/MacOS/Semaphore Notifier";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Semaphore Notifier No Sandbox.app/Contents/MacOS/Semaphore Notifier No Sandbox";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
