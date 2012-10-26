@@ -12,7 +12,6 @@
 #import "Branch.h"
 
 @interface ProjectMenuItemViewController ()
-@property (nonatomic)         ResourceStatus status ;
 @property (strong, nonatomic) NSMutableData *receivedData;
 @property (strong, nonatomic) NSMenuItem *menuItem;
 @property (strong, nonatomic) NSMutableArray *branchesController ;
@@ -54,17 +53,17 @@
   NSURLRequest *theRequest = [NSURLRequest requestWithURL: url
                                               cachePolicy: NSURLRequestReloadIgnoringLocalCacheData
                                           timeoutInterval: 10.0];
-  _status = ResourceStatusPending ;
+  _project.status = ResourceStatusPending ;
   NSURLConnection *theConnection= [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
   
   if (!theConnection) {
-    _status = ResourceStatusError ;
+    _project.status = ResourceStatusError ;
     NSLog(@"Error while requesting branches of ResourceStatusPending %@", self.project.name) ;
   }
 }
 
 - (void) showIndicator {
-  if(_status == ResourceStatusPending) {
+  if(_project.status == ResourceStatusPending) {
     [self.loadingIndicator performSelector:@selector(startAnimation:)
                                 withObject:self
                                 afterDelay:0.0
@@ -89,7 +88,7 @@
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
   NSLog(@"did fail with error (%@)", self.project.name) ;
-  _status = ResourceStatusError ;
+  _project.status = ResourceStatusError ;
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
@@ -102,7 +101,7 @@
     [self loadBranches] ;
     // mark as loaded
   } else {
-    _status = ResourceStatusError ;
+    _project.status = ResourceStatusError ;
     NSLog(@"Failed to parse the response (%@)", self.project.name) ;
   }
 }

@@ -85,22 +85,22 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Semaphore NotifierTests/ProjectMenuItemViewControllerSpec.m"
-         timestampString = "372934222.017111"
+         timestampString = "372962171.016422"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "99"
-         endingLineNumber = "99">
+         startingLineNumber = "98"
+         endingLineNumber = "98">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Semaphore Notifier/ProjectMenuItemViewController.m"
-         timestampString = "372934621.286423"
+         timestampString = "372962171.016422"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "105"
-         endingLineNumber = "105"
+         startingLineNumber = "104"
+         endingLineNumber = "104"
          landmarkName = "-connectionDidFinishLoading:"
          landmarkType = "5">
       </FileBreakpoint>

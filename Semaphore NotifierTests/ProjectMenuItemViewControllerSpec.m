@@ -11,7 +11,6 @@
 #import "StatusBarMenuItemView.h"
 
 @interface ProjectMenuItemViewController ()
-@property (nonatomic)         ResourceStatus status ;
 @property (retain, nonatomic) NSMutableData *receivedData;
 @property (retain, nonatomic) NSMenuItem *menuItem;
 @property (retain, nonatomic) NSMutableArray *branchesController ;
@@ -100,7 +99,7 @@ describe(@"ProjectMenuItemViewController", ^{
       }) ;
 
       it(@"sets the controller status to unknown", ^{
-        expect(controller.status).to.equal(ResourceStatusError) ;
+        expect(controller.project.status).to.equal(ResourceStatusError) ;
       }) ;
     }) ;
 
@@ -120,7 +119,7 @@ describe(@"ProjectMenuItemViewController", ^{
 
         [controller connectionDidFinishLoading: connection] ;
 
-        expect(controller.status).to.equal(ResourceStatusError) ;
+        expect(controller.project.status).to.equal(ResourceStatusError) ;
       }) ;
     }) ;
   }) ;
