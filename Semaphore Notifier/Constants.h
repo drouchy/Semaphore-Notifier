@@ -10,19 +10,12 @@
 
 extern NSString *SemaphoreApiUrl ;
 
-typedef enum BuildStatus : NSInteger {
-  BuildStatusNone,
-  BuildStatusPending,
-  BuildStatusSuccess,
-  BuildStatusFailure,
-  BuildStatusUnknown
-
-} BuildStatus ;
 
 typedef enum ResourceStatus : NSInteger {
   ResourceStatusNone,
+  ResourceStatusPending,
   ResourceStatusSuccess,
   ResourceStatusFailure,
-  ResourceStatusLoading
-  
+  ResourceStatusUnknown,
+  ResourceStatusError
 } ResourceStatus ;

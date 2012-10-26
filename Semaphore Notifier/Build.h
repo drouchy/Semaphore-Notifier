@@ -8,16 +8,15 @@
 
 #import <Foundation/Foundation.h>
 #import "Build.h"
-#import "SMXObject.h"
+#import "SemaphoreResource.h"
 #import "Constants.h"
 
-@interface Build : SMXObject
+@interface Build : SemaphoreResource
 
 @property (copy, nonatomic) NSNumber *number ;
 @property (copy, nonatomic) NSURL *url ;
 @property (copy, nonatomic) NSDate *startedAt ;
 @property (copy, nonatomic) NSDate *finishedAt ;
-@property (nonatomic)       ResourceStatus status ;
 
 - (void) updateFromJson: (NSDictionary *) json ;
 @end

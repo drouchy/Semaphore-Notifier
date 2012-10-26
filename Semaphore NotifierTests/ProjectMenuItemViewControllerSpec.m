@@ -11,7 +11,7 @@
 #import "StatusBarMenuItemView.h"
 
 @interface ProjectMenuItemViewController ()
-@property (retain, nonatomic) NSNumber *status ;
+@property (nonatomic)         ResourceStatus status ;
 @property (retain, nonatomic) NSMutableData *receivedData;
 @property (retain, nonatomic) NSMenuItem *menuItem;
 @property (retain, nonatomic) NSMutableArray *branchesController ;
@@ -99,8 +99,8 @@ describe(@"ProjectMenuItemViewController", ^{
         [controller connection: connection didFailWithError: error] ;
       }) ;
 
-      it(@"sets the controller status to error", ^{
-        expect(controller.status).to.equal(ResourceStatusFailure) ;
+      it(@"sets the controller status to unknown", ^{
+        expect(controller.status).to.equal(ResourceStatusError) ;
       }) ;
     }) ;
 
@@ -109,10 +109,6 @@ describe(@"ProjectMenuItemViewController", ^{
         controller.receivedData = [[@"[{\"id\": \"1\", \"name\": \"branch\"}]"  dataUsingEncoding:NSUTF8StringEncoding] mutableCopy];
 
         [controller connectionDidFinishLoading: connection] ;
-      }) ;
-
-      it(@"sets the controller status to success", ^{
-        expect(controller.status).to.equal(ResourceStatusSuccess) ;
       }) ;
 
       it(@"parses the JSON in the response and load the branches", ^{
@@ -124,7 +120,7 @@ describe(@"ProjectMenuItemViewController", ^{
 
         [controller connectionDidFinishLoading: connection] ;
 
-        expect(controller.status).to.equal(ResourceStatusFailure) ;
+        expect(controller.status).to.equal(ResourceStatusError) ;
       }) ;
     }) ;
   }) ;

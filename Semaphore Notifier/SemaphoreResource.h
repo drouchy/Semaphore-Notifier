@@ -13,6 +13,8 @@
 
 @interface SemaphoreResource : SMXObject
 
+@property (nonatomic) ResourceStatus status ;
+
 + (void) registerUserDefaultsProvider: (UserDefaultsProvider *) provider ;
 
 - (NSString *) authToken ;

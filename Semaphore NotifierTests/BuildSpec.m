@@ -42,7 +42,7 @@ describe(@"Build", ^{
     }) ;
 
     it(@"has a status", ^{
-      expect(build.status).to.equal(BuildStatusNone) ;
+      expect(build.status).to.equal(ResourceStatusNone) ;
     }) ;
   }) ;
 
@@ -89,27 +89,27 @@ describe(@"Build", ^{
 
     describe(@"status", ^{
       it(@"parses the success", ^{
-        expect(build.status).to.equal(BuildStatusSuccess) ;
+        expect(build.status).to.equal(ResourceStatusSuccess) ;
       }) ;
       it(@"parses the failure", ^{
         json[@"result"] = @"failed" ;
         [build updateFromJson: json] ;
 
-        expect(build.status).to.equal(BuildStatusFailure) ;
+        expect(build.status).to.equal(ResourceStatusFailure) ;
       }) ;
 
       it(@"parses the pending", ^{
         json[@"result"] = @"pending" ;
         [build updateFromJson: json] ;
 
-        expect(build.status).to.equal(BuildStatusPending) ;
+        expect(build.status).to.equal(ResourceStatusPending) ;
       }) ;
 
       it(@"parses an unknown", ^{
         json[@"result"] = @"foo" ;
         [build updateFromJson: json] ;
 
-        expect(build.status).to.equal(BuildStatusUnknown) ;
+        expect(build.status).to.equal(ResourceStatusUnknown) ;
       }) ;
     }) ;
   }) ;

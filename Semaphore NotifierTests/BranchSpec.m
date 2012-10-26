@@ -46,7 +46,7 @@ describe(@"Branch", ^{
     }) ;
 
     it(@"has a uknown last status by default", ^{
-      expect([branch lastStatus]).to.equal(BuildStatusNone) ;
+      expect([branch lastStatus]).to.equal(ResourceStatusNone) ;
     }) ;
 
     it(@"has no builds", ^{

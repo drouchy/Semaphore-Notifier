@@ -20,7 +20,7 @@
 }
 
 - (int) lastStatus {
-  return BuildStatusNone ;
+  return ResourceStatusNone ;
 }
 
 - (void) updateFromJson: (NSDictionary *) json {

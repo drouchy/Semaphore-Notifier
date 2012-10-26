@@ -12,7 +12,7 @@
 
 - (id) init {
   if((self = [super init])) {
-    _status = BuildStatusNone ;
+    self.status = ResourceStatusNone ;
   }
   return self ;
 }
@@ -25,17 +25,17 @@
   _startedAt = [dateFormatter dateFromString: json[@"started_at"]];
   _finishedAt = [dateFormatter dateFromString: json[@"finished_at"]];
 
-  _status = [self parseStatus:json[@"result"]] ;
+  self.status = [self parseStatus:json[@"result"]] ;
 }
 
-- (BuildStatus) parseStatus: (NSString *) status {
+- (ResourceStatus) parseStatus: (NSString *) status {
   if([status isEqualToString: @"passed"]) {
-    return BuildStatusSuccess ;
+    return ResourceStatusSuccess ;
   } else if([status isEqualToString: @"failed"]) {
-    return BuildStatusFailure ;
+    return ResourceStatusFailure ;
   } else if([status isEqualToString: @"pending"]) {
-    return BuildStatusPending ;
+    return ResourceStatusPending ;
   }
-  return BuildStatusUnknown ;
+  return ResourceStatusUnknown ;
 }
 @end

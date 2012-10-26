@@ -12,7 +12,7 @@
 #import "Branch.h"
 
 @interface ProjectMenuItemViewController ()
-@property (strong, nonatomic) NSNumber *status ;
+@property (nonatomic)         ResourceStatus status ;
 @property (strong, nonatomic) NSMutableData *receivedData;
 @property (strong, nonatomic) NSMenuItem *menuItem;
 @property (strong, nonatomic) NSMutableArray *branchesController ;
@@ -20,21 +20,15 @@
 
 @implementation ProjectMenuItemViewController
 
-@synthesize status = _status ;
-@synthesize receivedData = _receivedData;
-@synthesize menuItem = _menuItem;
-@synthesize branchesController = _branchesController ;
-
 + (id) controllerWithProject: (Project *) aProject {
-  ProjectMenuItemViewController *controller = [[self alloc] init] ;
-  controller.project = aProject ;
+  ProjectMenuItemViewController *controller = [[self alloc] initWithProject: aProject] ;
   return controller ;
 }
 
-- (id)init {
+- (id)initWithProject: (Project *) aProject {
   self = [super initWithNibName:@"ProjectMenuItemView" bundle: [NSBundle bundleForClass: [self class]]];
   if (self) {
-      // Initialization code here.
+    self.project = aProject ;
   }
   
   return self;
@@ -60,17 +54,17 @@
   NSURLRequest *theRequest = [NSURLRequest requestWithURL: url
                                               cachePolicy: NSURLRequestReloadIgnoringLocalCacheData
                                           timeoutInterval: 10.0];
-  _status = [NSNumber numberWithInt: ResourceStatusLoading] ;
+  _status = ResourceStatusPending ;
   NSURLConnection *theConnection= [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
   
   if (!theConnection) {
-    _status = [NSNumber numberWithInt: ResourceStatusLoading] ;
-    NSLog(@"Error while requesting branches of project %@", self.project.name) ;
+    _status = ResourceStatusError ;
+    NSLog(@"Error while requesting branches of ResourceStatusPending %@", self.project.name) ;
   }
 }
 
 - (void) showIndicator {
-  if([_status intValue] == ResourceStatusLoading) {
+  if(_status == ResourceStatusPending) {
     [self.loadingIndicator performSelector:@selector(startAnimation:)
                                 withObject:self
                                 afterDelay:0.0
@@ -95,20 +89,20 @@
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
   NSLog(@"did fail with error (%@)", self.project.name) ;
-  _status = [NSNumber numberWithInt: ResourceStatusFailure] ;
+  _status = ResourceStatusError ;
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
   NSLog(@"did finish loading (%@)", self.project.name) ;
-  _status = [NSNumber numberWithInt: ResourceStatusSuccess] ;
 
   NSArray *jsonArray = [NSJSONSerialization JSONObjectWithData: _receivedData options: NSJSONReadingMutableContainers error: nil];
   if(jsonArray) {
     NSLog(@"parsing the JSON message: %@", jsonArray) ;
     [_project loadBranches: jsonArray] ;
     [self loadBranches] ;
+    // mark as loaded
   } else {
-    _status = [NSNumber numberWithInt: ResourceStatusFailure] ;
+    _status = ResourceStatusError ;
     NSLog(@"Failed to parse the response (%@)", self.project.name) ;
   }
 }
