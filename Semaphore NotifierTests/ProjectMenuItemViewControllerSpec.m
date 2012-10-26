@@ -32,7 +32,7 @@ describe(@"ProjectMenuItemViewController", ^{
   beforeEach(^{
     controller = [[ProjectMenuItemViewController alloc] init] ;
     project = [Project projectWithName: @"project name" andKey: @"123a"] ;
-    controller.project = project ;
+    controller.resource = project ;
   }) ;
 
   describe(@"controllerWithProject", ^{

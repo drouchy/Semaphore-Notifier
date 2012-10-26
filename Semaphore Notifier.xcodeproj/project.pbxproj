@@ -49,6 +49,10 @@
 		3B445F9C1639C428002C0E6F /* statusFailure.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B57E56D1633FA7A0004FF18 /* statusFailure.png */; };
 		3B445F9D1639C428002C0E6F /* statusSuccess.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B57E56E1633FA7A0004FF18 /* statusSuccess.png */; };
 		3B445F9E1639C428002C0E6F /* statusUnknown.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B57E56F1633FA7A0004FF18 /* statusUnknown.png */; };
+		3B445FD7163AF3B5002C0E6F /* ResourceMenuItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B445FD6163AF3B5002C0E6F /* ResourceMenuItemViewController.m */; };
+		3B445FD8163AF3B5002C0E6F /* ResourceMenuItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B445FD6163AF3B5002C0E6F /* ResourceMenuItemViewController.m */; };
+		3B445FD9163AF3B5002C0E6F /* ResourceMenuItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B445FD6163AF3B5002C0E6F /* ResourceMenuItemViewController.m */; };
+		3B445FDD163AF442002C0E6F /* ResourceMenuItemViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B445FDC163AF442002C0E6F /* ResourceMenuItemViewControllerSpec.m */; };
 		3B57E5701633FA7A0004FF18 /* statusFailure.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B57E56D1633FA7A0004FF18 /* statusFailure.png */; };
 		3B57E5711633FA7A0004FF18 /* statusFailure.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B57E56D1633FA7A0004FF18 /* statusFailure.png */; };
 		3B57E5721633FA7A0004FF18 /* statusSuccess.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B57E56E1633FA7A0004FF18 /* statusSuccess.png */; };
@@ -156,6 +160,9 @@
 		3B41B36016392DED0060AE19 /* Semaphore Notifier.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Semaphore Notifier.entitlements"; sourceTree = "<group>"; };
 		3B445FA21639C428002C0E6F /* Semaphore Notifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Semaphore Notifier.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B445FA41639C428002C0E6F /* Semaphore Notifier-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Semaphore Notifier-Info.plist"; path = "/Users/drouchy/Developer/private/obj-c/Semaphore Notifier/Semaphore Notifier-Info.plist"; sourceTree = "<absolute>"; };
+		3B445FD5163AF3B5002C0E6F /* ResourceMenuItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResourceMenuItemViewController.h; sourceTree = "<group>"; };
+		3B445FD6163AF3B5002C0E6F /* ResourceMenuItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResourceMenuItemViewController.m; sourceTree = "<group>"; };
+		3B445FDC163AF442002C0E6F /* ResourceMenuItemViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResourceMenuItemViewControllerSpec.m; sourceTree = "<group>"; };
 		3B57E56D1633FA7A0004FF18 /* statusFailure.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = statusFailure.png; sourceTree = "<group>"; };
 		3B57E56E1633FA7A0004FF18 /* statusSuccess.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = statusSuccess.png; sourceTree = "<group>"; };
 		3B57E56F1633FA7A0004FF18 /* statusUnknown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = statusUnknown.png; sourceTree = "<group>"; };
@@ -313,6 +320,7 @@
 			children = (
 				3B8C73151630A3D20092ADE8 /* ProjectMenuItemViewControllerSpec.m */,
 				3B8C73461631396C0092ADE8 /* BranchMenuItemViewControllerSpec.m */,
+				3B445FDC163AF442002C0E6F /* ResourceMenuItemViewControllerSpec.m */,
 			);
 			name = "status menu";
 			sourceTree = "<group>";
@@ -507,6 +515,8 @@
 				3B8C730E1630A18F0092ADE8 /* ProjectMenuItemViewController.m */,
 				3B8C733E1631392E0092ADE8 /* BranchMenuItemViewController.h */,
 				3B8C733F1631392E0092ADE8 /* BranchMenuItemViewController.m */,
+				3B445FD5163AF3B5002C0E6F /* ResourceMenuItemViewController.h */,
+				3B445FD6163AF3B5002C0E6F /* ResourceMenuItemViewController.m */,
 			);
 			name = "status menu";
 			sourceTree = "<group>";
@@ -811,6 +821,7 @@
 				3B445F881639C428002C0E6F /* UserDefaultsProvider.m in Sources */,
 				3B445F891639C428002C0E6F /* StatusBarMenuItemView.m in Sources */,
 				3B445F8A1639C428002C0E6F /* SemaphoreResource.m in Sources */,
+				3B445FD9163AF3B5002C0E6F /* ResourceMenuItemViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -834,6 +845,7 @@
 				3BE8FF1E1632DC15000D2088 /* UserDefaultsProvider.m in Sources */,
 				3B11AE401632E9AF005E9F88 /* StatusBarMenuItemView.m in Sources */,
 				3B11AE4C16330098005E9F88 /* SemaphoreResource.m in Sources */,
+				3B445FD7163AF3B5002C0E6F /* ResourceMenuItemViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -867,6 +879,8 @@
 				3B11AE411632E9AF005E9F88 /* StatusBarMenuItemView.m in Sources */,
 				3B11AE4D16330098005E9F88 /* SemaphoreResource.m in Sources */,
 				3B11AE5116330485005E9F88 /* SemaphoreResourceSpec.m in Sources */,
+				3B445FD8163AF3B5002C0E6F /* ResourceMenuItemViewController.m in Sources */,
+				3B445FDD163AF442002C0E6F /* ResourceMenuItemViewControllerSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

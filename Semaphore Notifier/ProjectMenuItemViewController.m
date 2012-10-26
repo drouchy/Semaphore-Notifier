@@ -27,10 +27,14 @@
 - (id)initWithProject: (Project *) aProject {
   self = [super initWithNibName:@"ProjectMenuItemView" bundle: [NSBundle bundleForClass: [self class]]];
   if (self) {
-    self.project = aProject ;
+    self.resource = aProject ;
   }
   
   return self;
+}
+
+- (Project *) project {
+  return (Project *) self.resource ;
 }
 
 - (void) awakeFromNib {
@@ -53,17 +57,17 @@
   NSURLRequest *theRequest = [NSURLRequest requestWithURL: url
                                               cachePolicy: NSURLRequestReloadIgnoringLocalCacheData
                                           timeoutInterval: 10.0];
-  _project.status = ResourceStatusPending ;
+  self.resource.status = ResourceStatusPending ;
   NSURLConnection *theConnection= [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
   
   if (!theConnection) {
-    _project.status = ResourceStatusError ;
+    self.resource.status = ResourceStatusError ;
     NSLog(@"Error while requesting branches of ResourceStatusPending %@", self.project.name) ;
   }
 }
 
 - (void) showIndicator {
-  if(_project.status == ResourceStatusPending) {
+  if(self.project.status == ResourceStatusPending) {
     [self.loadingIndicator performSelector:@selector(startAnimation:)
                                 withObject:self
                                 afterDelay:0.0
@@ -88,7 +92,7 @@
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
   NSLog(@"did fail with error (%@)", self.project.name) ;
-  _project.status = ResourceStatusError ;
+  self.project.status = ResourceStatusError ;
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
@@ -97,11 +101,11 @@
   NSArray *jsonArray = [NSJSONSerialization JSONObjectWithData: _receivedData options: NSJSONReadingMutableContainers error: nil];
   if(jsonArray) {
     NSLog(@"parsing the JSON message: %@", jsonArray) ;
-    [_project loadBranches: jsonArray] ;
+    [self.project loadBranches: jsonArray] ;
     [self loadBranches] ;
     // mark as loaded
   } else {
-    _project.status = ResourceStatusError ;
+    self.project.status = ResourceStatusError ;
     NSLog(@"Failed to parse the response (%@)", self.project.name) ;
   }
 }
