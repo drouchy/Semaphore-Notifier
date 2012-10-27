@@ -27,4 +27,13 @@ static UserDefaultsProvider *provider ;
   return [provider userDefaults] ;
 }
 
+- (void) parseJson: (NSArray *) json {
+  [NSException raise: @"Method not supported" format:@"Method not supported"] ;
+}
+
+- (NSURL *) requestUrl {
+  [NSException raise: @"Method not supported" format:@"Method not supported"] ;
+  return nil ;
+}
+
 @end

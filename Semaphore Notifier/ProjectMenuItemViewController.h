@@ -16,7 +16,7 @@
 
 + (id) controllerWithProject: (Project *) aProject ;
 
-- (void) showIndicator ;
 - (NSMenuItem *) buildMenuItem ;
 - (Project *) project ;
+- (void) showIndicator ;
 @end

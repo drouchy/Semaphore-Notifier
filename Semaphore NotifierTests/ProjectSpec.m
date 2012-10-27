@@ -75,14 +75,14 @@ describe(@"project", ^{
     }) ;
   }) ;
 
-  describe(@"parseBranches", ^{
+  describe(@"parseJson", ^{
     __block NSArray *json  ;
     __block Branch *oneBranch ;
     
     beforeEach(^{
       json = @[ @{@"id": @2, @"name": @"branch 1"}, @{@"id": @3, @"name": @"branch 2"}] ;
       
-      [project loadBranches: json] ;
+      [project parseJson: json] ;
       oneBranch = project.branches[0] ;
     }) ;
 

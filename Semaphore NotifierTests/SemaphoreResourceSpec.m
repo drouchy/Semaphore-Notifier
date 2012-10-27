@@ -16,12 +16,15 @@ SpecBegin(SemaphoreResourceSpec)
 describe(@"SemaphoreResource", ^{
   __block SemaphoreResource *resource ;
   __block UserDefaultsProvider *provider ;
-  
+
+  beforeEach(^{
+    resource = [[SemaphoreResource alloc] init] ;
+  }) ;
+
   describe(@"authToken", ^{
     beforeEach(^{
       provider = [UserDefaultsProvider providerWithSettings: @{ @"authKey": @"my very own key"}] ;
       [SemaphoreResource registerUserDefaultsProvider: provider] ;
-      resource = [[SemaphoreResource alloc] init] ;
     }) ;
 
     it(@"reads the auth token from the user defaults", ^{
@@ -33,7 +36,6 @@ describe(@"SemaphoreResource", ^{
     beforeEach(^{
       provider = [UserDefaultsProvider providerWithSettings: @{ @"authKey": @"key1"}] ;
       [SemaphoreResource registerUserDefaultsProvider: provider] ;
-      resource = [[SemaphoreResource alloc] init] ;
     }) ;
     
     describe(@"Project.branchListUrl", ^{
@@ -47,7 +49,18 @@ describe(@"SemaphoreResource", ^{
         expect([[project branchListUrl] absoluteString]).to.equal(@"https://semaphoreapp.com/api/v1/projects/projectkey/branches?auth_token=key1") ;
       }) ;
     }) ;
-  
+  }) ;
+
+  describe(@"parseJson", ^{
+    it(@"throws an exception", ^{
+      expect(^{ [[[SemaphoreResource alloc] init] parseJson: @[]] ; }).to.raise(@"Method not supported");
+    }) ;
+  }) ;
+
+  describe(@"requestUrl", ^{
+    it(@"throws an exception", ^{
+      expect(^{ [[[SemaphoreResource alloc] init] requestUrl] ; }).to.raise(@"Method not supported");
+    }) ;
   }) ;
 }) ;
 SpecEnd

@@ -18,4 +18,6 @@
 + (void) registerUserDefaultsProvider: (UserDefaultsProvider *) provider ;
 
 - (NSString *) authToken ;
+- (void) parseJson: (NSArray *) json ;
+- (NSURL *) requestUrl ;
 @end

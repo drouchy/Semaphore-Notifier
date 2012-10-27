@@ -15,11 +15,6 @@
 @property (retain, nonatomic) NSMenuItem *menuItem;
 @property (retain, nonatomic) NSMutableArray *branchesController ;
 
-- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response ;
-- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data ;
-- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error ;
-- (void)connectionDidFinishLoading:(NSURLConnection *)connection ;
-
 - (void) loadBranches ;
 @end
 
@@ -46,81 +41,6 @@ describe(@"ProjectMenuItemViewController", ^{
 
     it(@"links it to the project", ^{
       expect(controller.project).to.beIdenticalTo(project) ;
-    }) ;
-  }) ;
-
-  describe(@"NSUrlConnection delegate", ^{
-    __block id connection ;
-    __block id response ;
-
-    beforeEach(^{
-      connection = [OCMockObject niceMockForClass:[NSConnection class]] ;
-      response = [OCMockObject niceMockForClass:[NSURLResponse class]] ;
-    }) ;
-
-    describe(@"didReceiveResponse", ^{
-      beforeEach(^{
-        [controller connection: connection didReceiveResponse: response] ;
-      }) ;
-
-      it(@"creates a NSData to receive the data", ^{
-        expect(controller.receivedData).toNot.beNil() ;
-      }) ;
-
-      it(@"resets the receivedata", ^{
-        expect([controller.receivedData length]).to.equal(0) ;
-      }) ;
-    }) ;
-
-    describe(@"didReceiveData", ^{
-      __block NSData *data ;
-
-      beforeEach(^{
-        data = [@"received data"  dataUsingEncoding:NSUTF8StringEncoding] ;
-        controller.receivedData = [NSMutableData data] ;
-        
-        [controller connection: connection didReceiveData: data] ;
-      }) ;
-
-      it(@"appends the received data", ^{
-        NSString *decoded = [[NSString alloc] initWithData: controller.receivedData encoding:NSUTF8StringEncoding] ;
-
-        expect(decoded).to.equal(@"received data") ;
-      }) ;
-    }) ;
-
-    describe(@"didFailWithError", ^{
-      __block NSError *error ;
-
-      beforeEach(^{
-        error = [[NSError alloc] init] ;
-
-        [controller connection: connection didFailWithError: error] ;
-      }) ;
-
-      it(@"sets the controller status to unknown", ^{
-        expect(controller.project.status).to.equal(ResourceStatusError) ;
-      }) ;
-    }) ;
-
-    describe(@"connectionDidFinishLoading", ^{
-      beforeEach(^{
-        controller.receivedData = [[@"[{\"id\": \"1\", \"name\": \"branch\"}]"  dataUsingEncoding:NSUTF8StringEncoding] mutableCopy];
-
-        [controller connectionDidFinishLoading: connection] ;
-      }) ;
-
-      it(@"parses the JSON in the response and load the branches", ^{
-        expect([controller.project.branches count]).to.equal(1) ;
-      }) ;
-
-      it(@"sets the controller status to error is the json is malformed", ^{
-        controller.receivedData = [[@"Failed"  dataUsingEncoding:NSUTF8StringEncoding] mutableCopy];
-
-        [controller connectionDidFinishLoading: connection] ;
-
-        expect(controller.project.status).to.equal(ResourceStatusError) ;
-      }) ;
     }) ;
   }) ;
 

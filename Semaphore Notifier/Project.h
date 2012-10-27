@@ -20,5 +20,4 @@
 + (id) projectWithName: (NSString *) aName andKey: (NSString *) aKey ;
 
 - (NSURL *) branchListUrl ;
-- (void) loadBranches: (NSArray *) json ;
 @end

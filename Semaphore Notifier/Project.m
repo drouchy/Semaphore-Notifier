@@ -35,7 +35,7 @@
   return [NSURL URLWithString:branchListUrl];
 }
 
-- (void) loadBranches: (NSArray *) json {
+- (void) parseJson: (NSArray *) json {
   for(NSDictionary *entry in json) {
     NSLog(@"Loading (%@) branch %@", self.name, entry[@"name"]) ;
     Branch *branch = [[Branch alloc] init] ;
@@ -44,5 +44,9 @@
     
     [_branches addObject: branch] ;
   }
+}
+
+- (NSURL *) requestUrl {
+  return [self branchListUrl] ;
 }
 @end
