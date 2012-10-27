@@ -12,11 +12,8 @@
 
 @interface ProjectMenuItemViewController : ResourceMenuItemViewController
 
-@property (weak) IBOutlet NSProgressIndicator *loadingIndicator;
-
 + (id) controllerWithProject: (Project *) aProject ;
 
-- (NSMenuItem *) buildMenuItem ;
 - (Project *) project ;
-- (void) showIndicator ;
+
 @end

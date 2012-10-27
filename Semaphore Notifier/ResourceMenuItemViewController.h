@@ -11,8 +11,12 @@
 
 @interface ResourceMenuItemViewController : NSViewController
 
+@property (weak) IBOutlet NSProgressIndicator *loadingIndicator;
 @property (nonatomic) SemaphoreResource *resource ;
+@property (strong, nonatomic) NSMenuItem *menuItem;
 
 - (id) initWithResource: (SemaphoreResource *) aResource ;
 
+- (NSMenuItem *) buildMenuItem ;
+- (void) showIndicator ;
 @end

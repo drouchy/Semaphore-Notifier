@@ -15,22 +15,20 @@
 @implementation BranchMenuItemViewController
 
 + (id) controllerWithBranch: (Branch *) aBranch {
-  BranchMenuItemViewController *controller = [[BranchMenuItemViewController alloc] init] ;
-  controller.branch = aBranch ;
-  return controller ;
+  return[[BranchMenuItemViewController alloc] initWithBranch: aBranch] ;
 }
-- (id)init {
+
+- (id) initWithBranch: (Branch *) aBranch {
   self = [super initWithNibName:@"BranchMenuItemView" bundle:[NSBundle bundleForClass: [self class]]];
   if (self) {
-      // Initialization code here.
+      self.resource = aBranch ;
   }
   
   return self;
 }
 
-- (NSMenuItem *) buildMenuItem {
-  NSMenuItem *menuItem = [[NSMenuItem alloc] init] ;
-  menuItem.view = self.view ;
-  return menuItem ;
+- (Branch *) branch {
+  return (Branch *) self.resource ;
 }
+
 @end

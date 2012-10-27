@@ -8,8 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "SMXObject.h"
+#import "SemaphoreResource.h"
 
-@interface Branch : SMXObject
+@interface Branch : SemaphoreResource
 
 @property (nonatomic) NSNumber *branchId ;
 @property (nonatomic) NSString  *name ;
