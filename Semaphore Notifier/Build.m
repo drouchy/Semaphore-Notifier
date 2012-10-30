@@ -16,6 +16,7 @@
   }
   return self ;
 }
+
 - (void) updateFromJson: (NSDictionary *) json {
   _number = [NSNumber numberWithInt: [json[@"build_number"] intValue]];
   _url = [NSURL URLWithString: json[@"build_url"]] ;
@@ -29,6 +30,7 @@
 }
 
 - (ResourceStatus) parseStatus: (NSString *) status {
+  NSLog(@"===> Parsing status %@", status) ;
   if([status isEqualToString: @"passed"]) {
     return ResourceStatusSuccess ;
   } else if([status isEqualToString: @"failed"]) {

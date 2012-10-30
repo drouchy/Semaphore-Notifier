@@ -13,6 +13,7 @@
 #import "AdvancedPreferencesViewController.h"
 #import "Project.h"
 #import "ProjectMenuItemViewController.h"
+#import "BranchMenuItemViewController.h"
 
 static UserDefaultsProvider *provider ;
 

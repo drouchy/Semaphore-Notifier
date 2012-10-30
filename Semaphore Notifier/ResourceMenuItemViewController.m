@@ -21,9 +21,17 @@
   return self ;
 }
 
+- (void) awakeFromNib {
+  [super awakeFromNib] ;
+}
+
+- (void) dealloc {
+  [self.resource removeObserver: self forKeyPath: @"status"] ;
+}
+
 - (void) showIndicator {
   if(self.resource.status == ResourceStatusPending) {
-    NSLog(@"show indicator") ;
+    NSLog(@"show indicator %@", [self.resource class]) ;
     [self.loadingIndicator performSelector:@selector(startAnimation:)
                                 withObject:self
                                 afterDelay:0.0
@@ -39,7 +47,40 @@
   _menuItem = [[NSMenuItem alloc] init] ;
   _menuItem.view = self.view ;
   _menuItem.submenu = [[NSMenu alloc] init] ;
+  //_menuItem.submenu.delegate = self ;
   return _menuItem ;
 }
 
+- (void)observeValueForKeyPath:(NSString *)keyPath
+                      ofObject:(id)object
+                        change:(NSDictionary *)change
+                       context:(void *)context {
+  
+  NSLog(@"Resource <-- observeValueForKeyPath --> %@", keyPath) ;
+  if ([keyPath isEqual:@"status"]) {
+    [self willChangeValueForKey: @"shouldHideCautionImage"] ;
+    [self willChangeValueForKey: @"shouldHideSubMenuImage"] ;
+    [self showIndicator] ;
+    [self didChangeValueForKey: @"shouldHideCautionImage"] ;
+    [self didChangeValueForKey: @"shouldHideSubMenuImage"] ;
+
+  }
+}
+
+- (Boolean) shouldHideCautionImage {
+  return self.resource.status != ResourceStatusError ;
+}
+
+- (Boolean) shouldHideSubMenuImage {
+  switch (self.resource.status) {
+    case ResourceStatusError:
+    case ResourceStatusPending:
+    case ResourceStatusNone:
+    case ResourceStatusUnknown:
+      return YES ;
+      break;
+    default:
+      return NO ;
+  }
+}
 @end

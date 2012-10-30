@@ -41,7 +41,8 @@
     Branch *branch = [[Branch alloc] init] ;
     branch.branchId = entry[@"id"] ;
     branch.name = entry[@"name"] ;
-    
+    branch.project = self ;
+
     [_branches addObject: branch] ;
   }
 }

@@ -13,8 +13,8 @@
 
 @property (weak) SemaphoreResource *resource ;
 
-+ (id) requestForResource: (SemaphoreResource *) aResource ;
++ (id) requestForResource: (SemaphoreResource *) aResource delegate: (id) delegate;
 
-- (void) execute: (void (^)())block ;
+- (void) execute: (void (^)())block statusBlock: (void (^)(ResourceStatus)) statusBlock;
 
 @end

@@ -12,6 +12,9 @@
 
 @property (strong, nonatomic) NSMutableData *receivedData;
 @property (strong, nonatomic) void (^executionDoneBlock)(void);
+@property (strong, nonatomic) void (^updateStatusBlock)(ResourceStatus);
+
+@property (weak) id delegate ;
 
 @end
 
@@ -23,14 +26,17 @@ dispatch_queue_t httpRequestQueue ;
   httpRequestQueue = dispatch_queue_create("net.drouchy.semaphore.notifier.httpRequest", NULL);
 }
 
-+ (id) requestForResource: (SemaphoreResource *) aResource {
++ (id) requestForResource: (SemaphoreResource *) aResource delegate: (id) delegate {
   SemaphoreHttpRequestExecutor *request = [[self alloc] init] ;
   request.resource = aResource ;
+  request.delegate = delegate ;
+  
   return request ;
 }
 
-- (void) execute: (void (^)())block {
+- (void) execute: (void (^)())block statusBlock: (void (^)(ResourceStatus)) statusBlock{
   _executionDoneBlock = block ;
+  _updateStatusBlock = statusBlock ;
 
   dispatch_async(httpRequestQueue, ^{
     [self initRequest] ;
@@ -38,20 +44,25 @@ dispatch_queue_t httpRequestQueue ;
 }
 
 - (void) initRequest {
+  [self.resource addObserver: self.delegate
+              forKeyPath:@"status"
+                 options:(NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld)
+                 context:@"KVO_CONTEXT_STATUS_CHANGED"];
+  
   NSURL *url = [self.resource requestUrl] ;
-  NSLog(@"opening url %@", url) ;
+  NSLog(@"opening resource %@ url %@", self.resource, url) ;
   
   NSURLRequest *theRequest = [NSURLRequest requestWithURL: url
                                               cachePolicy: NSURLRequestReloadIgnoringLocalCacheData
                                           timeoutInterval: 10.0];
-  self.resource.status = ResourceStatusPending ;
+  [self updateResourceStatus: ResourceStatusPending] ;
 
   NSURLConnection *theConnection= [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
   
   if (theConnection) {
     CFRunLoopRun();
   } else {
-    self.resource.status = ResourceStatusError ;
+    [self updateResourceStatus: ResourceStatusError] ;
     NSLog(@"Error while requesting branches of ResourceStatusPending %@", self.resource) ;
   }
 }
@@ -72,7 +83,7 @@ dispatch_queue_t httpRequestQueue ;
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
   NSLog(@"did fail with error (%@)", self.resource) ;
-  self.resource.status = ResourceStatusError ;
+  [self updateResourceStatus: ResourceStatusError] ;
   CFRunLoopStop(CFRunLoopGetCurrent());
 }
 
@@ -83,12 +94,23 @@ dispatch_queue_t httpRequestQueue ;
   if(jsonArray) {
     NSLog(@"parsing the JSON message: %@", jsonArray) ;
     [self.resource parseJson: jsonArray] ;
-    self.resource.status = ResourceStatusSuccess ;
+    [self updateResourceStatus: ResourceStatusSuccess] ;
     [_executionDoneBlock invoke] ;
   } else {
     self.resource.status = ResourceStatusError ;
     NSLog(@"Failed to parse the response (%@)", self.resource) ;
   }
   CFRunLoopStop(CFRunLoopGetCurrent());
+}
+
+- (void) updateResourceStatus: (ResourceStatus) status {
+  //[self performSelectorOnMainThread: @selector(setStatus:) withObject:[NSNumber numberWithInt:status] waitUntilDone:YES] ;
+  [self setStatus: status] ;
+  self.updateStatusBlock(status) ;
+}
+
+- (void) setStatus: (ResourceStatus) status {
+  NSLog(@"----> updating status of %@", self.resource) ;
+//  [self.resource setStatus:[status intValue]] ;
 }
 @end

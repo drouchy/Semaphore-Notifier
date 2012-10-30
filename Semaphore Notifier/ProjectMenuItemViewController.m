@@ -13,7 +13,9 @@
 #import "Branch.h"
 
 @interface ProjectMenuItemViewController ()
-@property (strong, nonatomic) NSMutableArray *branchesController ;
+
+@property (strong, nonatomic) NSMutableArray *branchControllers ;
+
 @end
 
 @implementation ProjectMenuItemViewController
@@ -28,7 +30,6 @@
   if (self) {
     self.resource = aProject ;
   }
-  
   return self;
 }
 
@@ -37,20 +38,20 @@
 }
 
 - (void) awakeFromNib {
-  [self.project addObserver:self
+  [super awakeFromNib] ;
+  [self.resource addObserver:self
                   forKeyPath:@"status"
                      options:(NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld)
-                    context:NULL];
-  
-  [self queryProjectBranches] ;
+                     context:@"KVO_CONTEXT_STATUS_CHANGED"];
 
+  [self queryProjectBranches] ;
 }
 
 // Check how to test that
 - (void) queryProjectBranches {
   NSLog(@"Requesting the branches of project %@", self.project.name) ;
-  __block SemaphoreHttpRequestExecutor *request = [SemaphoreHttpRequestExecutor requestForResource: self.resource] ;
-  [request execute: ^{ [self loadBranches] ; } ] ;
+  __block SemaphoreHttpRequestExecutor *request = [SemaphoreHttpRequestExecutor requestForResource: self.resource delegate: self] ;
+  [request execute: ^{ [self loadBranches] ; } statusBlock: ^(ResourceStatus status){ self.resource.status = status ; }] ;
 }
 
 - (void) loadBranches {
@@ -58,17 +59,21 @@
     NSLog(@"Loading branch: %@ (%@)", branch.name, self.project.name) ;
     BranchMenuItemViewController *controller = [BranchMenuItemViewController controllerWithBranch: branch] ;
     [self.menuItem.submenu addItem: [controller buildMenuItem] ] ;
+    [self.branchControllers addObject: controller] ;
   }
 }
 
-- (void)observeValueForKeyPath:(NSString *)keyPath
-                      ofObject:(id)object
-                        change:(NSDictionary *)change
-                       context:(void *)context {
+// Don't know how to test that
+- (void)menuWillOpen:(NSMenu *)menu {
+  NSTimer *timer = [NSTimer timerWithTimeInterval:0 target:self selector:@selector(animateProgress:) userInfo:nil repeats:NO];
+  [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSEventTrackingRunLoopMode];
+}
 
-  NSLog(@"<-- observeValueForKeyPath --> %@", keyPath) ;
-  if ([keyPath isEqual:@"status"]) {
-    [self showIndicator] ;
+- (void)animateProgress:(NSTimer *)timer {
+  NSLog(@"animate progress: %@", self.branchControllers) ;
+  for(BranchMenuItemViewController *controller in self.branchControllers) {
+    [controller showIndicator] ;
   }
 }
+
 @end
