@@ -15,6 +15,6 @@
 
 + (id) requestForResource: (SemaphoreResource *) aResource ;
 
-- (void) execute: (void (^)())block ;
+- (void) execute: (void (^)())block statusBlock: (void (^)(ResourceStatus)) statusUpdateBlock;
 
 @end

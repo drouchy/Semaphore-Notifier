@@ -18,5 +18,6 @@
 - (id) initWithResource: (SemaphoreResource *) aResource ;
 
 - (NSMenuItem *) buildMenuItem ;
-- (void) showIndicator ;
+- (void) showIndicators ;
+- (void) updateResourceStatus: (ResourceStatus) status ;
 @end

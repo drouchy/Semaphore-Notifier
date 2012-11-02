@@ -16,7 +16,38 @@
 @property (retain, nonatomic) NSMutableArray *branchesController ;
 
 - (void) loadBranches ;
+- (Boolean) shouldHideTheSubmenuImage ;
+
 @end
+
+SharedExamplesBegin(ProjectMenuItemViewControllerSamples)
+
+sharedExamplesFor(@"hidding the sub menu image", ^(NSDictionary *data) {
+  __block ProjectMenuItemViewController *controller ;
+  
+  beforeEach(^{
+    controller = data[@"controller"] ;
+  }) ;
+
+  it(@"hides the image", ^{
+    expect([controller shouldHideTheSubmenuImage]).to.beTruthy() ;
+  });
+});
+
+sharedExamplesFor(@"showing the sub menu image", ^(NSDictionary *data) {
+  __block ProjectMenuItemViewController *controller ;
+  
+  beforeEach(^{
+    controller = data[@"controller"] ;
+  }) ;
+  
+  it(@"hides the image", ^{
+    expect([controller shouldHideTheSubmenuImage]).to.beFalsy() ;
+  });
+});
+
+SharedExamplesEnd
+
 
 SpecBegin(ProjectMenuItemViewControllerSpec)
 
@@ -73,6 +104,24 @@ describe(@"ProjectMenuItemViewController", ^{
     pending(@"adds a submenu item for each branch", ^{
       [controller loadBranches] ;
       expect([[controller.menuItem.submenu itemArray] count]).to.equal(2) ;
+    }) ;
+  }) ;
+
+  describe(@"shouldShowSubmenuImage", ^{
+    describe(@"with some branches", ^{
+      beforeEach(^{
+        project.branches = [ @[ [[Branch alloc] init] ] mutableCopy] ;
+      }) ;
+
+      itBehavesLike(@"showing the sub menu image", ^{ return @{@"controller": controller} ; }) ;
+    }) ;
+
+    describe(@"with no branches", ^{
+      beforeEach(^{
+        project.branches = [ @[] mutableCopy] ;
+      }) ;
+      
+      itBehavesLike(@"hidding the sub menu image", ^{ return @{ @"controller": controller} ;}) ;
     }) ;
   }) ;
 }) ;

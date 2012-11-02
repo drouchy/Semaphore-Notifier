@@ -134,7 +134,7 @@ static UserDefaultsProvider *provider ;
 - (void)animateProgress:(NSTimer *)timer {
   NSLog(@"animate progress: %@", self.projectMenuControllers) ;
   for(ProjectMenuItemViewController *controller in self.projectMenuControllers) {
-    [controller showIndicator] ;
+    [controller showIndicators] ;
   }
 }
 @end

@@ -12,6 +12,7 @@
 
 @property (strong, nonatomic) NSMutableData *receivedData;
 @property (strong, nonatomic) void (^executionDoneBlock)(void);
+@property (strong, nonatomic) void (^statusUpdateBlock)(ResourceStatus);
 
 @end
 
@@ -29,8 +30,9 @@ dispatch_queue_t httpRequestQueue ;
   return request ;
 }
 
-- (void) execute: (void (^)())block {
+- (void) execute: (void (^)())block statusBlock: (void (^)(ResourceStatus)) statusUpdateBlock {
   _executionDoneBlock = block ;
+  _statusUpdateBlock = statusUpdateBlock ;
 
   dispatch_async(httpRequestQueue, ^{
     [self initRequest] ;
@@ -44,14 +46,14 @@ dispatch_queue_t httpRequestQueue ;
   NSURLRequest *theRequest = [NSURLRequest requestWithURL: url
                                               cachePolicy: NSURLRequestReloadIgnoringLocalCacheData
                                           timeoutInterval: 10.0];
-  self.resource.status = ResourceStatusPending ;
+  [self updateResourceStatus: ResourceStatusLoading] ;
 
   NSURLConnection *theConnection= [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
   
   if (theConnection) {
     CFRunLoopRun();
   } else {
-    self.resource.status = ResourceStatusError ;
+    [self updateResourceStatus: ResourceStatusError] ;
     NSLog(@"Error while requesting branches of ResourceStatusPending %@", self.resource) ;
   }
 }
@@ -72,7 +74,7 @@ dispatch_queue_t httpRequestQueue ;
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
   NSLog(@"did fail with error (%@)", self.resource) ;
-  self.resource.status = ResourceStatusError ;
+  [self updateResourceStatus: ResourceStatusError] ;
   CFRunLoopStop(CFRunLoopGetCurrent());
 }
 
@@ -83,12 +85,20 @@ dispatch_queue_t httpRequestQueue ;
   if(jsonArray) {
     NSLog(@"parsing the JSON message: %@", jsonArray) ;
     [self.resource parseJson: jsonArray] ;
-    self.resource.status = ResourceStatusSuccess ;
+    [self updateResourceStatus: ResourceStatusSuccess] ;
     [_executionDoneBlock invoke] ;
   } else {
     self.resource.status = ResourceStatusError ;
     NSLog(@"Failed to parse the response (%@)", self.resource) ;
   }
   CFRunLoopStop(CFRunLoopGetCurrent());
+}
+
+- (void) updateResourceStatus: (ResourceStatus) status {
+  if(_statusUpdateBlock) {
+    _statusUpdateBlock(status) ;
+  } else {
+    self.resource.status = status ;
+  }
 }
 @end

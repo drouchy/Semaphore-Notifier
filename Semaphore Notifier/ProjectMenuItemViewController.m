@@ -50,7 +50,11 @@
 - (void) queryProjectBranches {
   NSLog(@"Requesting the branches of project %@", self.project.name) ;
   __block SemaphoreHttpRequestExecutor *request = [SemaphoreHttpRequestExecutor requestForResource: self.resource] ;
-  [request execute: ^{ [self loadBranches] ; } ] ;
+  [request execute: ^{
+      [self loadBranches] ;
+      [self didChangeValueForKey: @"shouldHideTheSubmenuImage"] ;
+    }
+       statusBlock: ^(ResourceStatus status){ [self updateResourceStatus: status] ; }] ;
 }
 
 - (void) loadBranches {
@@ -68,7 +72,11 @@
 
   NSLog(@"<-- observeValueForKeyPath --> %@", keyPath) ;
   if ([keyPath isEqual:@"status"]) {
-    [self showIndicator] ;
+    [self showIndicators] ;
   }
+}
+
+- (Boolean) shouldHideTheSubmenuImage {
+  return [[[self project] branches] count] == 0 ;
 }
 @end

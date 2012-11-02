@@ -13,6 +13,7 @@ extern NSString *SemaphoreApiUrl ;
 
 typedef enum ResourceStatus : NSInteger {
   ResourceStatusNone,
+  ResourceStatusLoading,
   ResourceStatusPending,
   ResourceStatusSuccess,
   ResourceStatusFailure,
