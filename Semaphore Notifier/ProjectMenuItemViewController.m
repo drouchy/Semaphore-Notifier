@@ -72,7 +72,9 @@
 
   NSLog(@"<-- observeValueForKeyPath --> %@", keyPath) ;
   if ([keyPath isEqual:@"status"]) {
+    [self willChangeValueForKey: @"shouldHideTheErrorImage"] ;
     [self showIndicators] ;
+    [self didChangeValueForKey: @"shouldHideTheErrorImage"] ;
   }
 }
 
