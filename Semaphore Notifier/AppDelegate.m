@@ -33,8 +33,9 @@ static UserDefaultsProvider *provider ;
 
 + (void) registerUserDefaults {
   NSDictionary *defaults = @{
-                              @"authKey": @"",
-                              @"projects": [NSMutableArray array]
+                              @"authKey"        : @"",
+                              @"projects"       : [NSMutableArray array],
+                              @"watchOutMaster" : @YES
                             } ;
   
   [[NSUserDefaults standardUserDefaults] registerDefaults: [defaults mutableCopy]] ;
