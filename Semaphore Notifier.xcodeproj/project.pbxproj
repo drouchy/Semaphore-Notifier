@@ -46,26 +46,14 @@
 		3B445F991639C428002C0E6F /* License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3B8C733616311FC60092ADE8 /* License.txt */; };
 		3B445F9A1639C428002C0E6F /* semaphore-notifier.icns in Resources */ = {isa = PBXBuildFile; fileRef = 3B8C733B16312E780092ADE8 /* semaphore-notifier.icns */; };
 		3B445F9B1639C428002C0E6F /* BranchMenuItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B8C73401631392F0092ADE8 /* BranchMenuItemView.xib */; };
-		3B445F9C1639C428002C0E6F /* statusFailure.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B57E56D1633FA7A0004FF18 /* statusFailure.png */; };
-		3B445F9D1639C428002C0E6F /* statusSuccess.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B57E56E1633FA7A0004FF18 /* statusSuccess.png */; };
-		3B445F9E1639C428002C0E6F /* statusUnknown.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B57E56F1633FA7A0004FF18 /* statusUnknown.png */; };
 		3B445FD7163AF3B5002C0E6F /* ResourceMenuItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B445FD6163AF3B5002C0E6F /* ResourceMenuItemViewController.m */; };
 		3B445FD8163AF3B5002C0E6F /* ResourceMenuItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B445FD6163AF3B5002C0E6F /* ResourceMenuItemViewController.m */; };
 		3B445FD9163AF3B5002C0E6F /* ResourceMenuItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B445FD6163AF3B5002C0E6F /* ResourceMenuItemViewController.m */; };
 		3B445FDD163AF442002C0E6F /* ResourceMenuItemViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B445FDC163AF442002C0E6F /* ResourceMenuItemViewControllerSpec.m */; };
-		3B445FDF163BC827002C0E6F /* statusPending.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B445FDE163BC826002C0E6F /* statusPending.png */; };
-		3B445FE0163BC827002C0E6F /* statusPending.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B445FDE163BC826002C0E6F /* statusPending.png */; };
-		3B445FE1163BC827002C0E6F /* statusPending.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B445FDE163BC826002C0E6F /* statusPending.png */; };
 		3B445FE5163BCEE4002C0E6F /* SemaphoreHttpRequestExecutor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B445FE4163BCEE4002C0E6F /* SemaphoreHttpRequestExecutor.m */; };
 		3B445FE6163BCEE4002C0E6F /* SemaphoreHttpRequestExecutor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B445FE4163BCEE4002C0E6F /* SemaphoreHttpRequestExecutor.m */; };
 		3B445FE7163BCEE4002C0E6F /* SemaphoreHttpRequestExecutor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B445FE4163BCEE4002C0E6F /* SemaphoreHttpRequestExecutor.m */; };
 		3B445FEF163C241F002C0E6F /* SemaphoreHttpConnectionRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B445FEE163C241F002C0E6F /* SemaphoreHttpConnectionRequestSpec.m */; };
-		3B57E5701633FA7A0004FF18 /* statusFailure.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B57E56D1633FA7A0004FF18 /* statusFailure.png */; };
-		3B57E5711633FA7A0004FF18 /* statusFailure.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B57E56D1633FA7A0004FF18 /* statusFailure.png */; };
-		3B57E5721633FA7A0004FF18 /* statusSuccess.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B57E56E1633FA7A0004FF18 /* statusSuccess.png */; };
-		3B57E5731633FA7A0004FF18 /* statusSuccess.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B57E56E1633FA7A0004FF18 /* statusSuccess.png */; };
-		3B57E5741633FA7A0004FF18 /* statusUnknown.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B57E56F1633FA7A0004FF18 /* statusUnknown.png */; };
-		3B57E5751633FA7A0004FF18 /* statusUnknown.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B57E56F1633FA7A0004FF18 /* statusUnknown.png */; };
 		3B7B55F7162F0BF500D7CDCB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B7B55F6162F0BF500D7CDCB /* Cocoa.framework */; };
 		3B7B5601162F0BF500D7CDCB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B7B55FF162F0BF500D7CDCB /* InfoPlist.strings */; };
 		3B7B5603162F0BF500D7CDCB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7B5602162F0BF500D7CDCB /* main.m */; };
@@ -170,13 +158,9 @@
 		3B445FD5163AF3B5002C0E6F /* ResourceMenuItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResourceMenuItemViewController.h; sourceTree = "<group>"; };
 		3B445FD6163AF3B5002C0E6F /* ResourceMenuItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResourceMenuItemViewController.m; sourceTree = "<group>"; };
 		3B445FDC163AF442002C0E6F /* ResourceMenuItemViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResourceMenuItemViewControllerSpec.m; sourceTree = "<group>"; };
-		3B445FDE163BC826002C0E6F /* statusPending.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = statusPending.png; sourceTree = "<group>"; };
 		3B445FE3163BCEE4002C0E6F /* SemaphoreHttpRequestExecutor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SemaphoreHttpRequestExecutor.h; sourceTree = "<group>"; };
 		3B445FE4163BCEE4002C0E6F /* SemaphoreHttpRequestExecutor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SemaphoreHttpRequestExecutor.m; sourceTree = "<group>"; };
 		3B445FEE163C241F002C0E6F /* SemaphoreHttpConnectionRequestSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SemaphoreHttpConnectionRequestSpec.m; sourceTree = "<group>"; };
-		3B57E56D1633FA7A0004FF18 /* statusFailure.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = statusFailure.png; sourceTree = "<group>"; };
-		3B57E56E1633FA7A0004FF18 /* statusSuccess.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = statusSuccess.png; sourceTree = "<group>"; };
-		3B57E56F1633FA7A0004FF18 /* statusUnknown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = statusUnknown.png; sourceTree = "<group>"; };
 		3B7B55F2162F0BF500D7CDCB /* Semaphore Notifier No Sandbox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Semaphore Notifier No Sandbox.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B7B55F6162F0BF500D7CDCB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		3B7B55F9162F0BF500D7CDCB /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -516,10 +500,6 @@
 		3B7B5663162F19A200D7CDCB /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				3B445FDE163BC826002C0E6F /* statusPending.png */,
-				3B57E56D1633FA7A0004FF18 /* statusFailure.png */,
-				3B57E56E1633FA7A0004FF18 /* statusSuccess.png */,
-				3B57E56F1633FA7A0004FF18 /* statusUnknown.png */,
 				3B7B5667162F1B2B00D7CDCB /* statusIconTemplate.png */,
 				3B7B5668162F1B2B00D7CDCB /* statusIconTemplate@2x.png */,
 			);
@@ -764,10 +744,6 @@
 				3B445F991639C428002C0E6F /* License.txt in Resources */,
 				3B445F9A1639C428002C0E6F /* semaphore-notifier.icns in Resources */,
 				3B445F9B1639C428002C0E6F /* BranchMenuItemView.xib in Resources */,
-				3B445F9C1639C428002C0E6F /* statusFailure.png in Resources */,
-				3B445F9D1639C428002C0E6F /* statusSuccess.png in Resources */,
-				3B445F9E1639C428002C0E6F /* statusUnknown.png in Resources */,
-				3B445FE1163BC827002C0E6F /* statusPending.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -789,10 +765,6 @@
 				3B8C733716311FC60092ADE8 /* License.txt in Resources */,
 				3B8C733C16312E780092ADE8 /* semaphore-notifier.icns in Resources */,
 				3B8C73431631392F0092ADE8 /* BranchMenuItemView.xib in Resources */,
-				3B57E5701633FA7A0004FF18 /* statusFailure.png in Resources */,
-				3B57E5721633FA7A0004FF18 /* statusSuccess.png in Resources */,
-				3B57E5741633FA7A0004FF18 /* statusUnknown.png in Resources */,
-				3B445FDF163BC827002C0E6F /* statusPending.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -809,10 +781,6 @@
 				3B9FCBBD163058F90013F015 /* AdvancedPreferencesView.xib in Resources */,
 				3B8C73131630A18F0092ADE8 /* ProjectMenuItemView.xib in Resources */,
 				3B8C73441631392F0092ADE8 /* BranchMenuItemView.xib in Resources */,
-				3B57E5711633FA7A0004FF18 /* statusFailure.png in Resources */,
-				3B57E5731633FA7A0004FF18 /* statusSuccess.png in Resources */,
-				3B57E5751633FA7A0004FF18 /* statusUnknown.png in Resources */,
-				3B445FE0163BC827002C0E6F /* statusPending.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
