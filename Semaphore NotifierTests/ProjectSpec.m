@@ -98,6 +98,20 @@ describe(@"project", ^{
       expect(oneBranch.name).to.equal(@"branch 1") ;
     }) ;
   }) ;
+
+  describe(@"requestUrl", ^{
+    beforeEach(^{
+      project.apiKey = @"123" ;
+      UserDefaultsProvider *provider = [UserDefaultsProvider providerWithSettings: @{ @"authKey": @"aaa"}] ;
+      [SemaphoreResource registerUserDefaultsProvider: provider] ;
+    }) ;
+
+    it(@"computes the url based on the authKey & apiKey", ^{
+      NSURL *url = [project requestUrl] ;
+
+      expect(url.absoluteString).to.equal(@"https://semaphoreapp.com/api/v1/projects/123/branches?auth_token=aaa") ;
+    }) ;
+  }) ;
 }) ;
 
 SpecEnd

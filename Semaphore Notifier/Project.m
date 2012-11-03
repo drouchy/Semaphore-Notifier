@@ -38,9 +38,8 @@
 - (void) parseJson: (NSArray *) json {
   for(NSDictionary *entry in json) {
     NSLog(@"Loading (%@) branch %@", self.name, entry[@"name"]) ;
-    Branch *branch = [[Branch alloc] init] ;
+    Branch *branch = [Branch branchOfProject: self withName:entry[@"name"]];
     branch.branchId = entry[@"id"] ;
-    branch.name = entry[@"name"] ;
     
     [_branches addObject: branch] ;
   }

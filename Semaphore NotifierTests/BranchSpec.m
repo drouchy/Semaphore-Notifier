@@ -9,12 +9,30 @@
 #import "Branch.h"
 #import "SpecHelper.h"
 #import "Build.h"
+#import "Project.h"
 
 SpecBegin(BranchSpec)
 
 describe(@"Branch", ^{
   __block Branch *branch ;
+  __block id project ;
   
+  describe(@"branchOfProject:withName", ^{
+    beforeEach(^{
+      project = [OCMockObject niceMockForClass: [NSString class]] ;
+
+      branch = [Branch branchOfProject: project withName: @"branch name"] ;
+    }) ;
+
+    it(@"links to the project", ^{
+      expect(branch.project).to.beIdenticalTo(project) ;
+    }) ;
+
+    it(@"sets the name", ^{
+      expect(branch.name).to.equal(@"branch name") ;
+    }) ;
+  }) ;
+
   describe(@"init", ^{
     beforeEach(^{
       branch = [[Branch alloc] init] ;
@@ -45,16 +63,12 @@ describe(@"Branch", ^{
       expect(branch.historyUrl).to.equal([NSURL URLWithString: @"http://host/history"]) ;
     }) ;
 
-    it(@"has a uknown last status by default", ^{
-      expect([branch lastStatus]).to.equal(ResourceStatusNone) ;
-    }) ;
-
     it(@"has no builds", ^{
       expect(branch.builds).to.beEmpty() ;
     }) ;
   }) ;
 
-  describe(@"parseJson", ^{
+  describe(@"updateFromJson", ^{
     __block NSMutableDictionary *json ;
 
     beforeEach(^{
@@ -129,6 +143,102 @@ describe(@"Branch", ^{
 
         expect([branch.builds count]).to.equal(1) ;
       }) ;
+    }) ;
+  }) ;
+
+  describe(@"requestUrl", ^{
+    __block Project *project ;
+
+    beforeEach(^{
+      project = [[Project alloc] init] ;
+      branch.project = project ;
+      [branch.project setApiKey: @"123"] ;
+      branch.branchId = [NSNumber numberWithInt: 132] ;
+      
+      UserDefaultsProvider *provider = [UserDefaultsProvider providerWithSettings: @{ @"authKey": @"aaa"}] ;
+      [SemaphoreResource registerUserDefaultsProvider: provider] ;
+    }) ;
+
+    it(@"generates an URL based on the project & the branch", ^{
+      NSString *url = [[branch requestUrl] absoluteString] ;
+
+      expect(url).to.equal(@"https://semaphoreapp.com/api/v1/projects/123/132/status?auth_token=aaa") ;
+    }) ;
+  }) ;
+
+  describe(@"addBuild", ^{
+    beforeEach(^{
+      branch = [[Branch alloc] init] ;
+      branch.status = ResourceStatusFailure ;
+    }) ;
+
+    it(@"adds a first build", ^{
+      Build *build = [[Build alloc] init] ;
+      build.number = [NSNumber numberWithInt: 1] ;
+
+      [branch addBuild: build] ;
+      
+      expect(branch.builds).to.equal(@[build]) ;
+    }) ;
+
+    it(@"does not add an already added build", ^{
+      Build *build = [[Build alloc] init] ;
+      build.number = [NSNumber numberWithInt: 1] ;
+  
+      [branch addBuild: build] ;
+
+      build = [[Build alloc] init] ;
+      build.number = [NSNumber numberWithInt: 1] ;
+
+      [branch addBuild: build] ;
+
+      expect([branch.builds count]).to.equal(1) ;
+    }) ;
+
+    it(@"adds a second build", ^{
+      for(int i = 0 ; i < 2 ; i++) {
+        Build *build = [[Build alloc] init] ;
+        build.number = [NSNumber numberWithInt: i] ;
+
+        [branch addBuild: build] ;
+
+      }
+
+      expect([branch.builds count]).to.equal(2) ;
+    }) ;
+
+    it(@"keeps only the last two builds", ^{
+      for(int i = 0 ; i < 5 ; i++) {
+        Build *build = [[Build alloc] init] ;
+        build.number = [NSNumber numberWithInt: i] ;
+        
+        [branch addBuild: build] ;
+        
+      }
+      
+      expect([branch.builds[0] number]).to.equal(4) ;
+      expect([branch.builds[1] number]).to.equal(3) ;
+
+    }) ;
+  }) ;
+
+  describe(@"status", ^{
+    beforeEach(^{
+      branch = [[Branch alloc] init] ;
+      branch.status = ResourceStatusFailure ;
+    }) ;
+
+    it(@"returns the status of the resource when no build", ^{
+      expect([branch status]).to.equal(ResourceStatusFailure) ;
+    }) ;
+
+    it(@"returns the last build status", ^{
+      Build *build = [[Build alloc] init] ;
+      build.number = [NSNumber numberWithInt: 1] ;
+      build.status = ResourceStatusLoading ;
+      [branch addBuild: build] ;
+
+      expect(branch.status).to.equal(ResourceStatusLoading) ;
     }) ;
   }) ;
 }) ;

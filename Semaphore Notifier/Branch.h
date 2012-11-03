@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "SMXObject.h"
 #import "SemaphoreResource.h"
+#import "Build.h"
 
 @interface Branch : SemaphoreResource
 
@@ -18,7 +19,11 @@
 @property (nonatomic) NSURL *statusUrl ;
 @property (nonatomic) NSURL *historyUrl ;
 @property (readonly, nonatomic) NSMutableArray *builds ;
+@property (weak) id project ;
 
-- (int) lastStatus ;
++ branchOfProject: (id) project withName: (NSString *) name ;
+
 - (void) updateFromJson: (NSDictionary *) json ;
+- (void) addBuild: (Build *) build ;
+
 @end
