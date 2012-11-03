@@ -63,6 +63,23 @@
   }
 }
 
+- (void)observeValueForKeyPath:(NSString *)keyPath
+                      ofObject:(id)object
+                        change:(NSDictionary *)change
+                       context:(void *)context {
+  
+  NSLog(@"<-- observeValueForKeyPath --> %@", keyPath) ;
+  
+  NSArray *kvo = @[ @"shouldHideTheErrorImage", @"shouldHideTheSubmenuImage", @"statusImage" ] ;
+  
+  if ([keyPath isEqual:@"status"]) {
+    for(NSString *kvc in kvo) [self willChangeValueForKey: kvc] ;
+    [self showIndicators] ;
+    [self.view setNeedsDisplay: YES] ;
+    for(NSString *kvc in kvo) [self didChangeValueForKey: kvc] ;
+  }
+}
+
 - (void) updateResourceStatus: (ResourceStatus) status {
   self.resource.status = status ;
 }

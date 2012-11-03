@@ -10,6 +10,13 @@
 
 @implementation StatusBarMenuItemView
 
+enum AppleAquaColorVariant {
+  
+  AppleAquaColorBlue = 1,
+  AppleAquaColorGraphite = 6,
+};
+
+
 - (id)initWithFrame:(NSRect)frame
 {
     self = [super initWithFrame:frame];
@@ -20,9 +27,14 @@
     return self;
 }
 
-- (void)drawRect:(NSRect)dirtyRect
-{
-    // Drawing code here.
+- (void)drawRect:(NSRect)dirtyRect {
+  BOOL isHighlighted = [self.enclosingMenuItem isHighlighted];
+  if (isHighlighted) {
+    [[NSColor selectedMenuItemColor] set];
+    [NSBezierPath fillRect:dirtyRect];
+  } else {
+    [super drawRect: dirtyRect];
+  }
 }
 
 @end

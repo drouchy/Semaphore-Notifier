@@ -9,6 +9,7 @@
 #import "ProjectMenuItemViewController.h"
 #import "BranchMenuItemViewController.h"
 #import "SemaphoreHttpRequestExecutor.h"
+#import "StatusBarMenuItemView.h"
 
 #import "Branch.h"
 
@@ -40,8 +41,7 @@
   [self.project addObserver:self
                   forKeyPath:@"status"
                      options:(NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld)
-                    context:NULL];
-  
+                    context:NULL];  
   [self queryProjectBranches] ;
 
 }
@@ -62,19 +62,6 @@
     NSLog(@"Loading branch: %@ (%@)", branch.name, self.project.name) ;
     BranchMenuItemViewController *controller = [BranchMenuItemViewController controllerWithBranch: branch] ;
     [self.menuItem.submenu addItem: [controller buildMenuItem] ] ;
-  }
-}
-
-- (void)observeValueForKeyPath:(NSString *)keyPath
-                      ofObject:(id)object
-                        change:(NSDictionary *)change
-                       context:(void *)context {
-
-  NSLog(@"<-- observeValueForKeyPath --> %@", keyPath) ;
-  if ([keyPath isEqual:@"status"]) {
-    [self willChangeValueForKey: @"shouldHideTheErrorImage"] ;
-    [self showIndicators] ;
-    [self didChangeValueForKey: @"shouldHideTheErrorImage"] ;
   }
 }
 

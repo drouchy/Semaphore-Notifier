@@ -10,4 +10,6 @@
 
 @interface StatusBarMenuItemView : NSView
 
+@property (weak) NSMenuItem *menuItem ;
+
 @end
