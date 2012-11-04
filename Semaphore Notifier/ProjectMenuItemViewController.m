@@ -28,6 +28,7 @@
   self = [super initWithNibName:@"ProjectMenuItemView" bundle: [NSBundle bundleForClass: [self class]]];
   if (self) {
     self.resource = aProject ;
+    self.branchesController = [NSMutableArray array] ;
   }
   
   return self;
@@ -61,6 +62,7 @@
   for(Branch *branch in self.project.branches) {
     NSLog(@"Loading branch: %@ (%@)", branch.name, self.project.name) ;
     BranchMenuItemViewController *controller = [BranchMenuItemViewController controllerWithBranch: branch] ;
+    [self.branchesController addObject:controller] ;
     [self.menuItem.submenu addItem: [controller buildMenuItem] ] ;
   }
 }
@@ -68,4 +70,12 @@
 - (Boolean) shouldHideTheSubmenuImage {
   return [[[self project] branches] count] == 0 ;
 }
+
+- (void) refresh {
+  NSLog(@"Refreshing project %@", self.project.name) ;
+  for(BranchMenuItemViewController *controller in self.branchesController) {
+    [controller refresh] ;
+  }
+}
+
 @end

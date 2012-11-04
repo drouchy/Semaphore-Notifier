@@ -74,4 +74,9 @@
       return @"NSCaution" ;
   }
 }
+
+- (void) refresh {
+  NSLog(@"Refreshing project %@ - branch %@", [self.branch.project name], self.branch.name) ;
+  [self queryBuildStatus] ;
+}
 @end

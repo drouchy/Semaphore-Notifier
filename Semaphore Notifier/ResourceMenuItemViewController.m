@@ -83,4 +83,8 @@
 - (void) updateResourceStatus: (ResourceStatus) status {
   self.resource.status = status ;
 }
+
+- (void) refresh {
+  [NSException raise:@"not supported" format:@"operation not supported"] ;
+}
 @end

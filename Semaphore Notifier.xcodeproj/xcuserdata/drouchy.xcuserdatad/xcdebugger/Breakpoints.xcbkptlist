@@ -8,11 +8,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Semaphore Notifier/AppDelegate.m"
-         timestampString = "373719480.678197"
+         timestampString = "373742632.678499"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "199"
-         endingLineNumber = "199">
+         startingLineNumber = "206"
+         endingLineNumber = "206">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -41,11 +41,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Semaphore Notifier/AppDelegate.m"
-         timestampString = "373719480.678197"
+         timestampString = "373742632.678499"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "243"
-         endingLineNumber = "243">
+         startingLineNumber = "250"
+         endingLineNumber = "250">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -148,22 +148,22 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Semaphore Notifier/BranchMenuItemViewController.m"
-         timestampString = "373637607.775337"
+         timestampString = "373742735.397533"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "129"
-         endingLineNumber = "129">
+         startingLineNumber = "134"
+         endingLineNumber = "134">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Semaphore Notifier/BranchMenuItemViewController.m"
-         timestampString = "373637607.775337"
+         timestampString = "373742735.397533"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "133"
-         endingLineNumber = "133">
+         startingLineNumber = "138"
+         endingLineNumber = "138">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -194,22 +194,22 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Semaphore Notifier/BranchMenuItemViewController.m"
-         timestampString = "373637607.775337"
+         timestampString = "373742735.397533"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "117"
-         endingLineNumber = "117">
+         startingLineNumber = "122"
+         endingLineNumber = "122">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Semaphore Notifier/ResourceMenuItemViewController.m"
-         timestampString = "373633239.317532"
+         timestampString = "373742600.118271"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "112"
-         endingLineNumber = "112">
+         startingLineNumber = "116"
+         endingLineNumber = "116">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"

@@ -20,4 +20,5 @@
 - (NSMenuItem *) buildMenuItem ;
 - (void) showIndicators ;
 - (void) updateResourceStatus: (ResourceStatus) status ;
+- (void) refresh ;
 @end
