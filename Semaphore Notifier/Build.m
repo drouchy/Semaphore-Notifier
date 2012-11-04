@@ -25,6 +25,9 @@
   _startedAt = [dateFormatter dateFromString: json[@"started_at"]];
   _finishedAt = [dateFormatter dateFromString: json[@"finished_at"]];
 
+  _commitAuthor = json[@"commit"][@"author_name"] ;
+  _commitMessage = json[@"commit"][@"message"] ;
+
   self.status = [self parseStatus:json[@"result"]] ;
 }
 

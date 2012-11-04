@@ -87,6 +87,14 @@ describe(@"Build", ^{
       expect(build.finishedAt).to.equal(endDate) ;
     }) ;
 
+    it(@"parses the commit author", ^{
+      expect(build.commitAuthor).to.equal(@"The Author") ;
+    }) ;
+
+    it(@"parses the commit message", ^{
+      expect(build.commitMessage).to.equal(@"merge branch test to master") ;
+    }) ;
+
     describe(@"status", ^{
       it(@"parses the success", ^{
         expect(build.status).to.equal(ResourceStatusSuccess) ;

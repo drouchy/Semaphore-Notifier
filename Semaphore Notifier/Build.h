@@ -18,5 +18,8 @@
 @property (copy, nonatomic) NSDate *startedAt ;
 @property (copy, nonatomic) NSDate *finishedAt ;
 
+@property (copy, nonatomic) NSString *commitAuthor ;
+@property (copy, nonatomic) NSString *commitMessage ;
+
 - (void) updateFromJson: (NSDictionary *) json ;
 @end
