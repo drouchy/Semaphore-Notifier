@@ -8,4 +8,5 @@
 
 #import "Constants.h"
 
-NSString *SemaphoreApiUrl = @"https://semaphoreapp.com/api/v1";
+NSString *const SemaphoreApiUrl = @"https://semaphoreapp.com/api/v1";
+NSString *const NewBuildNotification = @"NewBuildNotification";

@@ -683,7 +683,7 @@
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<object class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
 			<string key="NS.key.0">NSCaution</string>
-			<string key="NS.object.0">{128, 128}</string>
+			<string key="NS.object.0">{32, 32}</string>
 		</object>
 		<bool key="IBDocument.UseAutolayout">YES</bool>
 	</data>

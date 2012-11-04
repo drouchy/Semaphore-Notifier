@@ -118,6 +118,13 @@
 		3B9FCBCC1630721E0013F015 /* AdvancedPreferencesViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9FCBCB1630721E0013F015 /* AdvancedPreferencesViewControllerSpec.m */; };
 		3BE8FF1E1632DC15000D2088 /* UserDefaultsProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE8FF1D1632DC15000D2088 /* UserDefaultsProvider.m */; };
 		3BE8FF1F1632DC15000D2088 /* UserDefaultsProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE8FF1D1632DC15000D2088 /* UserDefaultsProvider.m */; };
+		3BFB9AEA16467A1200127421 /* BuildStatusNotifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BFB9AE916467A1200127421 /* BuildStatusNotifier.m */; };
+		3BFB9AEB16467A1200127421 /* BuildStatusNotifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BFB9AE916467A1200127421 /* BuildStatusNotifier.m */; };
+		3BFB9AEC16467A1200127421 /* BuildStatusNotifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BFB9AE916467A1200127421 /* BuildStatusNotifier.m */; };
+		3BFB9AEF16467A2B00127421 /* BuildStatusNotifierSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BFB9AEE16467A2B00127421 /* BuildStatusNotifierSpec.m */; };
+		3BFB9AF216467C3400127421 /* LocalNotifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BFB9AF116467C3400127421 /* LocalNotifier.m */; };
+		3BFB9AF316467C3400127421 /* LocalNotifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BFB9AF116467C3400127421 /* LocalNotifier.m */; };
+		3BFB9AF416467C3400127421 /* LocalNotifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BFB9AF116467C3400127421 /* LocalNotifier.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -267,6 +274,11 @@
 		3B9FCBCB1630721E0013F015 /* AdvancedPreferencesViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdvancedPreferencesViewControllerSpec.m; sourceTree = "<group>"; };
 		3BE8FF1C1632DC15000D2088 /* UserDefaultsProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDefaultsProvider.h; sourceTree = "<group>"; };
 		3BE8FF1D1632DC15000D2088 /* UserDefaultsProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDefaultsProvider.m; sourceTree = "<group>"; };
+		3BFB9AE816467A1200127421 /* BuildStatusNotifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuildStatusNotifier.h; sourceTree = "<group>"; };
+		3BFB9AE916467A1200127421 /* BuildStatusNotifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuildStatusNotifier.m; sourceTree = "<group>"; };
+		3BFB9AEE16467A2B00127421 /* BuildStatusNotifierSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuildStatusNotifierSpec.m; sourceTree = "<group>"; };
+		3BFB9AF016467C3400127421 /* LocalNotifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalNotifier.h; sourceTree = "<group>"; };
+		3BFB9AF116467C3400127421 /* LocalNotifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalNotifier.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -388,6 +400,7 @@
 		3B7B55FC162F0BF500D7CDCB /* Semaphore Notifier */ = {
 			isa = PBXGroup;
 			children = (
+				3BFB9AE7164679F400127421 /* Notifiers */,
 				3B445FE2163BCEBC002C0E6F /* Executors */,
 				3B11AE3C1632E996005E9F88 /* Views */,
 				3B9FCBA0162F293D0013F015 /* Controllers */,
@@ -427,6 +440,7 @@
 				3B7B5661162F134500D7CDCB /* AppDelegateLoadingSpec.m */,
 				3B7B566E162F1BCD00D7CDCB /* StatusBarMenuSpec.m */,
 				3B9FCB82162F23470013F015 /* AppDelegateSpec.m */,
+				3BFB9AEE16467A2B00127421 /* BuildStatusNotifierSpec.m */,
 			);
 			path = "Semaphore NotifierTests";
 			sourceTree = "<group>";
@@ -640,6 +654,17 @@
 			name = Preferences;
 			sourceTree = "<group>";
 		};
+		3BFB9AE7164679F400127421 /* Notifiers */ = {
+			isa = PBXGroup;
+			children = (
+				3BFB9AE816467A1200127421 /* BuildStatusNotifier.h */,
+				3BFB9AE916467A1200127421 /* BuildStatusNotifier.m */,
+				3BFB9AF016467C3400127421 /* LocalNotifier.h */,
+				3BFB9AF116467C3400127421 /* LocalNotifier.m */,
+			);
+			name = Notifiers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -825,6 +850,8 @@
 				3B445F8A1639C428002C0E6F /* SemaphoreResource.m in Sources */,
 				3B445FD9163AF3B5002C0E6F /* ResourceMenuItemViewController.m in Sources */,
 				3B445FE7163BCEE4002C0E6F /* SemaphoreHttpRequestExecutor.m in Sources */,
+				3BFB9AEC16467A1200127421 /* BuildStatusNotifier.m in Sources */,
+				3BFB9AF416467C3400127421 /* LocalNotifier.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -850,6 +877,8 @@
 				3B11AE4C16330098005E9F88 /* SemaphoreResource.m in Sources */,
 				3B445FD7163AF3B5002C0E6F /* ResourceMenuItemViewController.m in Sources */,
 				3B445FE5163BCEE4002C0E6F /* SemaphoreHttpRequestExecutor.m in Sources */,
+				3BFB9AEA16467A1200127421 /* BuildStatusNotifier.m in Sources */,
+				3BFB9AF216467C3400127421 /* LocalNotifier.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -887,6 +916,9 @@
 				3B445FDD163AF442002C0E6F /* ResourceMenuItemViewControllerSpec.m in Sources */,
 				3B445FE6163BCEE4002C0E6F /* SemaphoreHttpRequestExecutor.m in Sources */,
 				3B445FEF163C241F002C0E6F /* SemaphoreHttpConnectionRequestSpec.m in Sources */,
+				3BFB9AEB16467A1200127421 /* BuildStatusNotifier.m in Sources */,
+				3BFB9AEF16467A2B00127421 /* BuildStatusNotifierSpec.m in Sources */,
+				3BFB9AF316467C3400127421 /* LocalNotifier.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

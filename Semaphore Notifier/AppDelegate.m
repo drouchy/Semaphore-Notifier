@@ -13,12 +13,14 @@
 #import "AdvancedPreferencesViewController.h"
 #import "Project.h"
 #import "ProjectMenuItemViewController.h"
+#import "BuildStatusNotifier.h"
 
 static UserDefaultsProvider *provider ;
 
 @interface AppDelegate()
 @property (strong, nonatomic) NSMutableArray *projects ;
 @property (strong, nonatomic) NSMutableArray *projectMenuControllers ;
+@property (strong, nonatomic) BuildStatusNotifier *notifier ;
 @end
 
 @implementation AppDelegate
@@ -48,6 +50,7 @@ static UserDefaultsProvider *provider ;
 
 - (id) init {
   if((self = [super init])) {
+    _notifier = [[BuildStatusNotifier alloc] init] ;
     [self loadProjects] ;
   }
   return self ;

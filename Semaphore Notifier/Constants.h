@@ -8,9 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-extern NSString *SemaphoreApiUrl ;
-
-
 typedef enum ResourceStatus : NSInteger {
   ResourceStatusNone,
   ResourceStatusLoading,
@@ -20,3 +17,6 @@ typedef enum ResourceStatus : NSInteger {
   ResourceStatusUnknown,
   ResourceStatusError
 } ResourceStatus ;
+
+FOUNDATION_EXPORT NSString *const SemaphoreApiUrl ;
+FOUNDATION_EXPORT NSString *const NewBuildNotification;
