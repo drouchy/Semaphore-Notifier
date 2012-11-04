@@ -9,6 +9,7 @@
 #import "Branch.h"
 #import "Constants.h"
 #import "Build.h"
+#import "LocalNotifier.h"
 
 @implementation Branch
 
@@ -48,10 +49,31 @@
 
 - (void) addBuild: (Build *) build {
   if([self lastBuild].number != build.number) {
-    [_builds insertObject: build atIndex:0] ;
-    if([_builds count] > 2) {
-      [_builds removeLastObject] ;
+    [self insertNewBuild: build] ;
+  } else {
+    switch(self.lastBuild.status) {
+      case ResourceStatusError:
+      case ResourceStatusPending:
+        [self updateLastBuildStatusTo: build.status] ;
+        break ;
+      default:
+        break ;
     }
+  }
+}
+
+- (void) insertNewBuild: (Build *) build {
+  [_builds insertObject: build atIndex:0] ;
+  if([_builds count] > 2) {
+    [_builds removeLastObject] ;
+  }
+  [LocalNotifier notifyForNewBuildOnBranch: self] ;
+}
+
+- (void) updateLastBuildStatusTo:(ResourceStatus) status {
+  if(self.lastBuild.status != status) {
+    self.lastBuild.status = status ;
+  [LocalNotifier notifyForNewBuildOnBranch: self] ;
   }
 }
 

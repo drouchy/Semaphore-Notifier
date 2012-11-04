@@ -220,6 +220,40 @@ describe(@"Branch", ^{
       expect([branch.builds[1] number]).to.equal(3) ;
 
     }) ;
+
+    it(@"updates the status of the last build if it was pending", ^{
+      Build *build = [[Build alloc] init] ;
+      build.number = [NSNumber numberWithInt: 1] ;
+      build.status = ResourceStatusPending ;
+  
+      [branch addBuild: build] ;
+      
+      build = [[Build alloc] init] ;
+      build.number = [NSNumber numberWithInt: 1] ;
+      build.status = ResourceStatusSuccess ;
+
+      [branch addBuild: build] ;
+
+      build = branch.builds[0] ;
+      expect(build.status).to.equal(ResourceStatusSuccess) ;
+    }) ;
+
+    it(@"updates the status of the last build if it was in error", ^{
+      Build *build = [[Build alloc] init] ;
+      build.number = [NSNumber numberWithInt: 1] ;
+      build.status = ResourceStatusError ;
+      
+      [branch addBuild: build] ;
+      
+      build = [[Build alloc] init] ;
+      build.number = [NSNumber numberWithInt: 1] ;
+      build.status = ResourceStatusSuccess ;
+      
+      [branch addBuild: build] ;
+      
+      build = branch.builds[0] ;
+      expect(build.status).to.equal(ResourceStatusSuccess) ;
+    }) ;
   }) ;
 
   describe(@"status", ^{
